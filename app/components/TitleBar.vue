@@ -2,12 +2,16 @@
     <div class="title-bar">
         <div class="left-window-controls">
             <ClientOnly>
-                <div v-if="colorMode.value === 'dark'" class="icon">
-                    <img src="/icons/dark/favicon.png" width="55" class="logo" alt="Origami Systems Logo" />
-                </div>
-                <div v-else class="icon">
-                    <img src="/icons/light/favicon.png" width="55" class="logo" alt="Origami Systems Logo" />
-                </div>
+                <NuxtLink :to="`/`" v-if="colorMode.value === 'dark'">
+                    <div class="icon">
+                        <img src="/icons/dark/favicon.png" width="55" class="logo" alt="Origami Systems Logo" />
+                    </div>
+                </NuxtLink>
+                <NuxtLink :to="`/`" v-else>
+                    <div class="icon">
+                        <img src="/icons/light/favicon.png" width="55" class="logo" alt="Origami Systems Logo" />
+                    </div>
+                </NuxtLink>
             </ClientOnly>
             <!-- <BackButton v-if="props.showBackButton" /> -->
             <div class="tabs" id="tabs">

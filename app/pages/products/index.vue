@@ -27,10 +27,22 @@
                     </li>
                 </ul>
             </section>
+            <section>
+                <NuxtLink to="https://desktop.the-house-app.com/example" target="_blank" rel="noopener noreferrer"
+                    class="link">
+                    <AppSubmitButton theme="house" primary>Try it out</AppSubmitButton>
+                </NuxtLink>
+            </section>
         </Card>
-        <Card>
-            <span class="heading">More comming soon!</span>
+        <Card class="card">
+            <TheGradesAppWordmark class="wordmark" />
+            <section>
+                <span class="heading">Comming soon!</span>
+            </section>
         </Card>
+        <!-- <Card> -->
+        <!--     <span class="heading">More comming soon!</span> -->
+        <!-- </Card> -->
     </div>
     <!-- </CardGrid> -->
 </template>
