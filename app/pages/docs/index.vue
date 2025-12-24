@@ -30,7 +30,6 @@ await fetchList()
 .container {
     display: grid;
     gap: 10px;
-    // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     width: 90%;
 }
@@ -40,7 +39,6 @@ await fetchList()
     padding: 20px;
     text-align: left;
     border: var(--border);
-    // background-color: var(--background-1);
     border-radius: var(--border-radius);
     flex: 1;
 
