@@ -14,8 +14,8 @@
                 <NuxtLink to="/" active-class="active" class="link">
                     <p class="title">Home</p>
                 </NuxtLink>
-                <NuxtLink to="/services" active-class="active" class="link">
-                    <p class="title">Services</p>
+                <NuxtLink to="/products" active-class="active" class="link">
+                    <p class="title">Products</p>
                 </NuxtLink>
                 <NuxtLink to="/bugs-tracker" active-class="active" class="link">
                     <p class="title">Bug Tracker</p>

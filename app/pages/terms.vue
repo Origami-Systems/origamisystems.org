@@ -2,7 +2,7 @@
     <LargeTitleText>Terms of Use</LargeTitleText>
     <Card class="card">
         <div class="container">
-            By using this app, you agree to the following terms:
+            By using apps from Origami Systems, you agree to the following terms:
 
             <h2>Purpose of the App</h2>
             This app is provided for use by schools, churches, and similar organizations to track and manage group

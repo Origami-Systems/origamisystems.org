@@ -1,7 +1,7 @@
 <template>
     <LargeTitleText>Bug<br>Tracker</LargeTitleText>
     <div class="bugs">
-        <Card>
+        <Card class="card">
             <p>
                 Welcome to The House App bug tracker! Here, you can find a list of known issues and bugs that have been
                 reported by users. If you encounter any problems while using the app, please check this list to see if
@@ -103,10 +103,11 @@ onMounted(async () => {
     gap: 10px;
     align-items: center;
 
-    :deep(.card) {
-        margin-bottom: 0px;
-        max-width: 700px;
-    }
+}
+
+.card {
+    margin-bottom: 0px;
+    max-width: 700px;
 }
 
 .settings {
