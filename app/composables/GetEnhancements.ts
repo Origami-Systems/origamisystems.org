@@ -3,7 +3,7 @@ import axios from "axios"
 
 const GetEnhancements = async () => {
     try {
-        const response = await axios.get("https://n8n.origamiking3612.com/webhook/the-house-app/get/enhancements")
+        const response = await axios.get("https://n8n.origamiking3612.com/webhook/origami-systems/get/enhancements")
 
         if (!Array.isArray(response.data)) {
             throw new Error("Expected array of enhancements, got: " + typeof response.data)

@@ -10,7 +10,7 @@
             </p>
             <p>
                 For a comprehensive and up-to-date overview of reported bugs, please visit our <NuxtLink
-                    class="text-link" to="https://github.com/Origami-Systems/issues/issues" external>
+                    class="text-link" to="https://github.com/Origami-Systems/issues/issues" external target="_blank">
                     GitHub Issues page </NuxtLink>.
             </p>
         </Card>
