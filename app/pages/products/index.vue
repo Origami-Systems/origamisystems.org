@@ -28,6 +28,9 @@
                 </ul>
             </section>
             <section>
+                <NuxtLink to="https://the-house-app.com" target="_blank" rel="noopener noreferrer" class="link">
+                    <AppSubmitButton theme="house" primary>See the website</AppSubmitButton>
+                </NuxtLink>
                 <NuxtLink to="https://desktop.the-house-app.com/example" target="_blank" rel="noopener noreferrer"
                     class="link">
                     <AppSubmitButton theme="house" primary>Try it out</AppSubmitButton>

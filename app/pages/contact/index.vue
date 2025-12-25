@@ -1,7 +1,7 @@
 <template>
     <Card title="Contact Us" class="card">
         <form @submit.prevent>
-            <p>We would love to hear from you! Please fill out the form and we will get back to you shortly .</p>
+            <p>We would love to hear from you! Please fill out the form and we will get back to you shortly.</p>
             <TextField label="Name" type="text" v-model="name" required placeholder="Enter your name" />
             <TextField label="Email Address" type="email" v-model="email" required placeholder="Enter your email" />
             <TextField label="Organization" type="text" v-model="organization"

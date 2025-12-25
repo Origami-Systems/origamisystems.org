@@ -2,14 +2,18 @@
     <LargeTitleText>
         Blog
     </LargeTitleText>
-    <div class="container">
+    <CardGrid>
         <div v-for="a in articles" :key="a.id">
             <NuxtLink :to="`${a.path}`" class="link">
                 <div class="item">
                     <div class="title">{{ a.title }}</div>
                     <div class="description">{{ a.description }}</div>
                     <div class="extra">
-                        <Badge>{{ normalizeString(a.type) }}</Badge>
+                        <div class="badge-container">
+                            <!-- @vue-ignore -->
+                            <Badge v-if="a.app" :theme="a.app">{{ formattedApp(a.app) }}</Badge>
+                            <Badge>{{ normalizeString(a.type) }}</Badge>
+                        </div>
                         <div class="tags">
                             <div v-for="tag in a.tags" :key="tag" class="tag">
                                 {{ tag }}
@@ -20,13 +24,20 @@
                 </div>
             </NuxtLink>
         </div>
-    </div>
+    </CardGrid>
 </template>
 
 <script setup lang="ts">
 import { normalizeString } from '#imports';
 
-const { fetchList, articles } = useBlog()
+const { fetchList, articles } = useBlog();
+
+const formattedApp = (app: string) => {
+    if (app === 'origami-systems') {
+        return "Origami Systems";
+    }
+    return normalizeString(app);
+}
 
 definePageMeta({
     title: "Blog"
@@ -46,13 +57,6 @@ onMounted(async () => {
 </script>
 
 <style lang="css" scoped>
-.container {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    width: 90%;
-}
-
 .item {
     position: relative;
     padding: 20px;
@@ -79,6 +83,12 @@ onMounted(async () => {
         justify-content: space-between;
         align-items: center;
         margin-top: 15px;
+
+        .badge-container {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
 
         .tags {
             display: flex;

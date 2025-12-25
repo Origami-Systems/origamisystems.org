@@ -9,7 +9,8 @@ export default defineContentConfig({
                 type: z.enum(['release', 'announcement']),
                 timestamp: z.string().date(),
                 draft: z.boolean().default(false),
-                tags: z.array(z.string())
+                tags: z.array(z.string()),
+                app: z.enum(['house', 'grades', 'origami-systems', 'sports']).optional(),
             })
         }),
         docs: defineCollection({
