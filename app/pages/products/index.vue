@@ -37,7 +37,7 @@
         <Card class="card">
             <TheGradesAppWordmark class="wordmark" />
             <section>
-                <span class="heading">Comming soon!</span>
+                <span class="heading">Coming soon!</span>
             </section>
         </Card>
         <!-- <Card> -->
