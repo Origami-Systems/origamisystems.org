@@ -16,7 +16,7 @@ defineProps<{
 }>();
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .container {
     display: flex;
     justify-content: space-between;

@@ -15,7 +15,7 @@ const props = defineProps<{ id?: string }>()
 const { headings } = useRuntimeConfig().public.mdc
 const generate = computed(() => props.id && ((typeof headings?.anchorLinks === 'boolean' && headings?.anchorLinks === true) || (typeof headings?.anchorLinks === 'object' && headings?.anchorLinks?.h1)))
 </script>
-<style lang="css" scoped>
+<style lang="scss" scoped>
 h1 {
     font-size: 25px;
 }

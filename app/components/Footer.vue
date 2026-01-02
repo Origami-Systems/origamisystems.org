@@ -33,7 +33,7 @@
     </footer>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .footer {
     margin-top: 6.5rem;
     padding: 2rem;

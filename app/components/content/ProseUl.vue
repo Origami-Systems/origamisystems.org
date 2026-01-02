@@ -4,7 +4,7 @@
     </ul>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 ul {
     text-align: left;
 }

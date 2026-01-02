@@ -4,7 +4,7 @@
     </p>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 p {
     text-align: left;
 }
