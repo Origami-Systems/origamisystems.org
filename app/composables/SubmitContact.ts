@@ -7,7 +7,8 @@ const SubmitContact = async (name: string, email: string, organization: string, 
             email: email,
             organization: organization,
             hear: hear,
-            question: question
+            question: question,
+            site: "origamisystems.org",
         })
 
         return response.status == 200
