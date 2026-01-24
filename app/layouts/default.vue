@@ -12,10 +12,8 @@ useSeoMeta({
     description: "",
     ogTitle: "Origami Systems",
     ogUrl: "https://origamisystems.org",
-    // ogImage: "https://origamisystems.org/web-app-manifest-192x192.png",
-    // twitterImage: "https://origamisystems.org/web-app-manifest-192x192.png",
+    ogImage: "https://origamisystems.org/icons/192x192.png",
+    twitterImage: "https://origamisystems.org/icons/192x192.png",
     twitterTitle: "Origami Systems",
 })
 </script>
-
-<style scoped lang="css"></style>

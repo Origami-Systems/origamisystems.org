@@ -25,6 +25,3 @@ const props = defineProps({
     error: Object as () => NuxtError
 });
 </script>
-<style scoped lang="css">
-.all {}
-</style>
