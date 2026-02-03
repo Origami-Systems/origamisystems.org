@@ -1,0 +1,40 @@
+---
+import { Card, AppSubmitButton } from "@origami-systems/ui";
+import MainLayout from "~/layouts/MainLayout.astro";
+import TheHouseAppWordmark from "@/wordmarks/TheHouseAppWordmark.astro";
+import OrigamiSystemsWordmark from "@/wordmarks/OrigamiSystemsWordmark.astro";
+---
+
+<MainLayout>
+    <OrigamiSystemsWordmark />
+    <h1>We are the creators of</h1>
+    <TheHouseAppWordmark />
+    <h1>and more to come!</h1>
+
+    <Card>
+        <h1>Get Started Today!</h1>
+        <!-- TODO: link to products site -->
+        <a href="/contact" class="link">
+            <AppSubmitButton primary="true" client:only="vue">
+                Contact Us
+            </AppSubmitButton>
+        </a>
+    </Card>
+</MainLayout>
+<style>
+    :global(.thehouseapp) {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .origamisystems {
+        max-width: 450px;
+    }
+
+    @media (max-width: 460px) {
+        .origamisystems {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+</style>

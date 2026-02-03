@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import gradesWordmarkDark from "@assets/icons/grades/dark/wordmark.png";
+import gradesWordmarkLight from "@assets/icons/grades/light/wordmark.png";
+---
+
+<div class="logo thegradesapp">
+    <Image
+        src={gradesWordmarkDark}
+        alt="The Grades App Logo"
+        class="icon icon-dark"
+    />
+    <Image
+        src={gradesWordmarkLight}
+        alt="The Grades App Logo"
+        class="icon icon-light"
+    />
+</div>
+
+<style>
+    .logo {
+        img {
+            height: auto;
+        }
+        user-select: none;
+    }
+
+    .icon {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .icon-dark {
+        display: none;
+    }
+
+    :global(html.dark) .icon-light {
+        display: none;
+    }
+
+    :global(html.dark) .icon-dark {
+        display: inline;
+    }
+</style>

@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import wordmarkDark from "@assets/icons/dark/wordmark.png";
+import wordmarkLight from "@assets/icons/light/wordmark.png";
+---
+
+<div class="logo origamisystems">
+    <Image
+        src={wordmarkDark}
+        alt="Origami Systems Logo"
+        class="icon icon-dark"
+    />
+    <Image
+        src={wordmarkLight}
+        alt="Origami Systems Logo"
+        class="icon icon-light"
+    />
+</div>
+
+<style>
+    .logo {
+        img {
+            height: auto;
+        }
+        user-select: none;
+    }
+
+    .icon {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .icon-dark {
+        display: none;
+    }
+
+    :global(html.dark) .icon-light {
+        display: none;
+    }
+
+    :global(html.dark) .icon-dark {
+        display: inline;
+    }
+</style>

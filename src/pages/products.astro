@@ -1,0 +1,109 @@
+---
+import { Card, LargeTitleText, AppSubmitButton } from "@origami-systems/ui";
+import MainLayout from "~/layouts/MainLayout.astro";
+
+import TheHouseAppWordmark from "@/wordmarks/TheHouseAppWordmark.astro";
+import TheGradesAppWordmark from "@/wordmarks/TheGradesAppWordmark.astro";
+---
+
+<MainLayout title="Products - Origami Systems">
+    <LargeTitleText>Products</LargeTitleText>
+    <Card>
+        <a
+            href="https://the-house-app.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wordmark"
+        >
+            <TheHouseAppWordmark />
+        </a>
+        <section>
+            <span class="heading">Key Features</span>
+            <ul>
+                <li>
+                    Customizable Houses: Create and manage house names, colors,
+                    and the number of houses to fit your school’s culture.
+                </li>
+                <li>
+                    Instant Recognition: Administrators can quickly award points
+                    to students, providing immediate feedback.
+                </li>
+                <li>
+                    Announcements: Broadcast important messages to all users for
+                    clear communication and transparency.
+                </li>
+                <li>
+                    Calendar Management: Create calendars for students, leaders,
+                    and administrators to stay organized.
+                </li>
+                <li>
+                    Flexible for Any Organization: While built for schools, the
+                    app can be tailored for other types of organizations as
+                    needed.
+                </li>
+            </ul>
+        </section>
+
+        <a
+            href="https://the-house-app.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+        >
+            <AppSubmitButton theme="house" primary="true" client:only="vue">
+                See the website
+            </AppSubmitButton>
+        </a>
+        <a
+            href="https://app.the-house-app.com/example"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+        >
+            <AppSubmitButton theme="house" primary="true" client:only="vue">
+                Try it out
+            </AppSubmitButton>
+        </a>
+    </Card>
+    <Card>
+        <div class="wordmark">
+            <TheGradesAppWordmark />
+        </div>
+        <section>
+            <span class="heading">Coming soon!</span>
+        </section>
+    </Card>
+</MainLayout>
+<style lang="scss">
+    .wordmark {
+        margin-right: auto;
+        max-width: 250px;
+    }
+
+    li {
+        text-align: left;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    section {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .heading {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+</style>
