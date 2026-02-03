@@ -2,7 +2,7 @@
     <SidebarButton v-model="open" />
     <Sidebar v-model="open">
         <SideBarItem to="/">Home</SideBarItem>
-        <SideBarItem to="/products">Productx</SideBarItem>
+        <SideBarItem to="/products">Products</SideBarItem>
         <SideBarItem to="/bugs-tracker">Bugs</SideBarItem>
         <SideBarItem to="/blog">Blog</SideBarItem>
         <SideBarItem to="/contact">Contact</SideBarItem>
