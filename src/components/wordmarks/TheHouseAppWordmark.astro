@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import houseWordmarkDark from "@assets/icons/house/dark/wordmark.png";
+import houseWordmarkLight from "@assets/icons/house/light/wordmark.png";
+---
+
+<div class="logo thehouseapp">
+    <Image
+        src={houseWordmarkDark}
+        alt="The House App Logo"
+        class="icon icon-dark"
+    />
+    <Image
+        src={houseWordmarkLight}
+        alt="The House App Logo"
+        class="icon icon-light"
+    />
+</div>
+
+<style>
+    .logo {
+        img {
+            height: auto;
+        }
+        user-select: none;
+    }
+
+    .icon {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .icon-dark {
+        display: none;
+    }
+
+    :global(html.dark) .icon-light {
+        display: none;
+    }
+
+    :global(html.dark) .icon-dark {
+        display: inline;
+    }
+</style>

@@ -1,12 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import { Card, LargeTitleText, AppSubmitButton } from "@origami-systems/ui";
 import MainLayout from "~/layouts/MainLayout.astro";
-import houseWordmarkDark from "@assets/icons/house/dark/wordmark.png";
-import houseWordmarkLight from "@assets/icons/house/light/wordmark.png";
 
-import gradesWordmarkDark from "@assets/icons/grades/dark/wordmark.png";
-import gradesWordmarkLight from "@assets/icons/grades/light/wordmark.png";
+import TheHouseAppWordmark from "@/wordmarks/TheHouseAppWordmark.astro";
+import TheGradesAppWordmark from "@/wordmarks/TheGradesAppWordmark.astro";
 ---
 
 <MainLayout title="Products - Origami Systems">
@@ -18,18 +15,7 @@ import gradesWordmarkLight from "@assets/icons/grades/light/wordmark.png";
             rel="noopener noreferrer"
             class="wordmark"
         >
-            <div class="logo">
-                <Image
-                    src={houseWordmarkDark}
-                    alt="The House App Logo"
-                    class="icon icon-dark"
-                />
-                <Image
-                    src={houseWordmarkLight}
-                    alt="The House App Logo"
-                    class="icon icon-light"
-                />
-            </div>
+            <TheHouseAppWordmark />
         </a>
         <section>
             <span class="heading">Key Features</span>
@@ -65,7 +51,7 @@ import gradesWordmarkLight from "@assets/icons/grades/light/wordmark.png";
             class="link"
         >
             <AppSubmitButton theme="house" primary="true" client:only="vue">
-                See the Website
+                See the website
             </AppSubmitButton>
         </a>
         <a
@@ -75,24 +61,13 @@ import gradesWordmarkLight from "@assets/icons/grades/light/wordmark.png";
             class="link"
         >
             <AppSubmitButton theme="house" primary="true" client:only="vue">
-                Try it Out
+                Try it out
             </AppSubmitButton>
         </a>
     </Card>
     <Card>
         <div class="wordmark">
-            <div class="logo">
-                <Image
-                    src={gradesWordmarkDark}
-                    alt="The Grades App Logo"
-                    class="icon icon-dark"
-                />
-                <Image
-                    src={gradesWordmarkLight}
-                    alt="The Grades App Logo"
-                    class="icon icon-light"
-                />
-            </div>
+            <TheGradesAppWordmark />
         </div>
         <section>
             <span class="heading">Coming soon!</span>
@@ -102,30 +77,7 @@ import gradesWordmarkLight from "@assets/icons/grades/light/wordmark.png";
 <style lang="scss">
     .wordmark {
         margin-right: auto;
-    }
-
-    .logo {
-        img {
-            height: auto;
-            width: 250px;
-        }
-        user-select: none;
-    }
-
-    .icon {
-        max-width: 400px;
-    }
-
-    .icon-dark {
-        display: none;
-    }
-
-    :global(html.dark) .icon-light {
-        display: none;
-    }
-
-    :global(html.dark) .icon-dark {
-        display: inline;
+        max-width: 250px;
     }
 
     li {
