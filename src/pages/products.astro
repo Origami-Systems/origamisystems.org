@@ -1,0 +1,157 @@
+---
+import { Image } from "astro:assets";
+import { Card, LargeTitleText, AppSubmitButton } from "@origami-systems/ui";
+import MainLayout from "~/layouts/MainLayout.astro";
+import houseWordmarkDark from "@assets/icons/house/dark/wordmark.png";
+import houseWordmarkLight from "@assets/icons/house/light/wordmark.png";
+
+import gradesWordmarkDark from "@assets/icons/grades/dark/wordmark.png";
+import gradesWordmarkLight from "@assets/icons/grades/light/wordmark.png";
+---
+
+<MainLayout title="Products - Origami Systems">
+    <LargeTitleText>Products</LargeTitleText>
+    <Card>
+        <a
+            href="https://the-house-app.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wordmark"
+        >
+            <div class="logo">
+                <Image
+                    src={houseWordmarkDark}
+                    alt="The House App Logo"
+                    class="icon icon-dark"
+                />
+                <Image
+                    src={houseWordmarkLight}
+                    alt="The House App Logo"
+                    class="icon icon-light"
+                />
+            </div>
+        </a>
+        <section>
+            <span class="heading">Key Features</span>
+            <ul>
+                <li>
+                    Customizable Houses: Create and manage house names, colors,
+                    and the number of houses to fit your school’s culture.
+                </li>
+                <li>
+                    Instant Recognition: Administrators can quickly award points
+                    to students, providing immediate feedback.
+                </li>
+                <li>
+                    Announcements: Broadcast important messages to all users for
+                    clear communication and transparency.
+                </li>
+                <li>
+                    Calendar Management: Create calendars for students, leaders,
+                    and administrators to stay organized.
+                </li>
+                <li>
+                    Flexible for Any Organization: While built for schools, the
+                    app can be tailored for other types of organizations as
+                    needed.
+                </li>
+            </ul>
+        </section>
+
+        <a
+            href="https://the-house-app.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+        >
+            <AppSubmitButton theme="house" primary="true" client:only="vue">
+                See the Website
+            </AppSubmitButton>
+        </a>
+        <a
+            href="https://desktop.the-house-app.com/example"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+        >
+            <AppSubmitButton theme="house" primary="true" client:only="vue">
+                Try it Out
+            </AppSubmitButton>
+        </a>
+    </Card>
+    <Card>
+        <div class="wordmark">
+            <div class="logo">
+                <Image
+                    src={gradesWordmarkDark}
+                    alt="The Grades App Logo"
+                    class="icon icon-dark"
+                />
+                <Image
+                    src={gradesWordmarkLight}
+                    alt="The Grades App Logo"
+                    class="icon icon-light"
+                />
+            </div>
+        </div>
+        <section>
+            <span class="heading">Coming soon!</span>
+        </section>
+    </Card>
+</MainLayout>
+<style lang="scss">
+    .wordmark {
+        margin-right: auto;
+    }
+
+    .logo {
+        img {
+            height: auto;
+            width: 250px;
+        }
+        user-select: none;
+    }
+
+    .icon {
+        max-width: 400px;
+    }
+
+    .icon-dark {
+        display: none;
+    }
+
+    :global(html.dark) .icon-light {
+        display: none;
+    }
+
+    :global(html.dark) .icon-dark {
+        display: inline;
+    }
+
+    li {
+        text-align: left;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    section {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .heading {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+</style>
