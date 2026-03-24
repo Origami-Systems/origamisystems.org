@@ -77,8 +77,14 @@ import TheGradesAppWordmark from "@/wordmarks/TheGradesAppWordmark.astro";
         </Card>
     </div>
 </MainLayout>
-<style lang="scss">
-    .page :global(.card) {
+<style>
+    .page {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page > .card {
         width: 100%;
         max-width: 700px;
 
