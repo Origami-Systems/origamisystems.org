@@ -1,0 +1,30 @@
+<svg width="264" height="264" viewBox="0 0 264 264" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i_4037_7117)">
+<rect width="264" height="264" rx="58" fill="black"/>
+<rect x="2.5" y="2.5" width="259" height="259" rx="55.5" stroke="#D2F57E" stroke-width="5"/>
+<g clip-path="url(#clip0_4037_7117)">
+<rect x="156" y="56" width="24" height="48" fill="white"/>
+<rect x="108" y="176" width="24" height="24" fill="#9ECF00"/>
+<rect x="108" y="152" width="24" height="24" fill="#B6EC28"/>
+<rect x="156" y="104" width="24" height="48" fill="#BBE958"/>
+<rect x="84" y="56" width="24" height="48" fill="#D2F57E"/>
+<rect x="108" y="56" width="48" height="24" fill="#D7F0A3"/>
+<rect x="108" y="128" width="48" height="24" fill="#CCFF54"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_i_4037_7117" x="-5" y="-5" width="269" height="269" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="8" operator="erode" in="SourceAlpha" result="effect1_innerShadow_4037_7117"/>
+<feOffset dx="-5" dy="-5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.619608 0 0 0 0 0.811765 0 0 0 0 0 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_4037_7117"/>
+</filter>
+<clipPath id="clip0_4037_7117">
+<rect width="144" height="144" fill="white" transform="translate(60 56)"/>
+</clipPath>
+</defs>
+</svg>
