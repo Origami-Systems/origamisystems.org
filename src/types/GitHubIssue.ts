@@ -13,4 +13,3 @@ export interface GitHubIssue {
     body: string;
     state_reason: string;
 }
-

@@ -3,6 +3,4 @@ export interface FAQAnswers {
     questions: { q: string; a: string }[];
 }
 
-export const allQuestions: FAQAnswers[] = [
-];
-
+export const allQuestions: FAQAnswers[] = [];
