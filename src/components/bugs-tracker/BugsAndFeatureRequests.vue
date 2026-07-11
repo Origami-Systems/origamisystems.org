@@ -27,10 +27,9 @@
         </div>
         <div v-else class="left-aligned">
             <div class="container">
-                <span class="title"
-                    >No known issues at this time. If you encounter any problems, please report
-                    them!</span
-                >
+                <span class="title">
+                    No known issues at this time. If you encounter any problems, please report them!
+                </span>
             </div>
         </div>
     </RoundedContainer>
@@ -46,10 +45,10 @@
         </div>
         <div v-else class="left-aligned">
             <div class="container">
-                <span class="title"
-                    >No known enhancements or feature requests at this time. If you have any ideas
-                    for new features, please let us know!</span
-                >
+                <span class="title">
+                    No known enhancements or feature requests at this time. If you have any ideas
+                    for new features, please let us know!
+                </span>
             </div>
         </div>
     </RoundedContainer>
@@ -96,6 +95,10 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+.container {
+    text-align: center;
+}
+
 .settings {
     width: 100%;
     max-width: 700px;
