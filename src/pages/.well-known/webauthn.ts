@@ -5,5 +5,11 @@ export const GET: APIRoute = () => {
         JSON.stringify({
             origins: ["https://the-house-app.com"],
         }),
+        {
+            headers: {
+                "Access-Control-Allow-Origin": "https://the-house-app.com",
+                "Content-Type": "application/json",
+            },
+        },
     );
 };
