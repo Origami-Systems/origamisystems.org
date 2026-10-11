@@ -1,10 +1,1 @@
-<svg width="264" height="264" viewBox="0 0 264 264" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="264" height="264" rx="58" fill="black"/>
-<rect x="156" y="60" width="24" height="48" fill="white"/>
-<rect x="108" y="180" width="24" height="24" fill="#9ECF00"/>
-<rect x="108" y="156" width="24" height="24" fill="#B6EC28"/>
-<rect x="156" y="108" width="24" height="48" fill="#BBE958"/>
-<rect x="84" y="60" width="24" height="48" fill="#D2F57E"/>
-<rect x="108" y="60" width="48" height="24" fill="#D7F0A3"/>
-<rect x="108" y="132" width="48" height="24" fill="#CCFF54"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="264" height="264" fill="none" viewBox="0 0 264 264"><rect width="264" height="264" fill="#000" rx="58"/><path fill="#fff" d="M156 60h24v48h-24z"/><path fill="#9ecf00" d="M108 180h24v24h-24z"/><path fill="#b6ec28" d="M108 156h24v24h-24z"/><path fill="#bbe958" d="M156 108h24v48h-24z"/><path fill="#d2f57e" d="M84 60h24v48H84z"/><path fill="#d7f0a3" d="M108 60h48v24h-48z"/><path fill="#ccff54" d="M108 132h48v24h-48z"/></svg>

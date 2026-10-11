@@ -1,10 +1,1 @@
-<svg width="264" height="264" viewBox="0 0 264 264" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="204" y="48" width="48" height="72" fill="#FF005D"/>
-<rect x="156" y="24" width="48" height="96" fill="#FF9500"/>
-<rect x="108" width="48" height="120" fill="#FFC400"/>
-<rect x="108" y="24" width="96" height="48" transform="rotate(90 108 24)" fill="#B3FF00"/>
-<rect x="12" y="120" width="96" height="48" fill="#00FB60"/>
-<rect x="108" y="168" width="96" height="96" fill="#00C7A5"/>
-<rect x="204" y="120" width="48" height="96" fill="#5400FB"/>
-<rect x="108" y="120" width="96" height="48" fill="#006EFF"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="264" height="264" fill="none" viewBox="0 0 264 264"><path fill="#ff005d" d="M204 48h48v72h-48z"/><path fill="#ff9500" d="M156 24h48v96h-48z"/><path fill="#ffc400" d="M108 0h48v120h-48z"/><path fill="#b3ff00" d="M108 24v96H60V24z"/><path fill="#00fb60" d="M12 120h96v48H12z"/><path fill="#00c7a5" d="M108 168h96v96h-96z"/><path fill="#5400fb" d="M204 120h48v96h-48z"/><path fill="#006eff" d="M108 120h96v48h-96z"/></svg>
