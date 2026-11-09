@@ -4,6 +4,7 @@ import MainLayout from "~/layouts/MainLayout.astro";
 
 import TheHouseAppWordmark from "@/wordmarks/TheHouseAppWordmark.astro";
 import TheGradesAppWordmark from "@/wordmarks/TheGradesAppWordmark.astro";
+import TheSignupsAppWordmark from "@/wordmarks/TheSignupsAppWordmark.astro";
 ---
 
 <MainLayout title="Products - Origami Systems">
@@ -64,6 +65,62 @@ import TheGradesAppWordmark from "@/wordmarks/TheGradesAppWordmark.astro";
             >
                 <AppSubmitButton theme="house" primary="true" client:only="vue">
                     Try it out
+                </AppSubmitButton>
+            </a>
+        </Card>
+        <Card>
+            <a
+                href="https://signups.origamisystems.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="wordmark"
+            >
+                <TheSignupsAppWordmark />
+            </a>
+            <section>
+                <span class="heading">Key Features</span>
+                <ul>
+                    <li>
+                        Customizable Signup Forms: Create forms for events,
+                        volunteer opportunities, and activities with flexible
+                        sections and slots.
+                    </li>
+                    <li>
+                        Capacity Management: Set limits on individual slots and
+                        automatically track available spots.
+                    </li>
+                    <li>
+                        Waitlists: Allow participants to join a waitlist when a
+                        slot is full.
+                    </li>
+                    <li>
+                        Easy Sharing: Share signup forms with a public link so
+                        participants can quickly find and join opportunities.
+                    </li>
+                    <li>
+                        Organizer Dashboard: Monitor responses, view available
+                        spots, manage participants, and track signup activity in
+                        one place.
+                    </li>
+                    <li>
+                        Flexible Scheduling: Assign dates, times, and locations
+                        to signup opportunities to keep everyone organized.
+                    </li>
+                </ul>
+            </section>
+
+            <a
+                href="https://signups.origamisystems.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link"
+            >
+                <AppSubmitButton
+                    theme="signups"
+                    primary="true"
+                    client:only="vue"
+                >
+                    Open The Signups App
                 </AppSubmitButton>
             </a>
         </Card>
