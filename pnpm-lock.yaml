@@ -249,8 +249,8 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0
       '@origami-systems/ui':
-        specifier: ^7.0.0-beta.28
-        version: 7.0.0-beta.28(@lucide/vue@1.73.0(vue@3.5.46(typescript@5.9.3)))(@origami-systems/config@2.3.0)(vue@3.5.46(typescript@5.9.3))
+        specifier: ^7.0.0-beta.29
+        version: 7.0.0-beta.29(@lucide/vue@1.73.0(vue@3.5.46(typescript@5.9.3)))(@origami-systems/config@2.3.0)(vue@3.5.46(typescript@5.9.3))
       astro:
         specifier: 7.4.13
         version: 7.4.13(@types/node@24.13.2)(esbuild@0.28.2)(sass@1.101.0)(yaml@2.9.1)
@@ -1053,8 +1053,8 @@ packages:
   '@origami-systems/config@2.3.0':
     resolution: {integrity: sha512-oKOdCyu5BJF3Biv1qqviDD2NEiNoDcZ5p0RANb8kXiiwegF41l2h44QhwXAVZgJ11iaSvYKWurkDq4OUUQPAAA==, tarball: https://npm.pkg.github.com/download/@origami-systems/config/2.3.0/b61760a5e64687ee101309931e6fb74a14526503}
 
-  '@origami-systems/ui@7.0.0-beta.28':
-    resolution: {integrity: sha512-qsKWMwtBw/LGnE5UVp5UuyqHWXchwCipBVD5IaVJddJI8ld2DST1OBLWF3qSIu/LiCK6ZM+RRZ6E7Miz/aBLmQ==, tarball: https://npm.pkg.github.com/download/@origami-systems/ui/7.0.0-beta.28/29d52e3e354180ab46369777bca929f1e2f4fe14}
+  '@origami-systems/ui@7.0.0-beta.29':
+    resolution: {integrity: sha512-sruLKgy49VzNrR4Sv1OJrOB9hlux+Popn1JHDIh99b+aih7wkUs3qkKaENOjcFLmHVMjj6q+fuqfTRC8vcvMWg==, tarball: https://npm.pkg.github.com/download/@origami-systems/ui/7.0.0-beta.29/b0447527a2f9f6f80cc3d7d4b5251dcfb499835c}
     peerDependencies:
       '@lucide/vue': 1.73.0
       '@origami-systems/config': ^2.3.0
@@ -3823,7 +3823,7 @@ snapshots:
 
   '@origami-systems/config@2.3.0': {}
 
-  '@origami-systems/ui@7.0.0-beta.28(@lucide/vue@1.73.0(vue@3.5.46(typescript@5.9.3)))(@origami-systems/config@2.3.0)(vue@3.5.46(typescript@5.9.3))':
+  '@origami-systems/ui@7.0.0-beta.29(@lucide/vue@1.73.0(vue@3.5.46(typescript@5.9.3)))(@origami-systems/config@2.3.0)(vue@3.5.46(typescript@5.9.3))':
     dependencies:
       '@lucide/vue': 1.73.0(vue@3.5.46(typescript@5.9.3))
       '@origami-systems/config': 2.3.0

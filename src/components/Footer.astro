@@ -179,7 +179,7 @@ import IconLight from "@assets/icons/light/icon.png";
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: flex-start;
+            justify-content: center;
             gap: 1rem 2.5rem;
             width: 100%;
         }
@@ -189,6 +189,14 @@ import IconLight from "@assets/icons/light/icon.png";
         .footer-right .footer-columns a {
             font-size: 0.9rem;
             padding: 0.25rem 0;
+        }
+    }
+    @media (max-width: 560px) {
+        .footer .footer-right .footer-columns {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            gap: 1.5rem 3rem;
         }
     }
 </style>

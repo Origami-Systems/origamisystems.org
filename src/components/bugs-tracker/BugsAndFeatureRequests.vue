@@ -1,29 +1,36 @@
 <template>
     <div class="settings">
-        <input
-            type="search"
-            v-model="search"
-            class="search"
-            placeholder="Search"
-        />
+        <div class="search">
+            <TextField
+                v-model="search"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+            />
+        </div>
         <Dropdown
             :options="['Issues', 'Feature Requests']"
-            :option-display="(a: string) => a"
             v-model="mode"
             class="mode"
+            aria-label="Type"
         />
         <Dropdown
             :options="['Open', 'Closed']"
-            :option-display="(a: string) => a"
             v-model="status"
             class="status"
             width="140px"
+            aria-label="Status"
         />
     </div>
     <RoundedContainer v-if="mode === 'Issues'">
         <template #title>Known Issues</template>
+        <AppSkeleton v-if="loading" loading label="Loading issues">
+            <div v-for="item in placeholders" :key="item.id" class="left-aligned">
+                <BugItem :issue="item" />
+            </div>
+        </AppSkeleton>
         <div
-            v-if="filtered.length > 0"
+            v-else-if="filtered.length > 0"
             v-for="issue in filtered"
             :key="issue.id"
             class="left-aligned"
@@ -41,8 +48,13 @@
     </RoundedContainer>
     <RoundedContainer v-if="mode === 'Feature Requests'">
         <template #title>Enhancements and Feature Requests</template>
+        <AppSkeleton v-if="loading" loading label="Loading feature requests">
+            <div v-for="item in placeholders" :key="item.id" class="left-aligned">
+                <EnhancementItem :enhancement="item" />
+            </div>
+        </AppSkeleton>
         <div
-            v-if="filtered.length > 0"
+            v-else-if="filtered.length > 0"
             v-for="enhancement in filtered"
             :key="enhancement.id"
             class="left-aligned"
@@ -63,7 +75,7 @@
 <script setup lang="ts">
 import type { GitHubIssue } from "~/types/GitHubIssue";
 import { computed, onMounted, ref } from "vue";
-import { Dropdown, RoundedContainer } from "@origami-systems/ui";
+import { AppSkeleton, Dropdown, RoundedContainer, TextField } from "@origami-systems/ui";
 import BugItem from "./BugItem.vue";
 import EnhancementItem from "./EnhancementItem.vue";
 import { getEnhancements } from "@utils/GetEnhancements";
@@ -74,6 +86,20 @@ const status = ref<"Open" | "Closed">("Open");
 const search = ref<string>("");
 
 const issues = ref<GitHubIssue[]>([]);
+const loading = ref(true);
+const placeholders = [1, 2, 3].map(
+    (id) =>
+        ({
+            id,
+            number: id,
+            title: "Loading an item from the tracker",
+            state: "open",
+            html_url: "#",
+            labels: [],
+            body: "",
+            state_reason: "",
+        }) satisfies GitHubIssue,
+);
 const enhancements = ref<GitHubIssue[]>([]);
 
 const filtered = computed<GitHubIssue[]>(() => {
@@ -94,9 +120,11 @@ const filtered = computed<GitHubIssue[]>(() => {
     return result;
 });
 
-onMounted(() => {
-    getIssues().then((data) => (issues.value = data));
-    getEnhancements().then((data) => (enhancements.value = data));
+onMounted(async () => {
+    const [issueData, enhancementData] = await Promise.all([getIssues(), getEnhancements()]);
+    issues.value = issueData;
+    enhancements.value = enhancementData;
+    loading.value = false;
 });
 </script>
 

@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "astro dev",
         "build": "astro build",
-        "prod": "pnpm build && npx serve dist -l 4321",
+        "prod": "pnpm build && pnpx serve dist -l 4321",
         "preview": "astro preview",
         "astro": "astro",
         "typecheck": "astro check",
@@ -21,7 +21,7 @@
         "@astrojs/vue": "7.1.6",
         "@lucide/astro": "^1.77.0",
         "@origami-systems/config": "^2.3.0",
-        "@origami-systems/ui": "^7.0.0-beta.28",
+        "@origami-systems/ui": "^7.0.0-beta.29",
         "astro": "7.4.13",
         "sharp": "^0.35.5",
         "vue": "^3.5.46"

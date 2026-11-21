@@ -1,59 +1,44 @@
 <template>
     <form @submit.prevent class="form">
-        <label>
-            Name
-            <input
-                type="text"
-                v-model="name"
-                required
-                placeholder="Enter your name"
-                autocomplete="name"
-            />
-        </label>
-        <label>
-            Email Address
-            <input
-                type="email"
-                v-model="email"
-                required
-                placeholder="Enter your email"
-                autocomplete="email"
-            />
-        </label>
-        <label>
-            Organization
-            <input
-                type="text"
-                v-model="organization"
-                placeholder="Your company, school, or group"
-                required
-                autocomplete="organization"
-            />
-        </label>
-        <label>
-            How did you hear about us?
+        <TextField
+            v-model="name"
+            label="Name"
+            placeholder="Enter your name"
+            autocomplete="name"
+            required
+        />
+        <EmailField v-model="email" label="Email Address" placeholder="Enter your email" required />
+        <TextField
+            v-model="organization"
+            label="Organization"
+            placeholder="Your company, school, or group"
+            autocomplete="organization"
+            required
+        />
+        <Field label="How did you hear about us?" required full-width v-slot="field">
             <Dropdown
-                type="text"
+                :id="field.id"
                 v-model="hear"
-                :option-display="(a: string) => a"
                 :options="howDidYouHearAboutUsOptions"
+                width="100%"
                 required
             />
-        </label>
-        <label v-if="hear === 'Other'">
-            Please specify
-            <input
-                type="text"
-                v-model="howDidYouHearAboutUs"
-                required
-                placeholder="Tell us where you heard about us"
-            />
-        </label>
+        </Field>
+        <TextField
+            v-if="hear === 'Other'"
+            v-model="howDidYouHearAboutUs"
+            label="Please specify"
+            placeholder="Tell us where you heard about us"
+            required
+            stacked
+            full-width
+        />
         <TextArea
-            label="What would you like to know more about? (optional)"
             v-model="question"
+            label="What would you like to know more about?"
             placeholder="Tell us what interests you or any questions you have"
-            class="text-area"
+            stacked
+            full-width
         />
         <input
             type="text"
@@ -61,20 +46,22 @@
             name="hp_field"
             autocomplete="off"
             tabindex="-1"
+            aria-hidden="true"
             style="display: none"
         />
-        <AppSubmitButton type="submit" @click="submit" primary :disabled
-            >Submit</AppSubmitButton
-        >
+        <AppSubmitButton @click="submit" primary :disabled>Send Message</AppSubmitButton>
     </form>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import {
-    TextArea,
-    Dropdown,
     AppSubmitButton,
+    Dropdown,
+    EmailField,
+    Field,
+    TextArea,
+    TextField,
     useNotifications,
 } from "@origami-systems/ui";
 import { SubmitContact } from "@utils/SubmitContact";
@@ -115,8 +102,7 @@ const submit = async (done: () => void) => {
             notifications.error("Submission failed. Please try again.");
             return;
         }
-        const hearValue =
-            hear.value === "Other" ? howDidYouHearAboutUs.value : hear.value;
+        const hearValue = hear.value === "Other" ? howDidYouHearAboutUs.value : hear.value;
         const result = await SubmitContact(
             name.value,
             email.value,
@@ -143,11 +129,6 @@ const submit = async (done: () => void) => {
 </script>
 
 <style scoped>
-.text-area :deep(label) {
-    text-align: left;
-    margin-bottom: 10px;
-}
-
 .form {
     display: flex;
     flex-direction: column;
