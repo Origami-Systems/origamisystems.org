@@ -20,26 +20,23 @@ defineProps<{
 }>();
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .container {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
     padding: 10px;
     border-bottom: 0.5px solid var(--background-0);
-
-    .status-text {
-        padding: 6px;
-        border-radius: var(--border-radius);
-
-        &.closed {
-            background-color: var(--color-purple);
-        }
-
-        &.open {
-            background-color: var(--color-green);
-        }
-    }
+}
+.container .status-text {
+    padding: 6px;
+    border-radius: var(--border-radius);
+}
+.container .status-text.closed {
+    background-color: var(--color-purple);
+}
+.container .status-text.open {
+    background-color: var(--color-green);
 }
 
 .container:nth-child(odd) {

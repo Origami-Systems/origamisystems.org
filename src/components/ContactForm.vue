@@ -134,12 +134,10 @@ const submit = async (done: () => void) => {
 };
 </script>
 
-<style lang="scss" scoped>
-.text-area {
-    :deep(label) {
-        text-align: left;
-        margin-bottom: 10px;
-    }
+<style scoped>
+.text-area :deep(label) {
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .form {

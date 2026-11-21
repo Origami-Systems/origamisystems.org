@@ -32,16 +32,15 @@ import BugsAndFeatureRequests from "@/bugs-tracker/BugsAndFeatureRequests.vue";
     </div>
 </MainLayout>
 
-<style lang="scss">
+<style>
     .bugs {
         display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: center;
-
-        :global(.card) {
-            margin-bottom: 0px;
-            max-width: 700px;
-        }
+    }
+    .bugs :global(.card) {
+        margin-bottom: 0px;
+        max-width: 700px;
     }
 </style>

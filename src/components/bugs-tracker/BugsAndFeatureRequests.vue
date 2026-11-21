@@ -94,7 +94,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .container {
     text-align: center;
 }
@@ -114,19 +114,16 @@ onMounted(() => {
     .settings {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .search {
         grid-column: span 2;
     }
 }
-
 @media (max-width: 460px) {
     .settings {
         grid-template-columns: 1fr;
-
-        .search {
-            grid-column: span 1;
-        }
+    }
+    .settings .search {
+        grid-column: span 1;
     }
 }
 </style>

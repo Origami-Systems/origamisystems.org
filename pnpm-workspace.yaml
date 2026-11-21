@@ -6,3 +6,5 @@ minimumReleaseAgeExclude:
     - astro
     - "@astrojs/*"
     - "@origami-systems/*"
+lockfile:
+    includeResolutionSettings: true

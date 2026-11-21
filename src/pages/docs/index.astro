@@ -23,28 +23,25 @@ const posts = await getCollection("docs");
         }
     </CardGrid>
 </MainLayout>
-<style lang="scss">
+<style>
     .link {
         display: grid;
         flex: 1;
-
-        .item {
-            position: relative;
-            padding: 20px;
-            text-align: left;
-            border: var(--border);
-            border-radius: var(--border-radius);
-
-            .title {
-                color: var(--text-0);
-                font-weight: bold;
-                margin-bottom: 20px;
-                font-size: 1.2rem;
-            }
-
-            .description {
-                color: var(--subtext-0);
-            }
-        }
+    }
+    .link .item {
+        position: relative;
+        padding: 20px;
+        text-align: left;
+        border: var(--border);
+        border-radius: var(--border-radius);
+    }
+    .link .item .title {
+        color: var(--text-0);
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+    .link .item .description {
+        color: var(--subtext-0);
     }
 </style>

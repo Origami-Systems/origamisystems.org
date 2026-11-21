@@ -24,11 +24,9 @@ onMounted(() => {
 });
 </script>
 
-<style scoped lang="scss">
-.active {
-    :deep(p) {
-        color: var(--accent);
-    }
+<style scoped>
+.active :deep(p) {
+    color: var(--accent);
 }
 
 .title {
@@ -37,10 +35,9 @@ onMounted(() => {
     font-weight: bold;
     color: var(--text-0);
     user-select: none;
-
-    &:hover {
-        color: var(--accent);
-        cursor: pointer;
-    }
+}
+.title:hover {
+    color: var(--accent);
+    cursor: pointer;
 }
 </style>

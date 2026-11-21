@@ -33,18 +33,16 @@ const { Content } = await render(docs);
     </div>
 </MainLayout>
 
-<style lang="scss">
+<style>
     .docs {
         width: 80vw;
-
-        .header {
-            margin-bottom: 1rem;
-            text-align: left;
-
-            .description {
-                color: var(--subtext-0);
-            }
-        }
+    }
+    .docs .header {
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    .docs .header .description {
+        color: var(--subtext-0);
     }
 
     hr {

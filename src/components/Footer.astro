@@ -75,7 +75,7 @@ import IconLight from "@assets/icons/light/icon.png";
     </div>
 </footer>
 
-<style lang="scss">
+<style>
     .footer {
         margin-top: 6.5rem;
         padding: 2rem;
@@ -83,57 +83,46 @@ import IconLight from "@assets/icons/light/icon.png";
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 0;
         margin-bottom: -35px;
         transition: var(--transitions);
-
-        .footer-left {
-            margin-bottom: 1rem;
-
-            .footer-info {
-                display: flex;
-                align-items: center;
-
-                .footer-logo {
-                    border-radius: 0.5rem;
-                    margin-right: 1rem;
-                    user-select: none;
-                }
-
-                .footer-text a {
-                    text-decoration: none;
-                }
-            }
-        }
-
-        .footer-right {
-            .footer-columns {
-                display: flex;
-                flex-direction: row;
-                gap: 5rem;
-                text-align: left;
-
-                h4 {
-                    font-weight: bold;
-                    font-size: 1rem;
-                    margin-bottom: 0.5rem;
-                    user-select: none;
-                }
-
-                a {
-                    display: block;
-                    color: var(--text-1);
-                    font-size: 0.9rem;
-                    text-decoration: none;
-                    margin: 0.25rem 0;
-                    transition: color 0.2s ease;
-
-                    &:hover {
-                        color: var(--accent);
-                    }
-                }
-            }
-        }
+    }
+    .footer .footer-left {
+        margin-bottom: 1rem;
+    }
+    .footer .footer-left .footer-info {
+        display: flex;
+        align-items: center;
+    }
+    .footer .footer-left .footer-info .footer-logo {
+        border-radius: 0.5rem;
+        margin-right: 1rem;
+        user-select: none;
+    }
+    .footer .footer-left .footer-info .footer-text a {
+        text-decoration: none;
+    }
+    .footer .footer-right .footer-columns {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        text-align: left;
+    }
+    .footer .footer-right .footer-columns h4 {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        user-select: none;
+    }
+    .footer .footer-right .footer-columns a {
+        display: block;
+        color: var(--text-1);
+        font-size: 0.9rem;
+        text-decoration: none;
+        margin: 0.25rem 0;
+        transition: color 0.2s ease;
+    }
+    .footer .footer-right .footer-columns a:hover {
+        color: var(--accent);
     }
 
     .link {
@@ -149,29 +138,24 @@ import IconLight from "@assets/icons/light/icon.png";
             align-items: flex-start;
             gap: 1.5rem;
         }
-
         .footer-left {
             width: 100%;
             order: 2;
             margin-bottom: 0;
-
-            .footer-info {
-                justify-content: center;
-                text-align: left;
-
-                .footer-logo {
-                    margin-right: 0.5rem;
-                }
-
-                .footer-text {
-                    font-size: 0.85rem;
-                    word-wrap: wrap;
-                    word-spacing: normal;
-                    word-break: normal;
-                }
-            }
         }
-
+        .footer-left .footer-info {
+            justify-content: center;
+            text-align: left;
+        }
+        .footer-left .footer-info .footer-logo {
+            margin-right: 0.5rem;
+        }
+        .footer-left .footer-info .footer-text {
+            font-size: 0.85rem;
+            word-wrap: wrap;
+            word-spacing: normal;
+            word-break: normal;
+        }
         .footer-right {
             display: flex;
             flex-direction: column;
@@ -179,23 +163,20 @@ import IconLight from "@assets/icons/light/icon.png";
             gap: 1.5rem;
             order: 1;
             width: 100%;
-
-            .footer-columns {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                gap: 0.5rem;
-                width: 100%;
-
-                h4 {
-                    font-size: 1rem;
-                }
-
-                a {
-                    font-size: 0.9rem;
-                    padding: 0.25rem 0;
-                }
-            }
+        }
+        .footer-right .footer-columns {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        .footer-right .footer-columns h4 {
+            font-size: 1rem;
+        }
+        .footer-right .footer-columns a {
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
         }
     }
 </style>
