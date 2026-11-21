@@ -1,175 +1,296 @@
 ---
-import { Card, LargeTitleText, AppSubmitButton } from "@origami-systems/ui";
+import { Image } from "astro:assets";
+import { AppSubmitButton, Badge, Card, CardGrid, LargeTitleText } from "@origami-systems/ui";
+import {
+    BookOpen,
+    CalendarDays,
+    ClipboardList,
+    Gauge,
+    Link2,
+    ListChecks,
+    Megaphone,
+    Palette,
+    Trophy,
+    UsersRound,
+    Hourglass,
+} from "@lucide/astro";
 import MainLayout from "~/layouts/MainLayout.astro";
-
 import TheHouseAppWordmark from "@/wordmarks/TheHouseAppWordmark.astro";
 import TheGradesAppWordmark from "@/wordmarks/TheGradesAppWordmark.astro";
 import TheSignupsAppWordmark from "@/wordmarks/TheSignupsAppWordmark.astro";
+import accountLight from "@assets/icons/account/light/rounded.png";
+import accountDark from "@assets/icons/account/dark/rounded.png";
 ---
 
-<MainLayout title="Products - Origami Systems">
-    <LargeTitleText>Products</LargeTitleText>
-    <div class="page">
-        <Card style="--accent: var(--house-app)">
-            <a
-                href="https://the-house-app.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="wordmark"
-            >
-                <TheHouseAppWordmark />
-            </a>
-            <section>
-                <span class="heading">Key Features</span>
-                <ul>
-                    <li>
-                        Customizable Houses: Create and manage house names,
-                        colors, and the number of houses to fit your school’s
-                        culture.
-                    </li>
-                    <li>
-                        Instant Recognition: Administrators can quickly award
-                        points to students, providing immediate feedback.
-                    </li>
-                    <li>
-                        Announcements: Broadcast important messages to all users
-                        for clear communication and transparency.
-                    </li>
-                    <li>
-                        Calendar Management: Create calendars for students,
-                        leaders, and administrators to stay organized.
-                    </li>
-                    <li>
-                        Flexible for Any Organization: While built for schools,
-                        the app can be tailored for other types of organizations
-                        as needed.
-                    </li>
-                </ul>
-            </section>
+<MainLayout title="Products - Origami Systems" mainClass="marketing products">
+    <section class="page-section header">
+        <LargeTitleText>Products</LargeTitleText>
+        <p class="lede">
+            Each app solves one problem well. Use one on its own or several
+            together with the same account.
+        </p>
+    </section>
 
-            <a
-                href="https://the-house-app.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="link"
-            >
-                <AppSubmitButton theme="house" primary="true" client:only="vue">
-                    See the website
-                </AppSubmitButton>
-            </a>
-            <a
-                href="https://app.the-house-app.com/example"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="link"
-            >
-                <AppSubmitButton theme="house" primary="true" client:only="vue">
-                    Try it out
-                </AppSubmitButton>
-            </a>
-        </Card>
-        <Card style="--accent: var(--signups-app)">
-            <a
-                href="https://signups.origamisystems.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="wordmark"
-            >
-                <TheSignupsAppWordmark />
-            </a>
-            <section>
-                <span class="heading">Key Features</span>
-                <ul>
-                    <li>
-                        Customizable Signup Forms: Create forms for events,
-                        volunteer opportunities, and activities with flexible
-                        sections and slots.
-                    </li>
-                    <li>
-                        Capacity Management: Set limits on individual slots and
-                        automatically track available spots.
-                    </li>
-                    <li>
-                        Waitlists: Allow participants to join a waitlist when a
-                        slot is full.
-                    </li>
-                    <li>
-                        Easy Sharing: Share signup forms with a public link so
-                        participants can quickly find and join opportunities.
-                    </li>
-                    <li>
-                        Organizer Dashboard: Monitor responses, view available
-                        spots, manage participants, and track signup activity in
-                        one place.
-                    </li>
-                    <li>
-                        Flexible Scheduling: Assign dates, times, and locations
-                        to signup opportunities to keep everyone organized.
-                    </li>
-                </ul>
-            </section>
+    <div class="product-list">
+        <article class="product" style="--accent: var(--house-app)">
+            <header class="product-header">
+                <div class="wordmark"><TheHouseAppWordmark /></div>
+                <p>
+                    Build community through friendly competition. Bring houses,
+                    points, events, and announcements together in one shared
+                    home.
+                </p>
+                <div class="actions">
+                    <a
+                        href="https://the-house-app.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <AppSubmitButton theme="house" client:only="vue">
+                            Visit the Website
+                        </AppSubmitButton>
+                    </a>
+                    <a
+                        href="https://app.the-house-app.com/example"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <AppSubmitButton client:only="vue">
+                            Explore an Example
+                        </AppSubmitButton>
+                    </a>
+                </div>
+            </header>
+            <ul class="features" aria-label="The House App features">
+                <li>
+                    <Palette size={20} aria-hidden="true" />
+                    <span><strong>Your houses</strong> Names, colors, mottos, leaders, and as many houses as you need.</span>
+                </li>
+                <li>
+                    <Trophy size={20} aria-hidden="true" />
+                    <span><strong>Points and standings</strong> Award points as they are earned and show live results.</span>
+                </li>
+                <li>
+                    <Megaphone size={20} aria-hidden="true" />
+                    <span><strong>Announcements</strong> Send updates to everyone or just the people who need them.</span>
+                </li>
+                <li>
+                    <CalendarDays size={20} aria-hidden="true" />
+                    <span><strong>Calendars</strong> Separate calendars for students, leaders, and staff.</span>
+                </li>
+            </ul>
+        </article>
 
-            <a
-                href="https://signups.origamisystems.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="link"
-            >
-                <AppSubmitButton
-                    theme="signups"
-                    primary="true"
-                    client:only="vue"
-                >
-                    Open The Signups App
-                </AppSubmitButton>
-            </a>
-        </Card>
-        <Card style="--accent: var(--grades-app)">
-            <div class="wordmark">
-                <TheGradesAppWordmark />
-            </div>
-            <section>
-                <span class="heading">Coming soon!</span>
-            </section>
-        </Card>
+        <article class="product" style="--accent: var(--signups-app)">
+            <header class="product-header">
+                <div class="wordmark"><TheSignupsAppWordmark /></div>
+                <p>
+                    Collect signups for events, shifts, and volunteer work
+                    without the spreadsheet. Set it up in minutes and share one
+                    link.
+                </p>
+                <div class="actions">
+                    <a
+                        href="https://signups.origamisystems.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <AppSubmitButton theme="signups" client:only="vue">
+                            Open The Signups App
+                        </AppSubmitButton>
+                    </a>
+                    <a href="/signups">
+                        <AppSubmitButton client:only="vue">Learn More</AppSubmitButton>
+                    </a>
+                </div>
+            </header>
+            <ul class="features" aria-label="The Signups App features">
+                <li>
+                    <ClipboardList size={20} aria-hidden="true" />
+                    <span><strong>Flexible forms</strong> Organize sections and slots with dates, times, and locations.</span>
+                </li>
+                <li>
+                    <Gauge size={20} aria-hidden="true" />
+                    <span><strong>Capacity limits</strong> Cap each slot and see open spots update on their own.</span>
+                </li>
+                <li>
+                    <Hourglass size={20} aria-hidden="true" />
+                    <span><strong>Waitlists</strong> Let people wait for a spot when a slot fills up.</span>
+                </li>
+                <li>
+                    <Link2 size={20} aria-hidden="true" />
+                    <span><strong>Easy sharing</strong> Share a public link so anyone can find and join.</span>
+                </li>
+                <li>
+                    <UsersRound size={20} aria-hidden="true" />
+                    <span><strong>Organizer dashboard</strong> Follow responses and manage participants in one place.</span>
+                </li>
+            </ul>
+        </article>
+
+        <article class="product" style="--accent: var(--grades-app)">
+            <header class="product-header">
+                <div class="title-row">
+                    <div class="wordmark"><TheGradesAppWordmark /></div>
+                    <Badge theme="grades">Coming soon</Badge>
+                </div>
+                <p>
+                    A straightforward gradebook for teachers, with assignments
+                    and scores that fit with the rest of our apps.
+                </p>
+            </header>
+            <ul class="features" aria-label="The Grades App plans">
+                <li>
+                    <ListChecks size={20} aria-hidden="true" />
+                    <span><strong>Gradebooks</strong> Assignments, scores, and progress for every class.</span>
+                </li>
+            </ul>
+        </article>
     </div>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>Included with every app.</h2>
+            <p>These come with each product at no extra setup.</p>
+        </div>
+        <CardGrid class="card-grid-wide" minWidth="300px">
+            <Card heading="h3">
+                <span slot="title" class="card-title-row account-head"><Image src={accountLight} alt="" class="app-icon icon-light" />
+                    <Image src={accountDark} alt="" class="app-icon icon-dark" />Origami Systems Account</span>
+                <p>
+                    One sign-in for every app, with passkeys, two-factor
+                    authentication, and sessions that stay signed in.
+                </p>
+                <a href="https://account.origamisystems.org" class="card-action" target="_blank" rel="noopener noreferrer"><AppSubmitButton client:only="vue">Open your account</AppSubmitButton></a>
+            </Card>
+            <Card heading="h3">
+                <span slot="title" class="card-title-row"><span class="feature-icon"><BookOpen size={22} aria-hidden="true" /></span>The Help App</span>
+                <p>
+                    Guides for every product, plus a direct way to contact us
+                    when something goes wrong.
+                </p>
+                <a href="https://help.origamisystems.org" class="card-action" target="_blank" rel="noopener noreferrer"><AppSubmitButton client:only="vue">Visit The Help App</AppSubmitButton></a>
+            </Card>
+        </CardGrid>
+    </section>
+
+    <section class="cta">
+        <div class="cta-copy">
+            <h2>Not sure where to start?</h2>
+            <p>
+                Tell us what you are organizing and we will point you to the
+                right app.
+            </p>
+        </div>
+        <div class="actions">
+            <a href="/contact">
+                <AppSubmitButton primary client:only="vue">Contact Us</AppSubmitButton>
+            </a>
+            <a href="/schools">
+                <AppSubmitButton client:only="vue">For Schools</AppSubmitButton>
+            </a>
+        </div>
+    </section>
 </MainLayout>
+
 <style>
-    .page {
+    .header {
+        gap: var(--space-control);
+    }
+    .product-list {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: var(--space-section);
+        width: min(1000px, 100%);
+        margin-top: -3rem;
     }
-
-    .page > .card {
-        width: 100%;
-        max-width: 700px;
-
-        .wordmark {
-            margin-right: auto;
-            max-width: 250px;
+    .product {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        border: var(--border);
+        border-radius: var(--border-radius);
+        background: var(--card-background);
+        overflow: hidden;
+    }
+    .product-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-section);
+        padding: clamp(20px, 4vw, 40px);
+        border-right: var(--border);
+    }
+    .title-row .wordmark {
+        flex: 0 1 240px;
+    }
+    .title-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-control);
+    }
+    .wordmark {
+        width: min(240px, 100%);
+    }
+    .product-header p {
+        margin: 0;
+        color: var(--text-1);
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+    .features {
+        list-style: none;
+        margin: 0;
+        padding: clamp(20px, 4vw, 40px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.1rem;
+    }
+    .features li {
+        display: flex;
+        gap: 0.8rem;
+        align-items: flex-start;
+        line-height: var(--line-height-body);
+    }
+    .features li > :global(svg) {
+        flex-shrink: 0;
+        margin-top: 2px;
+        color: var(--accent);
+    }
+    .features span {
+        color: var(--subtext-0);
+    }
+    .features strong {
+        display: block;
+        color: var(--text-0);
+        font-weight: var(--weight-label);
+    }
+    .account-head {
+        display: flex;
+        align-items: center;
+        gap: var(--space-control);
+    }
+    .account-head :global(.app-icon) {
+        width: 44px;
+        height: 44px;
+    }
+    .account-head :global(.icon-dark) {
+        display: none;
+    }
+    :global(html.dark) .account-head :global(.icon-light) {
+        display: none;
+    }
+    :global(html.dark) .account-head :global(.icon-dark) {
+        display: block;
+    }
+    @media (max-width: 800px) {
+        .product {
+            grid-template-columns: 1fr;
         }
-
-        li {
-            text-align: left;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        section {
-            text-align: left;
-            margin-top: 10px;
-        }
-
-        .heading {
-            font-weight: bold;
-            font-size: 1.2em;
+        .product-header {
+            border-right: none;
+            border-bottom: var(--border);
         }
     }
 </style>

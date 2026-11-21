@@ -2,6 +2,7 @@
 interface Props {
     title?: string;
     description?: string;
+    mainClass?: string;
 }
 
 import Footer from "../components/Footer.astro";
@@ -11,8 +12,13 @@ import LocalNotifications from "@/LocalNotifications.vue";
 
 import "../styles/global.css";
 import "@origami-systems/ui/style.css";
+import "../styles/marketing.css";
 
-const { title = "Origami Systems", description = "" } = Astro.props;
+const {
+    title = "Origami Systems",
+    description = "",
+    mainClass,
+} = Astro.props;
 ---
 
 <html lang="en" class="light">
@@ -25,7 +31,7 @@ const { title = "Origami Systems", description = "" } = Astro.props;
         <header id="title-bar-layout-header">
             <TitleBar />
         </header>
-        <main id="title-bar-layout">
+        <main id="title-bar-layout" class={mainClass}>
             <slot />
         </main>
         <Footer />

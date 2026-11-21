@@ -1,6 +1,11 @@
 <template>
     <div class="settings">
-        <input type="search" v-model="search" class="search" placeholder="Search" />
+        <input
+            type="search"
+            v-model="search"
+            class="search"
+            placeholder="Search"
+        />
         <Dropdown
             :options="['Issues', 'Feature Requests']"
             :option-display="(a: string) => a"
@@ -28,7 +33,8 @@
         <div v-else class="left-aligned">
             <div class="container">
                 <span class="title">
-                    No known issues at this time. If you encounter any problems, please report them!
+                    No known issues at this time. If you encounter any problems,
+                    please report them!
                 </span>
             </div>
         </div>
@@ -46,8 +52,8 @@
         <div v-else class="left-aligned">
             <div class="container">
                 <span class="title">
-                    No known enhancements or feature requests at this time. If you have any ideas
-                    for new features, please let us know!
+                    No known enhancements or feature requests at this time. If
+                    you have any ideas for new features, please let us know!
                 </span>
             </div>
         </div>

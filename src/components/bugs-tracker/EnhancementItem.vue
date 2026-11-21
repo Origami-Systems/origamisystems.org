@@ -1,7 +1,9 @@
 <template>
     <a :href="enhancement.html_url" class="link">
         <div class="container">
-            <span class="title">#{{ enhancement.number }}: {{ enhancement.title }}</span>
+            <span class="title"
+                >#{{ enhancement.number }}: {{ enhancement.title }}</span
+            >
             <span
                 class="status-text capitalize"
                 style="color: var(--always-white)"

@@ -9,7 +9,8 @@
         "prod": "pnpm build && npx serve dist -l 4321",
         "preview": "astro preview",
         "astro": "astro",
-        "typecheck": "astro check"
+        "typecheck": "astro check",
+        "fmt": "prettier --write ."
     },
     "dependencies": {
         "@astrojs/check": "0.9.12",
@@ -20,7 +21,7 @@
         "@astrojs/vue": "7.1.6",
         "@lucide/astro": "^1.52.0",
         "@origami-systems/config": "^2.3.0",
-        "@origami-systems/ui": "^6.2.3",
+        "@origami-systems/ui": "^7.0.0-beta.28",
         "astro": "7.4.13",
         "sharp": "^0.34.5",
         "vue": "^3.5.43"

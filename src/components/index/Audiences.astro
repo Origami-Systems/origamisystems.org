@@ -1,0 +1,29 @@
+---
+import { AppSubmitButton, Card, CardGrid } from "@origami-systems/ui";
+import { Building2, School, UsersRound } from "@lucide/astro";
+---
+
+<CardGrid class="card-grid-wide three-up" minWidth="220px">
+    <Card heading="h3">
+        <span slot="title" class="card-title-row"><span class="feature-icon"><School size={22} aria-hidden="true" /></span>Schools</span>
+        <p>
+            Run a house system, organize volunteers and conferences, and keep
+            staff and students on the same page.
+        </p>
+        <a href="/schools" class="text-link card-link">See how schools use it</a>
+    </Card>
+    <Card heading="h3">
+        <span slot="title" class="card-title-row"><span class="feature-icon"><Building2 size={22} aria-hidden="true" /></span>Organizations</span>
+        <p>
+            Nonprofits, churches, and businesses can collect signups for events
+            and shifts, and share updates with the people involved.
+        </p>
+    </Card>
+    <Card heading="h3">
+        <span slot="title" class="card-title-row"><span class="feature-icon"><UsersRound size={22} aria-hidden="true" /></span>Teams and clubs</span>
+        <p>
+            Coordinate who brings what, who works which shift, and who is
+            coming, without a long email thread.
+        </p>
+    </Card>
+</CardGrid>

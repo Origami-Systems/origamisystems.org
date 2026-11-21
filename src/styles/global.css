@@ -9,5 +9,21 @@
 
 html {
     transition:
-        background-color var(--transition-time) ease, color var(--transition-time) ease;
+        background-color var(--transition-time) ease,
+        color var(--transition-time) ease;
+}
+
+/* While the theme switches, turn off per-element transitions so the page
+   changes in one step (cross-faded by the View Transition when supported). */
+html.theme-switching,
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+    transition: none !important;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
 }

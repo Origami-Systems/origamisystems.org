@@ -63,13 +63,20 @@
             tabindex="-1"
             style="display: none"
         />
-        <AppSubmitButton type="submit" @click="submit" primary :disabled>Submit</AppSubmitButton>
+        <AppSubmitButton type="submit" @click="submit" primary :disabled
+            >Submit</AppSubmitButton
+        >
     </form>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { TextArea, Dropdown, AppSubmitButton, useNotifications } from "@origami-systems/ui";
+import {
+    TextArea,
+    Dropdown,
+    AppSubmitButton,
+    useNotifications,
+} from "@origami-systems/ui";
 import { SubmitContact } from "@utils/SubmitContact";
 
 const hp_field = ref("");
@@ -108,7 +115,8 @@ const submit = async (done: () => void) => {
             notifications.error("Submission failed. Please try again.");
             return;
         }
-        const hearValue = hear.value === "Other" ? howDidYouHearAboutUs.value : hear.value;
+        const hearValue =
+            hear.value === "Other" ? howDidYouHearAboutUs.value : hear.value;
         const result = await SubmitContact(
             name.value,
             email.value,

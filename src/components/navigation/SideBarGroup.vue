@@ -3,6 +3,7 @@
     <Sidebar v-model="open">
         <SideBarItem to="/">Home</SideBarItem>
         <SideBarItem to="/products">Products</SideBarItem>
+        <SideBarItem to="/about">About</SideBarItem>
         <SideBarItem to="/bugs-tracker">Bugs</SideBarItem>
         <SideBarItem to="/blog">Blog</SideBarItem>
         <SideBarItem to="/contact">Contact</SideBarItem>
