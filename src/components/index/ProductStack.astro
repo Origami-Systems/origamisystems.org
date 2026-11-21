@@ -1,0 +1,164 @@
+---
+import { Image } from "astro:assets";
+import { ArrowUpRight } from "@lucide/astro";
+import { Badge } from "@origami-systems/ui";
+import houseLight from "@assets/icons/house/light/rounded.png";
+import houseDark from "@assets/icons/house/dark/rounded.png";
+import signupsLight from "@assets/icons/signups/light/rounded.png";
+import signupsDark from "@assets/icons/signups/dark/rounded.png";
+import gradesLight from "@assets/icons/grades/light/rounded.png";
+import gradesDark from "@assets/icons/grades/dark/rounded.png";
+
+const products = [
+    {
+        name: "The House App",
+        description: "Points, events, and announcements for house systems.",
+        href: "https://the-house-app.com",
+        accent: "var(--house-app)",
+        light: houseLight,
+        dark: houseDark,
+    },
+    {
+        name: "The Signups App",
+        description: "Signup forms with slots, limits, and waitlists.",
+        href: "/signups",
+        accent: "var(--signups-app)",
+        light: signupsLight,
+        dark: signupsDark,
+    },
+    {
+        name: "The Grades App",
+        description: "Gradebooks and assignments for teachers.",
+        accent: "var(--grades-app)",
+        light: gradesLight,
+        dark: gradesDark,
+        soon: true,
+    },
+];
+---
+
+<ul class="product-stack" aria-label="Our products">
+    {
+        products.map((product) => {
+            const Tag = product.href ? "a" : "div";
+            return (
+                <li style={`--accent: ${product.accent}`}>
+                    <Tag
+                        class="product"
+                        href={product.href}
+                        target={product.href?.startsWith("http") ? "_blank" : undefined}
+                        rel={product.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                    >
+                        <span class="app-icon">
+                            <Image src={product.light} alt="" class="icon-light" />
+                            <Image src={product.dark} alt="" class="icon-dark" />
+                        </span>
+                        <span class="text">
+                            <strong>{product.name}</strong>
+                            <small>{product.description}</small>
+                        </span>
+                        {product.soon ? (
+                            <Badge theme="grades">Coming soon</Badge>
+                        ) : (
+                            <ArrowUpRight size={20} class="arrow" aria-hidden="true" />
+                        )}
+                    </Tag>
+                </li>
+            );
+        })
+    }
+</ul>
+
+<style>
+    .product-stack {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .product {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 1.2rem;
+        border: var(--border);
+        border-radius: var(--border-radius);
+        background: var(--card-background);
+        color: var(--text-0);
+        text-decoration: none;
+        transition:
+            transform var(--transition-time) ease,
+            box-shadow var(--transition-time) ease,
+            border-color var(--transition-time) ease;
+    }
+    li:nth-child(2) .product {
+        margin-left: clamp(0px, 4vw, 40px);
+    }
+    li:nth-child(3) .product {
+        margin-left: clamp(0px, 8vw, 80px);
+    }
+    a.product:hover,
+    a.product:focus-visible {
+        border-color: var(--accent);
+        box-shadow: 5px 5px 0 var(--accent);
+        transform: translate(-2px, -2px);
+    }
+    .app-icon {
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+    }
+    .app-icon :global(img) {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .icon-dark {
+        display: none;
+    }
+    :global(html.dark) .icon-light {
+        display: none;
+    }
+    :global(html.dark) .icon-dark {
+        display: block;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        flex: 1;
+        min-width: 0;
+    }
+    .text strong {
+        font-size: var(--text-size-card-title);
+        line-height: var(--line-height-heading);
+    }
+    .text small {
+        color: var(--subtext-0);
+        font-size: var(--text-size-small);
+    }
+    .product :global(.arrow) {
+        flex-shrink: 0;
+        color: var(--accent);
+    }
+    @media (max-width: 850px) {
+        li .product {
+            margin-left: 0 !important;
+        }
+    }
+    @media (max-width: 480px) {
+        .product {
+            flex-wrap: wrap;
+        }
+        .text {
+            flex-basis: calc(100% - 56px - 1rem - 36px);
+        }
+        .product :global(.badge),
+        .product > :global(span:last-child:not(.text)) {
+            margin-left: calc(56px + 1rem);
+        }
+    }
+</style>

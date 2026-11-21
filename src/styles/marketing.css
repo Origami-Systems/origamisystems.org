@@ -1,0 +1,204 @@
+/* Shared layout for the marketing pages (home, products, about, schools). */
+main#title-bar-layout.marketing {
+    width: min(1180px, 100%);
+    margin-inline: auto;
+    gap: 6rem;
+    padding: clamp(2.5rem, 6vw, 5rem) 16px 5rem;
+}
+:where(.marketing) .page-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-section);
+    width: min(1000px, 100%);
+}
+:where(.marketing) .section-intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-control);
+    max-width: 720px;
+}
+:where(.marketing) .section-intro.centered {
+    align-self: center;
+    text-align: center;
+}
+:where(.marketing) .section-intro h2 {
+    margin: 0;
+    color: var(--text-0);
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: var(--weight-heading);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+}
+:where(.marketing) .section-intro p,
+:where(.marketing) .lede {
+    margin: 0;
+    color: var(--subtext-0);
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+.marketing .card-grid-wide > .card,
+.marketing .card-grid-wide .card {
+    max-width: unset;
+}
+.marketing .card p {
+    margin: 0;
+    color: var(--subtext-0);
+    line-height: var(--line-height-body);
+}
+:where(.marketing) .feature-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+:where(.marketing) .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-control);
+}
+:where(.marketing) .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    border: var(--border);
+    border-radius: calc(var(--border-radius) + 6px);
+    background: var(--card-background);
+    padding: clamp(2rem, 5vw, 4rem);
+    width: min(1000px, 100%);
+}
+:where(.marketing) .cta .actions {
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 220px;
+}
+:where(.marketing) .cta .actions a,
+:where(.marketing) .cta .actions button {
+    width: 100%;
+}
+@media (max-width: 850px) {
+    main#title-bar-layout.marketing {
+        gap: 4.5rem;
+    }
+    :where(.marketing) .cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    :where(.marketing) .cta {
+        gap: var(--space-section);
+    }
+    :where(.marketing) .cta .actions {
+        flex-direction: row;
+        width: auto;
+    }
+    :where(.marketing) .cta .actions a,
+    :where(.marketing) .cta .actions button {
+        width: auto;
+    }
+}
+@media (max-width: 430px) {
+    :where(.marketing) .actions,
+    :where(.marketing) .cta .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    :where(.marketing) .actions a,
+    :where(.marketing) .actions button,
+    :where(.marketing) .cta .actions a,
+    :where(.marketing) .cta .actions button {
+        width: 100%;
+    }
+}
+:where(.marketing) .cta-copy {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-control);
+}
+:where(.marketing) .cta h2 {
+    margin: 0;
+    color: var(--text-0);
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+:where(.marketing) .card-action {
+    align-self: flex-start;
+    margin-top: auto;
+}
+:where(.marketing) .card-action.more {
+    align-self: center;
+}
+.marketing .large-title {
+    text-wrap: balance;
+}
+:where(.marketing) .cta p {
+    margin: 0;
+    max-width: 560px;
+    color: var(--subtext-0);
+    line-height: 1.65;
+}
+:where(.marketing) .card-title-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-control);
+}
+.marketing .card .v-container {
+    flex: 1;
+}
+.text-link {
+    color: var(--text-0);
+    font-weight: var(--weight-label);
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-underline-offset: 3px;
+}
+.text-link:hover {
+    color: var(--accent);
+}
+:where(.marketing) .card-link {
+    align-self: flex-start;
+    margin-top: auto;
+}
+:where(.marketing) .card-title-row .title-text {
+    flex: 1;
+}
+.marketing .card-grid.three-up {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+@media (max-width: 760px) {
+    .marketing .card-grid.three-up {
+        grid-template-columns: 1fr !important;
+    }
+}
+:where(.marketing) .app-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+:where(.marketing) .app-icon-dark {
+    display: none;
+}
+html.dark :where(.marketing) .app-icon-light {
+    display: none;
+}
+html.dark :where(.marketing) .app-icon-dark {
+    display: block;
+}
+:where(.marketing) .icon-link-wrap {
+    flex-shrink: 0;
+    border-radius: var(--border-radius);
+}
+.marketing .card-grid.feature-grid:not(.signups-features) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+@media (max-width: 760px) {
+    .marketing .card-grid.feature-grid:not(.signups-features) {
+        grid-template-columns: 1fr !important;
+    }
+}

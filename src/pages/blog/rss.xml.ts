@@ -9,7 +9,9 @@ function formatDate(date: Date) {
 
 export const GET: APIRoute = async (context) => {
     const unsortedPosts = await getCollection("blog");
-    const posts = unsortedPosts.sort((a, b) => Number(b.data.timestamp) - Number(a.data.timestamp));
+    const posts = unsortedPosts.sort(
+        (a, b) => Number(b.data.timestamp) - Number(a.data.timestamp),
+    );
 
     return rss({
         title: "Origami Systems",

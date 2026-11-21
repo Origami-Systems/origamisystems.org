@@ -1,0 +1,192 @@
+---
+import { AppSubmitButton, Card, CardGrid, LargeTitleText } from "@origami-systems/ui";
+import {
+    CalendarCheck,
+    GraduationCap,
+    KeyRound,
+    Megaphone,
+    Trophy,
+    UsersRound,
+} from "@lucide/astro";
+import MainLayout from "~/layouts/MainLayout.astro";
+---
+
+<MainLayout
+    title="For Schools - Origami Systems"
+    description="How schools use Origami Systems for house systems, signups, and staying connected."
+    mainClass="marketing"
+>
+    <section class="page-section header">
+        <LargeTitleText>For<br />Schools</LargeTitleText>
+        <p class="lede">
+            Origami Systems started in schools. Our apps help staff spend less
+            time on coordination and give students one clear place to see
+            what is happening.
+        </p>
+        <div class="actions">
+            <a href="/contact">
+                <AppSubmitButton primary client:only="vue">Talk to Us</AppSubmitButton>
+            </a>
+            <a href="/products">
+                <AppSubmitButton client:only="vue">See Our Products</AppSubmitButton>
+            </a>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>Built around the school day.</h2>
+        </div>
+        <CardGrid class="card-grid-wide" minWidth="300px">
+            <Card heading="h3" style="--accent: var(--house-app)">
+                <span slot="title" class="card-title-row"><span class="feature-icon"><Trophy size={22} aria-hidden="true" /></span>Run your house system</span>
+                <p>
+                    Award points as good work happens and let students follow
+                    live standings. Houses keep their own names, colors, and
+                    leaders.
+                </p>
+                <a href="https://the-house-app.com" class="text-link card-link" target="_blank" rel="noopener noreferrer">Learn about The House App</a>
+            </Card>
+            <Card heading="h3" style="--accent: var(--house-app)">
+                <span slot="title" class="card-title-row"><span class="feature-icon"><Megaphone size={22} aria-hidden="true" /></span>Share news and events</span>
+                <p>
+                    Post announcements to the right people and keep calendars
+                    for students, leaders, and staff in the same place.
+                </p>
+            </Card>
+            <Card heading="h3" style="--accent: var(--signups-app)">
+                <span slot="title" class="card-title-row"><span class="feature-icon"><CalendarCheck size={22} aria-hidden="true" /></span>Organize volunteers and conferences</span>
+                <p>
+                    Build signups for parent conferences, field trip
+                    chaperones, or concessions. Slots fill up on their own and
+                    waitlists catch the rest.
+                </p>
+                <a href="/signups" class="text-link card-link">Learn about The Signups App</a>
+            </Card>
+            <Card heading="h3" style="--accent: var(--grades-app)">
+                <span slot="title" class="card-title-row"><span class="feature-icon"><GraduationCap size={22} aria-hidden="true" /></span>Keep track of grades</span>
+                <p>
+                    The Grades App is in progress. It will give teachers a
+                    straightforward gradebook that fits with the rest of our
+                    apps.
+                </p>
+            </Card>
+        </CardGrid>
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>Easy for staff and students.</h2>
+        </div>
+        <CardGrid class="card-grid-wide" minWidth="300px">
+            <Card heading="h3">
+                <span slot="title" class="card-title-row"><span class="feature-icon"><KeyRound size={22} aria-hidden="true" /></span>One sign-in</span>
+                <p>
+                    Staff and students use one Origami Systems account for every
+                    app, secured with passkeys and two-factor authentication.
+                </p>
+            </Card>
+            <Card heading="h3">
+                <span slot="title" class="card-title-row"><span class="feature-icon"><UsersRound size={22} aria-hidden="true" /></span>The right access for each person</span>
+                <p>
+                    Give administrators, staff, student leaders, and students
+                    the access that matches their role.
+                </p>
+            </Card>
+        </CardGrid>
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>Getting started.</h2>
+        </div>
+        <ol class="steps">
+            <li>
+                <strong>Reach out</strong>
+                <p>Tell us about your school and what you want to organize.</p>
+            </li>
+            <li>
+                <strong>Set things up</strong>
+                <p>Add your houses, people, and first signups with our help.</p>
+            </li>
+            <li>
+                <strong>Invite your school</strong>
+                <p>Staff and students sign in and pick up where you left off.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="cta">
+        <div class="cta-copy">
+            <h2>Bring your school online.</h2>
+            <p>
+                See an example house system, or get in touch and we will walk
+                through what your school needs.
+            </p>
+        </div>
+        <div class="actions">
+            <a href="/contact">
+                <AppSubmitButton primary client:only="vue">Contact Us</AppSubmitButton>
+            </a>
+            <a
+                href="https://app.the-house-app.com/example"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <AppSubmitButton client:only="vue">Explore an Example</AppSubmitButton>
+            </a>
+        </div>
+    </section>
+</MainLayout>
+
+<style>
+    .header {
+        gap: var(--space-section);
+    }
+    .header .lede {
+        max-width: 640px;
+    }
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-section);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: step;
+    }
+    .steps li {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-tight);
+        border-top: 2px solid var(--background-2);
+        padding-top: 1.2rem;
+        counter-increment: step;
+    }
+    .steps li::before {
+        content: counter(step);
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 1rem;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--accent) 14%, transparent);
+        color: var(--text-0);
+        font-weight: var(--weight-heading);
+    }
+    .steps strong {
+        font-size: var(--text-size-card-title);
+    }
+    .steps p {
+        margin: 0;
+        color: var(--subtext-0);
+        line-height: var(--line-height-body);
+    }
+    @media (max-width: 650px) {
+        .steps {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

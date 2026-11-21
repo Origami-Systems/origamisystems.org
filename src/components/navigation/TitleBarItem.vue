@@ -33,6 +33,7 @@ onMounted(() => {
     font-size: 24px;
     margin: 0 15px;
     font-weight: bold;
+    white-space: nowrap;
     color: var(--text-0);
     user-select: none;
 }

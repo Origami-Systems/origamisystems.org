@@ -38,6 +38,12 @@ import faviconLight from "@assets/icons/light/favicon.svg";
                 client:only="vue">Products</TitleBarItem
             >
             <TitleBarItem
+                id="tb-about"
+                to="/about"
+                data-astro-prefetch
+                client:only="vue">About</TitleBarItem
+            >
+            <TitleBarItem
                 id="tb-bugs"
                 to="/bugs-tracker"
                 data-astro-prefetch
@@ -103,13 +109,13 @@ import faviconLight from "@assets/icons/light/favicon.svg";
         align-items: center;
     }
 
-    @media (max-width: 650px) {
-        .tabs {
+    @media (max-width: 900px) {
+        nav#title-bar .tabs {
             display: none;
         }
     }
 
-    @media (min-width: 650px) {
+    @media (min-width: 901px) {
         .sidebar {
             display: none;
         }

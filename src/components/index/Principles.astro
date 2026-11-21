@@ -1,0 +1,33 @@
+---
+import { Card, CardGrid } from "@origami-systems/ui";
+import { MousePointerClick, ShieldCheck, Wrench } from "@lucide/astro";
+
+const principles = [
+    {
+        title: "Simplicity",
+        icon: MousePointerClick,
+        text: "Ordinary tasks should not need long instructions or workarounds. If something feels complicated, we treat it as our problem to fix.",
+    },
+    {
+        title: "Security",
+        icon: ShieldCheck,
+        text: "Your information deserves real protection, and strong security should be easy enough that people actually use it.",
+    },
+    {
+        title: "Reliability",
+        icon: Wrench,
+        text: "Features should behave the same way every time, and updates should make the experience better, not take things away.",
+    },
+];
+---
+
+<CardGrid class="card-grid-wide three-up" minWidth="220px">
+    {
+        principles.map((p) => (
+            <Card heading="h3">
+                <span slot="title" class="card-title-row"><span class="feature-icon"><p.icon size={22} aria-hidden="true" /></span>{p.title}</span>
+                <p>{p.text}</p>
+            </Card>
+        ))
+    }
+</CardGrid>

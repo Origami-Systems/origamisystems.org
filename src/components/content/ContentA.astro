@@ -2,11 +2,17 @@
 const props = Astro.props;
 ---
 
-<a href={props.href} class="text-link">
+<a href={props.href}>
     <slot />
 </a>
 <style>
-    p {
-        text-align: left;
+    /* Matches the-house-app.com blog links (UI 6 text-link). */
+    a {
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
     }
 </style>

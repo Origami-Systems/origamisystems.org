@@ -2,7 +2,9 @@ import type { GitHubIssue } from "~/types/GitHubIssue";
 
 export async function getIssues() {
     try {
-        const res = await fetch("https://n8n.origamiking3612.com/webhook/the-house-app/get/issues");
+        const res = await fetch(
+            "https://n8n.origamiking3612.com/webhook/the-house-app/get/issues",
+        );
 
         if (!res.ok) {
             throw new Error(`HTTP ${res.status}`);

@@ -1,44 +1,145 @@
 ---
-import { Card, AppSubmitButton } from "@origami-systems/ui";
+import { AppSubmitButton, LargeTitleText } from "@origami-systems/ui";
+import { Apps } from "@origami-systems/config";
 import MainLayout from "~/layouts/MainLayout.astro";
-import TheHouseAppWordmark from "@/wordmarks/TheHouseAppWordmark.astro";
 import OrigamiSystemsWordmark from "@/wordmarks/OrigamiSystemsWordmark.astro";
+import ProductStack from "~/components/index/ProductStack.astro";
+import Principles from "~/components/index/Principles.astro";
+import FeatureGrid from "~/components/index/FeatureGrid.astro";
+import Audiences from "~/components/index/Audiences.astro";
 ---
 
-<MainLayout>
-    <OrigamiSystemsWordmark />
-    <h1>We are the creators of</h1>
-    <TheHouseAppWordmark />
-    <h1>and more to come!</h1>
+<MainLayout title={Apps.website.title} mainClass="marketing">
+    <section class="hero">
+        <div class="hero-copy">
+            <div class="wordmark">
+                <OrigamiSystemsWordmark />
+            </div>
+            <LargeTitleText>Technology that works for people.</LargeTitleText>
+            <p class="hero-tagline">
+                Simple, secure, and reliable apps, so you can stop working
+                around your software.
+            </p>
+            <div class="actions">
+                <a href="/products">
+                    <AppSubmitButton primary client:only="vue">
+                        See Our Products
+                    </AppSubmitButton>
+                </a>
+                <a href="/about">
+                    <AppSubmitButton client:only="vue">Why We Build</AppSubmitButton>
+                </a>
+            </div>
+        </div>
 
-    <Card>
-        <h1>Get Started Today!</h1>
-        <!-- TODO: link to products site -->
-        <a href="/contact" class="link">
-            <AppSubmitButton primary="true" client:only="vue">
-                Contact Us
-            </AppSubmitButton>
-        </a>
-    </Card>
+        <ProductStack />
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro centered">
+            <h2>Software you don't have to think about.</h2>
+            <p>
+                Too much everyday software makes simple things complicated. We
+                build apps that do one job well and stay out of your way. Every
+                product follows the same three principles.
+            </p>
+        </div>
+        <Principles />
+        <a href="/about" class="card-action more"><AppSubmitButton client:only="vue">Read why we started Origami Systems</AppSubmitButton></a>
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>Connected by design.</h2>
+            <p>
+                Our apps solve different problems, but they share the same
+                account, the same look, and the same place to get help. Once you
+                know one, the rest feel familiar.
+            </p>
+        </div>
+        <FeatureGrid />
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>Made for any group of people.</h2>
+            <p>
+                Schools were our starting point, but the apps work for anyone
+                who needs to organize people and keep them informed.
+            </p>
+        </div>
+        <Audiences />
+    </section>
+
+    <section class="cta">
+        <div class="cta-copy">
+            <h2>Find the right fit.</h2>
+            <p>
+                Explore the products on your own, or tell us what your
+                organization needs and we will help you get set up.
+            </p>
+        </div>
+        <div class="actions">
+            <a href="/products">
+                <AppSubmitButton primary client:only="vue">
+                    See Our Products
+                </AppSubmitButton>
+            </a>
+            <a href="/contact">
+                <AppSubmitButton client:only="vue">Contact Us</AppSubmitButton>
+            </a>
+        </div>
+    </section>
 </MainLayout>
+
 <style>
-    :global(.thehouseapp) {
+    .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+        align-items: center;
+        gap: clamp(3rem, 7vw, 6rem);
+        min-height: 520px;
         width: 100%;
-        max-width: 300px;
+    }
+    .hero-copy {
+        padding-left: 20px;
+    }
+    .wordmark {
+        width: min(280px, 70%);
+        margin-bottom: 2rem;
+    }
+    .wordmark :global(.origamisystems) {
+        max-width: 100%;
+    }
+    .hero-tagline {
+        margin: 1.2rem 0 2rem;
+        max-width: 520px;
+        color: var(--text-1);
+        font-size: clamp(1.15rem, 2vw, 1.4rem);
+        font-weight: var(--weight-label);
+        line-height: 1.4;
+    }
+    .hero-copy :global(.large-title) {
+        margin: 0;
+        font-size: clamp(2.8rem, 6vw, 5.4rem);
+        line-height: 1;
     }
 
-    .origamisystems {
-        max-width: 450px;
-    }
-
-    @media (max-width: 460px) {
-        .origamisystems {
-            width: 100%;
-            max-width: 100%;
+    @media (max-width: 850px) {
+        .hero {
+            grid-template-columns: 1fr;
+            min-height: auto;
         }
-    }
-
-    h1 {
-        text-align: center;
+        .hero-copy {
+            text-align: center;
+            padding-left: 0;
+        }
+        .wordmark,
+        .hero-tagline {
+            margin-inline: auto;
+        }
+        .hero .actions {
+            justify-content: center;
+        }
     }
 </style>
