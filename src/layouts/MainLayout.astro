@@ -1,9 +1,9 @@
 ---
-interface Props {
-    title?: string;
-    description?: string;
+import type { ComponentProps } from "astro/types";
+
+type Props = ComponentProps<typeof Head> & {
     mainClass?: string;
-}
+};
 
 import Footer from "../components/Footer.astro";
 import Head from "../components/Head.astro";
@@ -14,16 +14,12 @@ import "../styles/global.css";
 import "@origami-systems/ui/style.css";
 import "../styles/marketing.css";
 
-const {
-    title = "Origami Systems",
-    description = "",
-    mainClass,
-} = Astro.props;
+const { mainClass, ...head } = Astro.props;
 ---
 
 <html lang="en" class="light">
     <head>
-        <Head title={title} description={description} />
+        <Head {...head} />
 
         <slot name="head" />
     </head>

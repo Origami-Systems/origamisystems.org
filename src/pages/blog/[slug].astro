@@ -23,14 +23,9 @@ const { Content } = await render(post);
 <MainLayout
     title={`${data.title} - Origami Systems`}
     description={data.description}
+    type="article"
+    publishedTime={data.timestamp}
 >
-    <link
-        slot="head"
-        rel="alternate"
-        type="application/rss+xml"
-        title="Origami Systems Blog RSS"
-        href="https://origamisystems.org/blog/rss.xml"
-    />
     <article class="blog">
         <header>
             <h1>{data.title}</h1>

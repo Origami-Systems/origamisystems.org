@@ -1,75 +1,124 @@
 ---
-// import { ClientRouter } from "astro:transitions";
+import { Apps } from "@origami-systems/config";
 
 interface Props {
     title?: string;
     description?: string;
+    /** Absolute or root-relative image for link previews. */
+    image?: string;
+    imageAlt?: string;
+    type?: "website" | "article";
+    publishedTime?: Date;
+    noindex?: boolean;
 }
-const { title, description } = Astro.props;
+
+const SITE_NAME = Apps.website.title;
+const DEFAULT_DESCRIPTION = Apps.website.description;
+const SOCIALS = [
+    "https://www.instagram.com/origamisystems",
+    "https://www.facebook.com/origamisystemsllc",
+    "https://www.linkedin.com/company/origami-systems",
+    "https://x.com/_origamisystems",
+];
+
+const {
+    title = SITE_NAME,
+    description = DEFAULT_DESCRIPTION,
+    image = "/icons/512x512.png",
+    imageAlt = "Origami Systems logo",
+    type = "website",
+    publishedTime,
+    noindex = false,
+} = Astro.props;
+
+const site = Astro.site ?? new URL(Apps.website.url.production);
+const canonical = new URL(Astro.url.pathname, site).href;
+const imageURL = new URL(image, site).href;
+const logoURL = new URL("/icons/512x512.png", site).href;
+
+const organization = {
+    "@type": "Organization",
+    "@id": `${site.origin}/#organization`,
+    name: SITE_NAME,
+    url: `${site.origin}/`,
+    logo: logoURL,
+    description: DEFAULT_DESCRIPTION,
+    sameAs: SOCIALS,
+};
+
+const structuredData =
+    type === "article"
+        ? {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: title.replace(/ - Origami Systems$/, ""),
+              description,
+              url: canonical,
+              image: imageURL,
+              datePublished: publishedTime?.toISOString(),
+              author: { "@id": organization["@id"] },
+              publisher: organization,
+              mainEntityOfPage: canonical,
+          }
+        : {
+              "@context": "https://schema.org",
+              "@graph": [
+                  organization,
+                  {
+                      "@type": "WebSite",
+                      name: SITE_NAME,
+                      url: `${site.origin}/`,
+                      publisher: { "@id": organization["@id"] },
+                  },
+              ],
+          };
 ---
 
-<title>{title}</title>
-<script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "Origami Systems",
-        url: "https://origamisystems.org/",
-    })}
-/>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
-<meta name="publisher" content="OrigamiKing3612" />
-<meta
-    name="keywords"
-    content="The House App, The House App Desktop, The House App App, Origami Systems, OrigamiKing3612"
-/>
-<meta
-    name="theme-color"
-    media="(prefers-color-scheme: light)"
-    content="#f5fcff"
-/>
-<meta
-    name="theme-color"
-    media="(prefers-color-scheme: dark)"
-    content="#000001"
-/>
-<meta
-    name="background-color"
-    media="(prefers-color-scheme: light)"
-    content="#f5fcff"
-/>
-<meta
-    name="background-color"
-    media="(prefers-color-scheme: dark)"
-    content="#000001"
-/>
-<meta property="og:title" content={title} />
-<meta property="og:site_name" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://origamisystems.org" />
-<meta
-    property="og:image"
-    content="https://origamisystems.org/icons/192x192.png"
-/>
-
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+{noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+<meta name="author" content={SITE_NAME} />
 <meta name="generator" content={Astro.generator} />
 
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content={imageURL} />
+<meta property="og:image:alt" content={imageAlt} />
+{
+    publishedTime && (
+        <meta property="article:published_time" content={publishedTime.toISOString()} />
+    )
+}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@_origamisystems" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageURL} />
+<meta name="twitter:image:alt" content={imageAlt} />
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5fcff" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000001" />
+
 <link rel="manifest" href="/manifest.json" />
-<link
-    rel="icon"
-    type="image/png"
-    href="/icons/favicon-96x96.png"
-    sizes="96x96"
-/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" href="/icons/96x96.png" sizes="96x96" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Origami Systems Blog"
+    href={new URL("/blog/rss.xml", site).href}
+/>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -79,8 +128,6 @@ const { title, description } = Astro.props;
     type="font/woff2"
     crossorigin
 />
-<link rel="sitemap" href="/sitemap-index.xml" />
-<!-- <ClientRouter /> -->
 <script is:inline>
     const theme = (() => {
         const localStorageTheme = localStorage?.getItem("color-mode") ?? "";

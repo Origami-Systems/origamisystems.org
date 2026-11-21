@@ -1,5 +1,6 @@
 ---
 import { AppSubmitButton, LargeTitleText } from "@origami-systems/ui";
+import { Apps } from "@origami-systems/config";
 import MainLayout from "~/layouts/MainLayout.astro";
 import OrigamiSystemsWordmark from "@/wordmarks/OrigamiSystemsWordmark.astro";
 import ProductStack from "~/components/index/ProductStack.astro";
@@ -8,7 +9,7 @@ import FeatureGrid from "~/components/index/FeatureGrid.astro";
 import Audiences from "~/components/index/Audiences.astro";
 ---
 
-<MainLayout mainClass="marketing">
+<MainLayout title={Apps.website.title} mainClass="marketing">
     <section class="hero">
         <div class="hero-copy">
             <div class="wordmark">

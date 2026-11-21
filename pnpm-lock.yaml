@@ -246,11 +246,11 @@ importers:
         specifier: ^1.77.0
         version: 1.77.0(astro@7.4.13(@types/node@24.13.2)(esbuild@0.28.2)(sass@1.101.0)(yaml@2.9.1))
       '@origami-systems/config':
-        specifier: ^2.3.0
-        version: 2.3.0
+        specifier: ^2.3.1
+        version: 2.3.1
       '@origami-systems/ui':
-        specifier: ^7.0.0-beta.29
-        version: 7.0.0-beta.29(@lucide/vue@1.73.0(vue@3.5.46(typescript@5.9.3)))(@origami-systems/config@2.3.0)(vue@3.5.46(typescript@5.9.3))
+        specifier: ^7.0.0-beta.30
+        version: 7.0.0-beta.30(@lucide/vue@1.73.0(vue@3.5.46(typescript@5.9.3)))(@origami-systems/config@2.3.1)(vue@3.5.46(typescript@5.9.3))
       astro:
         specifier: 7.4.13
         version: 7.4.13(@types/node@24.13.2)(esbuild@0.28.2)(sass@1.101.0)(yaml@2.9.1)
@@ -1050,14 +1050,14 @@ packages:
   '@nodable/entities@2.2.0':
     resolution: {integrity: sha512-9uGyhaQavEUMC8AIddIjau4NsnsXhou+j5sBAGojCM1oxmQpVKTWR/9JxABD6UAv12vpIms55fPZKFQEhG6uBg==}
 
-  '@origami-systems/config@2.3.0':
-    resolution: {integrity: sha512-oKOdCyu5BJF3Biv1qqviDD2NEiNoDcZ5p0RANb8kXiiwegF41l2h44QhwXAVZgJ11iaSvYKWurkDq4OUUQPAAA==, tarball: https://npm.pkg.github.com/download/@origami-systems/config/2.3.0/b61760a5e64687ee101309931e6fb74a14526503}
+  '@origami-systems/config@2.3.1':
+    resolution: {integrity: sha512-npd2ZuOuyBAooplG6dTBEcLDDO6QhE/WGHVdyceYdRJJOeHTabCLOvdCZ28AgSQel5kJYPg3CspBgVNjQE6wPA==, tarball: https://npm.pkg.github.com/download/@origami-systems/config/2.3.1/65c7d61e3845d75fe085992e1e03670eb2de8862}
 
-  '@origami-systems/ui@7.0.0-beta.29':
-    resolution: {integrity: sha512-sruLKgy49VzNrR4Sv1OJrOB9hlux+Popn1JHDIh99b+aih7wkUs3qkKaENOjcFLmHVMjj6q+fuqfTRC8vcvMWg==, tarball: https://npm.pkg.github.com/download/@origami-systems/ui/7.0.0-beta.29/b0447527a2f9f6f80cc3d7d4b5251dcfb499835c}
+  '@origami-systems/ui@7.0.0-beta.30':
+    resolution: {integrity: sha512-RBc0WTRoCVXwnY7Od+I7EvDnkzXUpB3NbICklGkT9hNChIdBQvr6y4zFJLUIWRTgXQzzlz4X2wAtOfheoO+3IQ==, tarball: https://npm.pkg.github.com/download/@origami-systems/ui/7.0.0-beta.30/b129c9e06085e65b7c9d03a84d965ffa1cd7b9fc}
     peerDependencies:
       '@lucide/vue': 1.73.0
-      '@origami-systems/config': ^2.3.0
+      '@origami-systems/config': ^2.3.1
       vue: 3.5.45
 
   '@oslojs/encoding@1.1.0':
@@ -3821,12 +3821,12 @@ snapshots:
 
   '@nodable/entities@2.2.0': {}
 
-  '@origami-systems/config@2.3.0': {}
+  '@origami-systems/config@2.3.1': {}
 
-  '@origami-systems/ui@7.0.0-beta.29(@lucide/vue@1.73.0(vue@3.5.46(typescript@5.9.3)))(@origami-systems/config@2.3.0)(vue@3.5.46(typescript@5.9.3))':
+  '@origami-systems/ui@7.0.0-beta.30(@lucide/vue@1.73.0(vue@3.5.46(typescript@5.9.3)))(@origami-systems/config@2.3.1)(vue@3.5.46(typescript@5.9.3))':
     dependencies:
       '@lucide/vue': 1.73.0(vue@3.5.46(typescript@5.9.3))
-      '@origami-systems/config': 2.3.0
+      '@origami-systems/config': 2.3.1
       vue: 3.5.46(typescript@5.9.3)
 
   '@oslojs/encoding@1.1.0': {}

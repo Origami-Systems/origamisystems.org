@@ -4,7 +4,7 @@ import MainLayout from "~/layouts/MainLayout.astro";
 const { error } = Astro.props;
 ---
 
-<MainLayout title="An Error Occurred">
+<MainLayout title="An Error Occurred - Origami Systems" noindex>
     <h1>An Error Occurred</h1>
     <p>
         Message: {error instanceof Error ? error.message : "Unknown error"}
