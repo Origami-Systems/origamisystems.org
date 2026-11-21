@@ -1,0 +1,119 @@
+---
+import { AppSubmitButton, Card, CardGrid, IconButton } from "@origami-systems/ui";
+import { Image } from "astro:assets";
+import { ArrowUpRight, BookOpen, Bug, KeyRound } from "@lucide/astro";
+import houseLight from "@assets/icons/house/light/favicon.svg";
+import houseDark from "@assets/icons/house/dark/favicon.svg";
+import signupsLight from "@assets/icons/signups/light/favicon.svg";
+import signupsDark from "@assets/icons/signups/dark/favicon.svg";
+import gradesLight from "@assets/icons/grades/light/favicon.svg";
+import gradesDark from "@assets/icons/grades/dark/favicon.svg";
+
+const apps = [
+    { name: "The House App", accent: "var(--house-app)", light: houseLight, dark: houseDark },
+    { name: "The Signups App", accent: "var(--signups-app)", light: signupsLight, dark: signupsDark },
+    { name: "The Grades App", accent: "var(--grades-app)", light: gradesLight, dark: gradesDark },
+];
+---
+
+<CardGrid class="card-grid-wide feature-grid" minWidth="300px">
+    <Card heading="h3" class="account">
+        <span slot="title" class="card-title-row"
+            ><span class="feature-icon"><KeyRound size={22} aria-hidden="true" /></span
+            >One account for every app</span
+        >
+        <div class="account-body">
+            <div class="account-copy">
+                <p>
+                    Sign in once with your Origami Systems account and use it
+                    everywhere. Passkeys and two-factor authentication keep it
+                    secure, and you stay signed in without being asked again
+                    and again.
+                </p>
+                <a href="https://account.origamisystems.org" class="card-action" target="_blank" rel="noopener noreferrer"><AppSubmitButton client:only="vue">Open your account</AppSubmitButton></a>
+            </div>
+            <ul class="mini-apps" aria-label="Apps that use your account">
+                {
+                    apps.map((app) => (
+                        <li style={`--accent: ${app.accent}`}>
+                            <Image src={app.light} alt="" width="24" height="24" class="fav fav-light" />
+                            <Image src={app.dark} alt="" width="24" height="24" class="fav fav-dark" />
+                            {app.name}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </Card>
+    <Card heading="h3">
+        <span slot="title" class="card-title-row"><span class="feature-icon"><BookOpen size={22} aria-hidden="true" /></span><span class="title-text">Help when you need it</span><a href="https://help.origamisystems.org" class="icon-link-wrap" target="_blank" rel="noopener noreferrer" aria-label="Visit The Help App" title="Visit The Help App"><IconButton tabindex="-1" aria-hidden="true" client:only="vue"><ArrowUpRight size={20} aria-hidden="true" /></IconButton></a></span>
+        <p>
+            Guides for every app live in one place, and you can reach a real
+            person when something does not work.
+        </p>
+    </Card>
+    <Card heading="h3">
+        <span slot="title" class="card-title-row"><span class="feature-icon"><Bug size={22} aria-hidden="true" /></span><span class="title-text">Built in the open</span><a href="/bugs-tracker" class="icon-link-wrap" aria-label="Open the bug tracker" title="Open the bug tracker"><IconButton tabindex="-1" aria-hidden="true" client:only="vue"><ArrowUpRight size={20} aria-hidden="true" /></IconButton></a></span>
+        <p>
+            See which bugs we are fixing and which features are on the way.
+        </p>
+    </Card>
+</CardGrid>
+
+<style>
+    .feature-grid :global(.account) {
+        grid-column: 1 / -1;
+    }
+    .account-body {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: var(--space-section);
+    }
+    .account-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-control);
+    }
+    .mini-apps {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 210px;
+    }
+    .mini-apps li {
+        display: flex;
+        align-items: center;
+        gap: var(--space-control);
+        padding: 8px 12px;
+        border: 1px solid var(--accent);
+        border-radius: 13px;
+        background: color-mix(in srgb, var(--accent) 14%, transparent);
+        color: var(--text-0);
+        font-size: var(--text-size-small);
+        font-weight: var(--weight-label);
+    }
+    .fav {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+    }
+    .fav-dark {
+        display: none;
+    }
+    :global(html.dark) .fav-light {
+        display: none;
+    }
+    :global(html.dark) .fav-dark {
+        display: block;
+    }
+    @media (max-width: 700px) {
+        .account-body {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

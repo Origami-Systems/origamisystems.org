@@ -6,20 +6,23 @@ export const SubmitContact = async (
     question?: string,
 ) => {
     try {
-        await fetch("https://n8n.origamiking3612.com/webhook/the-house-app/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
+        await fetch(
+            "https://n8n.origamiking3612.com/webhook/the-house-app/contact",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    organization: organization,
+                    hear: hear,
+                    question: question,
+                    site: "origamisystems.org",
+                }),
             },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                organization: organization,
-                hear: hear,
-                question: question,
-                site: "origamisystems.org",
-            }),
-        });
+        );
 
         return true;
     } catch (error: any) {

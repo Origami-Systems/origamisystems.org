@@ -1,0 +1,258 @@
+---
+import { AppSubmitButton, Card, CardGrid, LargeTitleText } from "@origami-systems/ui";
+import {
+    CalendarClock,
+    ClipboardList,
+    Gauge,
+    Hourglass,
+    Link2,
+    UsersRound,
+} from "@lucide/astro";
+import MainLayout from "~/layouts/MainLayout.astro";
+import TheSignupsAppWordmark from "@/wordmarks/TheSignupsAppWordmark.astro";
+import SignupPreview from "~/components/signups/SignupPreview.astro";
+
+const features = [
+    {
+        title: "Sections and slots",
+        icon: ClipboardList,
+        text: "Group slots into sections so a big event stays easy to read, from setup to cleanup.",
+    },
+    {
+        title: "Dates, times, and places",
+        icon: CalendarClock,
+        text: "Give each slot its own schedule and location so people know exactly where to be.",
+    },
+    {
+        title: "Capacity limits",
+        icon: Gauge,
+        text: "Cap each slot and watch the open spots update as people sign up.",
+    },
+    {
+        title: "Waitlists",
+        icon: Hourglass,
+        text: "When a slot fills up, people can join the waitlist instead of being turned away.",
+    },
+    {
+        title: "One link to share",
+        icon: Link2,
+        text: "Send a public link and anyone can find the form and pick a slot.",
+    },
+    {
+        title: "Organizer dashboard",
+        icon: UsersRound,
+        text: "Follow responses, see who signed up for what, and manage participants in one place.",
+    },
+];
+---
+
+<MainLayout
+    title="The Signups App - Origami Systems"
+    description="Collect signups for events, shifts, and volunteer work with slots, capacity limits, and waitlists."
+    mainClass="marketing signups-page"
+>
+    <section class="hero">
+        <div class="hero-copy">
+            <div class="wordmark"><TheSignupsAppWordmark /></div>
+            <LargeTitleText>Signups without the spreadsheet.</LargeTitleText>
+            <p class="hero-tagline">
+                Set up a form in minutes, share one link, and let the slots fill
+                themselves.
+            </p>
+            <div class="actions">
+                <a
+                    href="https://signups.origamisystems.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <AppSubmitButton theme="signups" primary client:only="vue">
+                        Open The Signups App
+                    </AppSubmitButton>
+                </a>
+                <a href="/contact">
+                    <AppSubmitButton client:only="vue">Talk to Us</AppSubmitButton>
+                </a>
+            </div>
+        </div>
+
+        <SignupPreview />
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro centered">
+            <h2>Everyone knows where they're needed.</h2>
+            <p>
+                Volunteer shifts, parent conferences, potlucks, and practice
+                schedules all come down to the same thing: who is doing what,
+                and when. The Signups App keeps that in one clear place for
+                organizers and participants.
+            </p>
+        </div>
+    </section>
+
+    <CardGrid class="card-grid-wide feature-grid signups-features" minWidth="280px">
+        {
+            features.map((f) => (
+                <Card heading="h3">
+                    <span slot="title" class="card-title-row">
+                        <span class="feature-icon">
+                            <f.icon size={22} aria-hidden="true" />
+                        </span>
+                        {f.title}
+                    </span>
+                    <p>{f.text}</p>
+                </Card>
+            ))
+        }
+    </CardGrid>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>Ready in three steps.</h2>
+        </div>
+        <ol class="steps">
+            <li>
+                <strong>Create a form</strong>
+                <p>Name your event and add the details people need.</p>
+            </li>
+            <li>
+                <strong>Add your slots</strong>
+                <p>Set times, places, and how many people each slot needs.</p>
+            </li>
+            <li>
+                <strong>Share the link</strong>
+                <p>Send it out and watch the spots fill up.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="cta">
+        <div class="cta-copy">
+            <h2>Start your first signup.</h2>
+            <p>
+                Sign in with your Origami Systems account to create a form, or
+                read the guides to see how it works.
+            </p>
+        </div>
+        <div class="actions">
+            <a
+                href="https://signups.origamisystems.org"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <AppSubmitButton theme="signups" primary client:only="vue">
+                    Open The Signups App
+                </AppSubmitButton>
+            </a>
+            <a
+                href="https://help.origamisystems.org/signups"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <AppSubmitButton client:only="vue">Read the Guides</AppSubmitButton>
+            </a>
+        </div>
+    </section>
+</MainLayout>
+
+<style>
+    :global(main.signups-page) {
+        --accent: var(--signups-app);
+    }
+    .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+        align-items: center;
+        gap: clamp(3rem, 7vw, 6rem);
+        min-height: 520px;
+        width: 100%;
+    }
+    .hero-copy {
+        padding-left: 20px;
+    }
+    .wordmark {
+        width: min(280px, 70%);
+        margin-bottom: 2rem;
+    }
+    .hero-copy :global(.large-title) {
+        margin: 0;
+        font-size: clamp(2.8rem, 6vw, 5.4rem);
+        line-height: 1;
+    }
+    .hero-tagline {
+        margin: 1.2rem 0 2rem;
+        max-width: 520px;
+        color: var(--text-1);
+        font-size: clamp(1.15rem, 2vw, 1.4rem);
+        font-weight: var(--weight-label);
+        line-height: 1.4;
+    }
+    .feature-grid {
+        width: min(1000px, 100%);
+        margin-top: -4rem;
+    }
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-section);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: step;
+    }
+    .steps li {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-tight);
+        border-top: 2px solid var(--background-2);
+        padding-top: 1.2rem;
+        counter-increment: step;
+    }
+    .steps li::before {
+        content: counter(step);
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 1rem;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--accent) 14%, transparent);
+        color: var(--text-0);
+        font-weight: var(--weight-heading);
+    }
+    .steps strong {
+        font-size: var(--text-size-card-title);
+    }
+    .steps p {
+        margin: 0;
+        color: var(--subtext-0);
+        line-height: var(--line-height-body);
+    }
+    @media (max-width: 850px) {
+        .hero {
+            grid-template-columns: 1fr;
+            min-height: auto;
+        }
+        .hero-copy {
+            text-align: center;
+            padding-left: 0;
+        }
+        .wordmark,
+        .hero-tagline {
+            margin-inline: auto;
+        }
+        .hero .actions {
+            justify-content: center;
+        }
+        :global(.signups-page .signup-preview) {
+            max-width: 520px;
+            margin-inline: auto;
+        }
+    }
+    @media (max-width: 650px) {
+        .steps {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

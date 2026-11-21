@@ -1,0 +1,173 @@
+---
+import { AppSubmitButton, Card, CardGrid, LargeTitleText } from "@origami-systems/ui";
+import { Image } from "astro:assets";
+import houseLight from "@assets/icons/house/light/favicon.svg";
+import houseDark from "@assets/icons/house/dark/favicon.svg";
+import signupsLight from "@assets/icons/signups/light/favicon.svg";
+import signupsDark from "@assets/icons/signups/dark/favicon.svg";
+import accountLight from "@assets/icons/account/light/favicon.svg";
+import accountDark from "@assets/icons/account/dark/favicon.svg";
+import MainLayout from "~/layouts/MainLayout.astro";
+import Principles from "~/components/index/Principles.astro";
+---
+
+<MainLayout
+    title="About - Origami Systems"
+    description="Why Origami Systems exists: to make technology work for people, instead of making people work around technology."
+    mainClass="marketing"
+>
+    <section class="page-section about-header">
+        <LargeTitleText>About</LargeTitleText>
+        <p class="mission">
+            Origami Systems exists to make technology <span>work for people</span>,
+            instead of making people work around technology.
+        </p>
+    </section>
+
+    <section class="page-section story">
+        <div class="section-intro">
+            <h2>Why we started.</h2>
+        </div>
+        <div class="story-copy">
+            <p>
+                Everyday software has a way of getting more complicated over
+                time. Updates take things away. Simple tasks need workarounds.
+                Logging in becomes a chore. People put up with it because there
+                is nothing better to switch to.
+            </p>
+            <p>
+                Origami Systems started as a way to do something about that.
+                While building The House App and The Signups App, it became
+                clear that most of the problems people run into are not hard
+                problems. They just have not been solved with the person using
+                the software in mind.
+            </p>
+            <p>
+                The technology behind an app can be as complicated as it needs
+                to be. The people using it should not have to feel that.
+            </p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>What we care about.</h2>
+            <p>
+                Our goal is software that makes everyday tasks simpler, more
+                reliable, and more secure, without asking anyone to give up
+                ease of use.
+            </p>
+        </div>
+        <Principles />
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>What that looks like.</h2>
+            <p>Each product started with a frustration we wanted to remove.</p>
+        </div>
+        <CardGrid class="card-grid-wide three-up" minWidth="220px">
+            <Card heading="h3" style="--accent: var(--house-app)">
+                <span slot="title" class="card-title-row"><Image src={houseLight} alt="" class="app-icon app-icon-light" /><Image src={houseDark} alt="" class="app-icon app-icon-dark" />The House App</span>
+                <p>
+                    Points, announcements, and events used to live in separate
+                    tools. Now a house system has one shared home.
+                </p>
+            </Card>
+            <Card heading="h3" style="--accent: var(--signups-app)">
+                <span slot="title" class="card-title-row"><Image src={signupsLight} alt="" class="app-icon app-icon-light" /><Image src={signupsDark} alt="" class="app-icon app-icon-dark" />The Signups App</span>
+                <p>
+                    Organizers can set up slots, limits, and waitlists without
+                    fighting a page of settings first.
+                </p>
+            </Card>
+            <Card heading="h3">
+                <span slot="title" class="card-title-row"><Image src={accountLight} alt="" class="app-icon app-icon-light" /><Image src={accountDark} alt="" class="app-icon app-icon-dark" />Origami Systems Account</span>
+                <p>
+                    Passkeys and two-factor authentication keep accounts secure,
+                    and staying signed in works the way you expect it to.
+                </p>
+            </Card>
+        </CardGrid>
+    </section>
+
+    <section class="page-section">
+        <div class="section-intro">
+            <h2>More than a set of apps.</h2>
+            <p>
+                Underneath every product is the same account system,
+                notifications, and help center. We build those shared pieces
+                once and build them well, so every app you use from us is
+                consistent and dependable.
+            </p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-copy">
+            <h2>Have a problem worth solving?</h2>
+            <p>
+                Tell us what gets in your way. A lot of our features started as
+                someone's suggestion.
+            </p>
+        </div>
+        <div class="actions">
+            <a href="/contact">
+                <AppSubmitButton primary client:only="vue">Contact Us</AppSubmitButton>
+            </a>
+            <a href="/products">
+                <AppSubmitButton client:only="vue">See Our Products</AppSubmitButton>
+            </a>
+        </div>
+    </section>
+</MainLayout>
+
+<style>
+    .about-header {
+        align-items: center;
+        gap: 0;
+        text-align: center;
+    }
+    .about-header :global(.large-title) {
+        margin: 0 0 1.5rem;
+        text-align: center;
+    }
+    .mission {
+        margin: 0;
+        max-width: 760px;
+        color: var(--text-1);
+        font-size: clamp(1.4rem, 3vw, 2.1rem);
+        font-weight: var(--weight-label);
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+    }
+    .mission span {
+        color: var(--text-0);
+        font-weight: var(--weight-heading);
+    }
+    .story {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        gap: var(--space-section);
+    }
+    .story-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .story-copy {
+        max-width: 680px;
+    }
+    .story-copy p {
+        margin: 0;
+        color: var(--text-1);
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    @media (max-width: 900px) {
+        .story {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

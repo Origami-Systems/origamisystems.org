@@ -1,0 +1,163 @@
+---
+import { CalendarDays, Clock, MapPin } from "@lucide/astro";
+
+const slots = [
+    { title: "Setup crew", time: "8:00 AM", filled: 4, capacity: 6 },
+    { title: "Ticket booth", time: "10:00 AM", filled: 4, capacity: 4 },
+    { title: "Cleanup", time: "4:00 PM", filled: 2, capacity: 5 },
+];
+---
+
+<div class="signup-preview" aria-label="Example of a signup page in The Signups App" role="img">
+    <div class="signup-header">
+        <div class="header-copy">
+            <strong class="signup-title">Fall Festival Volunteers</strong>
+            <span>Help us set up, run, and clean up this year's festival.</span>
+            <span class="meta">
+                <MapPin size={15} aria-hidden="true" /> Community Center
+            </span>
+            <span class="meta">
+                <CalendarDays size={15} aria-hidden="true" /> Starts Oct 12, 8:00 AM
+            </span>
+        </div>
+    </div>
+
+    <div class="section">
+        <strong class="section-title">Saturday</strong>
+        {
+            slots.map((slot) => {
+                const full = slot.filled >= slot.capacity;
+                return (
+                    <div class="slot">
+                        <div class="slot-info">
+                            <strong>{slot.title}</strong>
+                            <span class="meta">
+                                <Clock size={14} aria-hidden="true" /> {slot.time}
+                            </span>
+                            <span class="capacity">
+                                {slot.filled} of {slot.capacity} spots filled
+                            </span>
+                        </div>
+                        <span class={full ? "fake-button" : "fake-button primary"}>
+                            {full ? "Join waitlist" : "Sign up"}
+                        </span>
+                    </div>
+                );
+            })
+        }
+    </div>
+</div>
+
+<style>
+    .signup-preview {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 100%;
+        padding: 14px;
+        border: var(--border);
+        border-radius: calc(var(--border-radius) + 6px);
+        background: var(--background-0);
+        user-select: none;
+    }
+    .signup-header {
+        position: relative;
+        overflow: hidden;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        padding: 22px;
+        border: var(--border);
+        border-radius: var(--border-radius);
+        background: var(--color-orange-muted);
+        color: var(--always-white);
+    }
+    /* Matches the "stripes" header theme in The Signups App. */
+    .signup-header::after {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 60%;
+        background: repeating-linear-gradient(
+            125deg,
+            transparent 0 18px,
+            var(--always-white) 18px 30px
+        );
+        opacity: 0.16;
+        pointer-events: none;
+    }
+    .header-copy {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 0;
+    }
+    .signup-title {
+        font-size: 1.5rem;
+        line-height: 1.15;
+    }
+    .header-copy .meta {
+        color: inherit;
+    }
+    .section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 2px;
+    }
+    .section-title {
+        font-size: 1.1rem;
+        color: var(--text-0);
+    }
+    .slot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px 14px;
+        border: var(--border);
+        border-radius: var(--border-radius);
+    }
+    .slot-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+    }
+    .slot-info strong {
+        color: var(--text-0);
+    }
+    .meta {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: var(--text-size-small);
+        color: var(--subtext-0);
+    }
+    .capacity {
+        font-size: var(--text-size-small);
+        color: var(--subtext-0);
+    }
+    .fake-button {
+        flex-shrink: 0;
+        padding: 6px 14px;
+        border: 3px solid var(--text-1);
+        border-radius: var(--border-radius);
+        color: var(--text-0);
+        font-size: var(--text-size-small);
+        white-space: nowrap;
+    }
+    .fake-button.primary {
+        border-color: var(--accent);
+        background: color-mix(in srgb, var(--accent) 20%, transparent);
+    }
+    @media (max-width: 430px) {
+        .signup-preview {
+            padding: 10px;
+        }
+        .signup-header {
+            padding: 18px;
+        }
+    }
+</style>
