@@ -16,7 +16,7 @@ import MainLayout from "~/layouts/MainLayout.astro";
             </div>
         </header>
         <hr />
-        <Card>
+        <Card class="summary-card">
             <div class="summary">
                 <h2>The short version</h2>
                 <p class="summary-note">
@@ -508,6 +508,10 @@ import MainLayout from "~/layouts/MainLayout.astro";
 
     hr {
         width: 100%;
+    }
+
+    .summary-card {
+        margin-bottom: 2rem;
     }
 
     .summary,
