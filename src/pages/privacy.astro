@@ -1,5 +1,5 @@
 ---
-import { Card, LargeTitleText } from "@origami-systems/ui";
+import { Card } from "@origami-systems/ui";
 import MainLayout from "~/layouts/MainLayout.astro";
 ---
 
@@ -7,9 +7,15 @@ import MainLayout from "~/layouts/MainLayout.astro";
     title="Privacy Policy - Origami Systems"
     description="How Origami Systems collects, uses, shares, and protects personal information."
 >
-    <LargeTitleText>Privacy<br />Policy</LargeTitleText>
-    <div class="page">
-        <p class="dates">Effective date: November 19, 2026 · Last updated: November 19, 2026</p>
+    <article class="blog">
+        <header>
+            <h1>Privacy Policy</h1>
+            <div class="description">
+                Effective date: November 19, 2026 · Last updated: November 19,
+                2026
+            </div>
+        </header>
+        <hr />
         <Card>
             <div class="summary">
                 <h2>The short version</h2>
@@ -68,1055 +74,1076 @@ import MainLayout from "~/layouts/MainLayout.astro";
                 </ul>
             </div>
         </Card>
-        <Card>
-            <div class="container">
-                <p>
-                    Origami Systems LLC ("Origami Systems," "we," "us," or "our")
-                    builds and runs software applications, websites, and related
-                    services.
-                </p>
-                <p>
-                    This Privacy Policy explains what personal information we
-                    collect, how we use, store, protect, and share it, and the
-                    choices available to individuals, parents, guardians, and
-                    organizations.
-                </p>
-                <p>
-                    This policy covers these Origami Systems products and services:
-                </p>
-                <ul>
-                    <li>
-                        <strong>The House App.</strong> Manages house systems, points,
-                        games, events, announcements, and participation for an organization.
-                    </li>
-                    <li>
-                        <strong>The Signups App.</strong> Lets people create sign-up forms,
-                        collect registrations, and manage participants and waitlists.
-                    </li>
-                    <li>
-                        <strong>Origami Systems Identity.</strong> Our sign-in and account
-                        service. It provides accounts, authentication, and account settings
-                        for the other Services.
-                    </li>
-                    <li>
-                        <strong>Other Origami Systems services.</strong> Our websites,
-                        the Account app, onboarding, help and support pages, administrative
-                        dashboards, notification services, and any other application that
-                        links to this policy.
-                    </li>
-                </ul>
-                <p>
-                    We call these the "Services." Not every Service collects
-                    everything described below. What we collect depends on which
-                    Services and features you use, your account type, and your
-                    organization's settings. A Service may give you an additional
-                    privacy notice when its features require one.
-                </p>
-                <h2 id="information-we-collect">Information we collect</h2>
-                <p>
-                    We collect the information we need to provide, maintain, secure,
-                    and improve the Services.
-                </p>
-                <h3>Account and identity information</h3>
-                <p>
-                    When you create or use an account through Origami Systems
-                    Identity, we may collect:
-                </p>
-                <ul>
-                    <li>
-                        First, middle, and last name, display name, name prefix, and
-                        username
-                    </li>
-                    <li>Email addresses and whether they are verified</li>
-                    <li>
-                        Date of birth, when an organization or feature requires it
-                    </li>
-                    <li>
-                        Account type (personal, organization-managed, or guest),
-                        status, and preferences
-                    </li>
-                    <li>Organization memberships and roles</li>
-                    <li>When the account was created and when it last signed in</li>
-                    <li>Sign-in methods and credential records</li>
-                    <li>Information needed to recover or verify the account</li>
-                    <li>
-                        The version of our Terms of Use and this Privacy Policy you
-                        accepted, and when you accepted it
-                    </li>
-                </ul>
-                <p>
-                    We never store plain-text passwords. We store passwords as
-                    one-way cryptographic hashes. We encrypt email addresses and
-                    authenticator secrets when we store them.
-                </p>
-                <p>
-                    Sign-in records can include passkeys and security keys,
-                    authenticator-app (TOTP) settings, backup codes, and
-                    passwordless sign-in settings.
-                </p>
-                <h3>External and organization sign-in</h3>
-                <p>
-                    You may be able to sign in with Google or Microsoft. An
-                    organization may also connect its own identity provider using
-                    single sign-on (SAML or OpenID Connect), or keep its member list
-                    in sync with ours through SCIM directory provisioning.
-                </p>
-                <p>
-                    When you use one of these methods, the provider sends us the
-                    information needed to identify you and set up your account and
-                    session, such as your name, email address, and a provider
-                    account identifier. When an organization uses directory
-                    provisioning, its system may create, update, or deactivate your
-                    account.
-                </p>
-                <p>
-                    We never receive your password from Google, Microsoft, or your
-                    organization's identity provider.
-                </p>
-                <h3>Authentication and security information</h3>
-                <p>To run and protect the Services, we collect:</p>
-                <ul>
-                    <li>Sign-in sessions and session identifiers</li>
-                    <li>
-                        Sign-in times, including successful and failed attempts and
-                        the reason an attempt failed
-                    </li>
-                    <li>IP addresses</li>
-                    <li>Browser and device information, such as the user agent</li>
-                    <li>
-                        Security events, rate-limit records, and multi-factor
-                        authentication status
-                    </li>
-                    <li>Account recovery and credential changes</li>
-                    <li>Administrative and security audit records</li>
-                </ul>
-                <p>
-                    We use this information to sign people in, block unauthorized
-                    access, investigate security incidents, and keep the Services
-                    reliable.
-                </p>
-                <h3>Organization information</h3>
-                <p>Organizations provide or manage information such as:</p>
-                <ul>
-                    <li>Organization names and identifiers</li>
-                    <li>Members, roles, permissions, and account assignments</li>
-                    <li>Administrators and authorized contacts</li>
-                    <li>
-                        Organization settings, profile policies, and enabled
-                        applications
-                    </li>
-                    <li>Single sign-on and directory provisioning settings</li>
-                    <li>Administrative activity</li>
-                    <li>Subscription and billing information</li>
-                </ul>
-                <p>
-                    An organization administrator may add information about members
-                    or create accounts for them.
-                </p>
-                <h3>Application information</h3>
-                <h4>The House App</h4>
-                <p>The House App may collect and process:</p>
-                <ul>
-                    <li>Organization, house, and year information</li>
-                    <li>House assignments and memberships</li>
-                    <li>Points, the reasons points were awarded, and standings</li>
-                    <li>Games, brackets, activities, and participation records</li>
-                    <li>Events and calendars</li>
-                    <li>Announcements, comments, and other submitted content</li>
-                    <li>Archived years and participation history</li>
-                    <li>Administrative actions and audit records</li>
-                </ul>
-                <p>
-                    The House App also supports guests invited by an administrator.
-                    For guests we may collect:
-                </p>
-                <ul>
-                    <li>Guest names or generated display names</li>
-                    <li>Guest-group and house assignments</li>
-                    <li>Invitations, invitation use, and expiration dates</li>
-                    <li>Guest participation in games and activities</li>
-                    <li>Guest comments and notification preferences</li>
-                    <li>
-                        Identifiers stored in the browser that let a guest return to
-                        their guest account
-                    </li>
-                </ul>
-                <p>
-                    Other members of the organization may see this information,
-                    depending on their roles and permissions.
-                </p>
-                <h4>The Signups App</h4>
-                <p>The Signups App may collect and process:</p>
-                <ul>
-                    <li>
-                        Form titles, descriptions, colors, settings, and access
-                        codes
-                    </li>
-                    <li>Event names, locations, dates, and times</li>
-                    <li>Sections, slots, and capacity</li>
-                    <li>
-                        Participant names, email addresses, and account identifiers
-                    </li>
-                    <li>
-                        Registration status, cancellations, and waitlist position
-                    </li>
-                    <li>Private cancellation links for guest registrations</li>
-                    <li>
-                        Notification preferences for registration confirmations and
-                        cancellations
-                    </li>
-                    <li>Form ownership and administrative activity</li>
-                </ul>
-                <p>
-                    Some forms let people register as a guest without an Origami
-                    Systems account. A guest registration includes a name and email
-                    address.
-                </p>
-                <p>Who can see a registration depends on the form's settings:</p>
-                <ul>
-                    <li>
-                        <strong>Standard forms.</strong> Anyone who can open the form
-                        can see the names of the people signed up for each slot. Only
-                        the form's creator and other authorized organizers can see participant
-                        email addresses.
-                    </li>
-                    <li>
-                        <strong>Anonymous forms.</strong> Other participants and visitors
-                        cannot see who signed up. The form's creator and authorized organizers
-                        can still see every registration, including names and email addresses.
-                    </li>
-                </ul>
-                <p>
-                    A form creator can also require an access code, which limits who
-                    can open the form.
-                </p>
-                <p>
-                    Form creators decide what their forms collect and are
-                    responsible for making sure their collection and use of that
-                    information follows the law.
-                </p>
-                <h4>Origami Systems Identity</h4>
-                <p>
-                    Origami Systems Identity provides sign-in and account management
-                    for the other Services. It processes the account,
-                    authentication, and security information described above.
-                </p>
-                <p>
-                    Identity shares limited account information with other Origami
-                    Systems applications when they need it to sign you in, check
-                    your permissions, manage your account, or provide a feature you
-                    asked for.
-                </p>
-                <h4>Other services</h4>
-                <p>
-                    Other Origami Systems applications may collect information they
-                    need for their own features. When their practices differ from
-                    what this policy describes, we will update this policy or give a
-                    separate notice.
-                </p>
-                <h3>Support and contact information</h3>
-                <p>
-                    When you contact us, fill out a contact form, or submit a bug
-                    report, we may collect:
-                </p>
-                <ul>
-                    <li>Your name and email address</li>
-                    <li>Your organization or company name</li>
-                    <li>How you heard about us</li>
-                    <li>The content of your message or report</li>
-                    <li>
-                        Information we need to look into and resolve your request
-                    </li>
-                    <li>Related messages and support records</li>
-                </ul>
-                <h3>Billing and subscription information</h3>
-                <p>
-                    When an organization or individual buys a subscription, we may
-                    collect or process:
-                </p>
-                <ul>
-                    <li>Billing names, addresses, and contact information</li>
-                    <li>Organization billing information</li>
-                    <li>Subscription plans, status, and billing history</li>
-                    <li>Transaction identifiers and payment status</li>
-                    <li>Information needed for invoicing, accounting, and taxes</li>
-                </ul>
-                <p>
-                    Stripe processes our payments. You enter payment card details in
-                    a secure payment form provided by Stripe, and the card number
-                    goes directly to Stripe. We do not receive or store full card
-                    numbers. We keep Stripe customer and subscription identifiers
-                    and the billing records described above. Stripe handles card
-                    information under its own privacy policy.
-                </p>
-                <h3>Device, diagnostic, and technical information</h3>
-                <p>When you use our websites or applications, we may collect:</p>
-                <ul>
-                    <li>IP addresses</li>
-                    <li>Browser type and version</li>
-                    <li>Device and operating system information</li>
-                    <li>Request and error logs</li>
-                    <li>Diagnostic and performance information</li>
-                    <li>Push notification subscriptions</li>
-                    <li>Application preferences</li>
-                </ul>
-                <p>
-                    We use Sentry to find and fix errors. In some of our web
-                    applications, Sentry also records a sample of sessions (session
-                    replay) so we can see how a page behaved when something went
-                    wrong. Session replay masks all text and form input and blocks
-                    images and media before the recording leaves your browser, so
-                    the recordings show page structure, clicks, and navigation, not
-                    what you typed or read. We have configured Sentry not to collect
-                    user identity information, cookies, request headers, request
-                    bodies, or URL query parameters.
-                </p>
-                <h2 id="where-information-comes-from">
-                    Where information comes from
-                </h2>
-                <p>We get information from:</p>
-                <ul>
-                    <li>
-                        <strong>You.</strong> When you create an account, register for
-                        something, submit content, or contact us.
-                    </li>
-                    <li>
-                        <strong>Organization administrators.</strong> When an organization
-                        creates or manages accounts, memberships, settings, or participation
-                        records.
-                    </li>
-                    <li>
-                        <strong>Other users.</strong> When an authorized user adds your
-                        information, such as a form creator or administrator managing
-                        participants.
-                    </li>
-                    <li>
-                        <strong>Your device and browser.</strong> When you use the Services
-                        and technical information is generated.
-                    </li>
-                    <li>
-                        <strong>Sign-in providers.</strong> When you sign in with Google,
-                        Microsoft, or your organization's identity provider, or when your
-                        organization syncs its directory with us.
-                    </li>
-                    <li>
-                        <strong>Service providers.</strong> When they send us information
-                        we need for billing, security, support, or operations.
-                    </li>
-                </ul>
-                <p>
-                    We process this information only for the purposes described in
-                    this policy or as the law otherwise permits.
-                </p>
-                <h2 id="personal-and-organization-managed-accounts">
-                    Personal and organization-managed accounts
-                </h2>
-                <h3>Personal accounts</h3>
-                <p>
-                    You can create a personal account to use supported Origami
-                    Systems applications. One personal account works across multiple
-                    applications. Origami Systems manages the information needed to
-                    sign you in and keep your account secure.
-                </p>
-                <h3>Organization-managed accounts</h3>
-                <p>
-                    Organizations can create and manage accounts for their members.
-                    Depending on its settings, an organization's administrators can
-                    control:
-                </p>
-                <ul>
-                    <li>Account creation and membership</li>
-                    <li>Which applications a member can use</li>
-                    <li>Roles and permissions</li>
-                    <li>
-                        Profile information, including whether members can change
-                        their own name or birthday
-                    </li>
-                    <li>Participation records and assignments</li>
-                    <li>Suspending or removing an account</li>
-                </ul>
-                <p>
-                    If you have an organization-managed account, you may need to ask
-                    your organization's administrator to make some changes or to get
-                    information the organization controls.
-                </p>
-                <h3>Who is responsible for the information</h3>
-                <p>
-                    Organizations decide what information goes into the Services for
-                    their activities and how they use it. For that information,
-                    Origami Systems processes personal information on the
-                    organization's behalf, under our agreements with the
-                    organization and the law.
-                </p>
-                <p>
-                    For other information, such as what we need to run account
-                    services, protect our systems, or meet our own legal
-                    obligations, Origami Systems decides how and why it is
-                    processed.
-                </p>
-                <p>
-                    Which party is responsible depends on the information, the
-                    Service, and the law that applies.
-                </p>
-                <h2 id="how-we-use-information">How we use information</h2>
-                <p>We use information to:</p>
-                <ul>
-                    <li>Provide and operate the Services</li>
-                    <li>Create, sign in, and manage accounts</li>
-                    <li>
-                        Manage organizations, memberships, roles, and permissions
-                    </li>
-                    <li>
-                        Process registrations, waitlists, and participation records
-                    </li>
-                    <li>
-                        Provide points, standings, games, calendars, and other
-                        features
-                    </li>
-                    <li>
-                        Send account, organization, registration, and application
-                        notifications
-                    </li>
-                    <li>Give administrators management and reporting tools</li>
-                    <li>Process subscriptions and billing</li>
-                    <li>Respond to support requests and messages</li>
-                    <li>
-                        Detect, investigate, and prevent fraud, abuse, and
-                        unauthorized access
-                    </li>
-                    <li>
-                        Find and fix errors and improve reliability and performance
-                    </li>
-                    <li>Enforce our agreements and meet legal obligations</li>
-                </ul>
-                <p>
+        <div class="content">
+            <p>
+                Origami Systems LLC ("Origami Systems," "we," "us," or "our")
+                builds and runs software applications, websites, and related
+                services.
+            </p>
+            <p>
+                This Privacy Policy explains what personal information we
+                collect, how we use, store, protect, and share it, and the
+                choices available to individuals, parents, guardians, and
+                organizations.
+            </p>
+            <p>
+                This policy covers these Origami Systems products and services:
+            </p>
+            <ul>
+                <li>
+                    <strong>The House App.</strong> Manages house systems, points,
+                    games, events, announcements, and participation for an organization.
+                </li>
+                <li>
+                    <strong>The Signups App.</strong> Lets people create sign-up forms,
+                    collect registrations, and manage participants and waitlists.
+                </li>
+                <li>
+                    <strong>Origami Systems Identity.</strong> Our sign-in and account
+                    service. It provides accounts, authentication, and account settings
+                    for the other Services.
+                </li>
+                <li>
+                    <strong>Other Origami Systems services.</strong> Our websites,
+                    the Account app, onboarding, help and support pages, administrative
+                    dashboards, notification services, and any other application that
+                    links to this policy.
+                </li>
+            </ul>
+            <p>
+                We call these the "Services." Not every Service collects
+                everything described below. What we collect depends on which
+                Services and features you use, your account type, and your
+                organization's settings. A Service may give you an additional
+                privacy notice when its features require one.
+            </p>
+            <h2 id="information-we-collect">Information we collect</h2>
+            <p>
+                We collect the information we need to provide, maintain, secure,
+                and improve the Services.
+            </p>
+            <h3>Account and identity information</h3>
+            <p>
+                When you create or use an account through Origami Systems
+                Identity, we may collect:
+            </p>
+            <ul>
+                <li>
+                    First, middle, and last name, display name, name prefix, and
+                    username
+                </li>
+                <li>Email addresses and whether they are verified</li>
+                <li>
+                    Date of birth, when an organization or feature requires it
+                </li>
+                <li>
+                    Account type (personal, organization-managed, or guest),
+                    status, and preferences
+                </li>
+                <li>Organization memberships and roles</li>
+                <li>When the account was created and when it last signed in</li>
+                <li>Sign-in methods and credential records</li>
+                <li>Information needed to recover or verify the account</li>
+                <li>
+                    The version of our Terms of Use and this Privacy Policy you
+                    accepted, and when you accepted it
+                </li>
+            </ul>
+            <p>
+                We never store plain-text passwords. We store passwords as
+                one-way cryptographic hashes. We encrypt email addresses and
+                authenticator secrets when we store them.
+            </p>
+            <p>
+                Sign-in records can include passkeys and security keys,
+                authenticator-app (TOTP) settings, backup codes, and
+                passwordless sign-in settings.
+            </p>
+            <h3>External and organization sign-in</h3>
+            <p>
+                You may be able to sign in with Google or Microsoft. An
+                organization may also connect its own identity provider using
+                single sign-on (SAML or OpenID Connect), or keep its member list
+                in sync with ours through SCIM directory provisioning.
+            </p>
+            <p>
+                When you use one of these methods, the provider sends us the
+                information needed to identify you and set up your account and
+                session, such as your name, email address, and a provider
+                account identifier. When an organization uses directory
+                provisioning, its system may create, update, or deactivate your
+                account.
+            </p>
+            <p>
+                We never receive your password from Google, Microsoft, or your
+                organization's identity provider.
+            </p>
+            <h3>Authentication and security information</h3>
+            <p>To run and protect the Services, we collect:</p>
+            <ul>
+                <li>Sign-in sessions and session identifiers</li>
+                <li>
+                    Sign-in times, including successful and failed attempts and
+                    the reason an attempt failed
+                </li>
+                <li>IP addresses</li>
+                <li>Browser and device information, such as the user agent</li>
+                <li>
+                    Security events, rate-limit records, and multi-factor
+                    authentication status
+                </li>
+                <li>Account recovery and credential changes</li>
+                <li>Administrative and security audit records</li>
+            </ul>
+            <p>
+                We use this information to sign people in, block unauthorized
+                access, investigate security incidents, and keep the Services
+                reliable.
+            </p>
+            <h3>Organization information</h3>
+            <p>Organizations provide or manage information such as:</p>
+            <ul>
+                <li>Organization names and identifiers</li>
+                <li>Members, roles, permissions, and account assignments</li>
+                <li>Administrators and authorized contacts</li>
+                <li>
+                    Organization settings, profile policies, and enabled
+                    applications
+                </li>
+                <li>Single sign-on and directory provisioning settings</li>
+                <li>Administrative activity</li>
+                <li>Subscription and billing information</li>
+            </ul>
+            <p>
+                An organization administrator may add information about members
+                or create accounts for them.
+            </p>
+            <h3>Application information</h3>
+            <h4>The House App</h4>
+            <p>The House App may collect and process:</p>
+            <ul>
+                <li>Organization, house, and year information</li>
+                <li>House assignments and memberships</li>
+                <li>Points, the reasons points were awarded, and standings</li>
+                <li>Games, brackets, activities, and participation records</li>
+                <li>Events and calendars</li>
+                <li>Announcements, comments, and other submitted content</li>
+                <li>Archived years and participation history</li>
+                <li>Administrative actions and audit records</li>
+            </ul>
+            <p>
+                The House App also supports guests invited by an administrator.
+                For guests we may collect:
+            </p>
+            <ul>
+                <li>Guest names or generated display names</li>
+                <li>Guest-group and house assignments</li>
+                <li>Invitations, invitation use, and expiration dates</li>
+                <li>Guest participation in games and activities</li>
+                <li>Guest comments and notification preferences</li>
+                <li>
+                    Identifiers stored in the browser that let a guest return to
+                    their guest account
+                </li>
+            </ul>
+            <p>
+                Other members of the organization may see this information,
+                depending on their roles and permissions.
+            </p>
+            <h4>The Signups App</h4>
+            <p>The Signups App may collect and process:</p>
+            <ul>
+                <li>
+                    Form titles, descriptions, colors, settings, and access
+                    codes
+                </li>
+                <li>Event names, locations, dates, and times</li>
+                <li>Sections, slots, and capacity</li>
+                <li>
+                    Participant names, email addresses, and account identifiers
+                </li>
+                <li>
+                    Registration status, cancellations, and waitlist position
+                </li>
+                <li>Private cancellation links for guest registrations</li>
+                <li>
+                    Notification preferences for registration confirmations and
+                    cancellations
+                </li>
+                <li>Form ownership and administrative activity</li>
+            </ul>
+            <p>
+                Some forms let people register as a guest without an Origami
+                Systems account. A guest registration includes a name and email
+                address.
+            </p>
+            <p>Who can see a registration depends on the form's settings:</p>
+            <ul>
+                <li>
+                    <strong>Standard forms.</strong> Anyone who can open the form
+                    can see the names of the people signed up for each slot. Only
+                    the form's creator and other authorized organizers can see participant
+                    email addresses.
+                </li>
+                <li>
+                    <strong>Anonymous forms.</strong> Other participants and visitors
+                    cannot see who signed up. The form's creator and authorized organizers
+                    can still see every registration, including names and email addresses.
+                </li>
+            </ul>
+            <p>
+                A form creator can also require an access code, which limits who
+                can open the form.
+            </p>
+            <p>
+                Form creators decide what their forms collect and are
+                responsible for making sure their collection and use of that
+                information follows the law.
+            </p>
+            <h4>Origami Systems Identity</h4>
+            <p>
+                Origami Systems Identity provides sign-in and account management
+                for the other Services. It processes the account,
+                authentication, and security information described above.
+            </p>
+            <p>
+                Identity shares limited account information with other Origami
+                Systems applications when they need it to sign you in, check
+                your permissions, manage your account, or provide a feature you
+                asked for.
+            </p>
+            <h4>Other services</h4>
+            <p>
+                Other Origami Systems applications may collect information they
+                need for their own features. When their practices differ from
+                what this policy describes, we will update this policy or give a
+                separate notice.
+            </p>
+            <h3>Support and contact information</h3>
+            <p>
+                When you contact us, fill out a contact form, or submit a bug
+                report, we may collect:
+            </p>
+            <ul>
+                <li>Your name and email address</li>
+                <li>Your organization or company name</li>
+                <li>How you heard about us</li>
+                <li>The content of your message or report</li>
+                <li>
+                    Information we need to look into and resolve your request
+                </li>
+                <li>Related messages and support records</li>
+            </ul>
+            <h3>Billing and subscription information</h3>
+            <p>
+                When an organization or individual buys a subscription, we may
+                collect or process:
+            </p>
+            <ul>
+                <li>Billing names, addresses, and contact information</li>
+                <li>Organization billing information</li>
+                <li>Subscription plans, status, and billing history</li>
+                <li>Transaction identifiers and payment status</li>
+                <li>Information needed for invoicing, accounting, and taxes</li>
+            </ul>
+            <p>
+                Stripe processes our payments. You enter payment card details in
+                a secure payment form provided by Stripe, and the card number
+                goes directly to Stripe. We do not receive or store full card
+                numbers. We keep Stripe customer and subscription identifiers
+                and the billing records described above. Stripe handles card
+                information under its own privacy policy.
+            </p>
+            <h3>Device, diagnostic, and technical information</h3>
+            <p>When you use our websites or applications, we may collect:</p>
+            <ul>
+                <li>IP addresses</li>
+                <li>Browser type and version</li>
+                <li>Device and operating system information</li>
+                <li>Request and error logs</li>
+                <li>Diagnostic and performance information</li>
+                <li>Push notification subscriptions</li>
+                <li>Application preferences</li>
+            </ul>
+            <p>
+                We use Sentry to find and fix errors. In some of our web
+                applications, Sentry also records a sample of sessions (session
+                replay) so we can see how a page behaved when something went
+                wrong. Session replay masks all text and form input and blocks
+                images and media before the recording leaves your browser, so
+                the recordings show page structure, clicks, and navigation, not
+                what you typed or read. We have configured Sentry not to collect
+                user identity information, cookies, request headers, request
+                bodies, or URL query parameters.
+            </p>
+            <h2 id="where-information-comes-from">
+                Where information comes from
+            </h2>
+            <p>We get information from:</p>
+            <ul>
+                <li>
+                    <strong>You.</strong> When you create an account, register for
+                    something, submit content, or contact us.
+                </li>
+                <li>
+                    <strong>Organization administrators.</strong> When an organization
+                    creates or manages accounts, memberships, settings, or participation
+                    records.
+                </li>
+                <li>
+                    <strong>Other users.</strong> When an authorized user adds your
+                    information, such as a form creator or administrator managing
+                    participants.
+                </li>
+                <li>
+                    <strong>Your device and browser.</strong> When you use the Services
+                    and technical information is generated.
+                </li>
+                <li>
+                    <strong>Sign-in providers.</strong> When you sign in with Google,
+                    Microsoft, or your organization's identity provider, or when your
+                    organization syncs its directory with us.
+                </li>
+                <li>
+                    <strong>Service providers.</strong> When they send us information
+                    we need for billing, security, support, or operations.
+                </li>
+            </ul>
+            <p>
+                We process this information only for the purposes described in
+                this policy or as the law otherwise permits.
+            </p>
+            <h2 id="personal-and-organization-managed-accounts">
+                Personal and organization-managed accounts
+            </h2>
+            <h3>Personal accounts</h3>
+            <p>
+                You can create a personal account to use supported Origami
+                Systems applications. One personal account works across multiple
+                applications. Origami Systems manages the information needed to
+                sign you in and keep your account secure.
+            </p>
+            <h3>Organization-managed accounts</h3>
+            <p>
+                Organizations can create and manage accounts for their members.
+                Depending on its settings, an organization's administrators can
+                control:
+            </p>
+            <ul>
+                <li>Account creation and membership</li>
+                <li>Which applications a member can use</li>
+                <li>Roles and permissions</li>
+                <li>
+                    Profile information, including whether members can change
+                    their own name or birthday
+                </li>
+                <li>Participation records and assignments</li>
+                <li>Suspending or removing an account</li>
+            </ul>
+            <p>
+                If you have an organization-managed account, you may need to ask
+                your organization's administrator to make some changes or to get
+                information the organization controls.
+            </p>
+            <h3>Who is responsible for the information</h3>
+            <p>
+                Organizations decide what information goes into the Services for
+                their activities and how they use it. For that information,
+                Origami Systems processes personal information on the
+                organization's behalf, under our agreements with the
+                organization and the law.
+            </p>
+            <p>
+                For other information, such as what we need to run account
+                services, protect our systems, or meet our own legal
+                obligations, Origami Systems decides how and why it is
+                processed.
+            </p>
+            <p>
+                Which party is responsible depends on the information, the
+                Service, and the law that applies.
+            </p>
+            <h2 id="how-we-use-information">How we use information</h2>
+            <p>We use information to:</p>
+            <ul>
+                <li>Provide and operate the Services</li>
+                <li>Create, sign in, and manage accounts</li>
+                <li>
+                    Manage organizations, memberships, roles, and permissions
+                </li>
+                <li>
+                    Process registrations, waitlists, and participation records
+                </li>
+                <li>
+                    Provide points, standings, games, calendars, and other
+                    features
+                </li>
+                <li>
+                    Send account, organization, registration, and application
+                    notifications
+                </li>
+                <li>Give administrators management and reporting tools</li>
+                <li>Process subscriptions and billing</li>
+                <li>Respond to support requests and messages</li>
+                <li>
+                    Detect, investigate, and prevent fraud, abuse, and
+                    unauthorized access
+                </li>
+                <li>
+                    Find and fix errors and improve reliability and performance
+                </li>
+                <li>Enforce our agreements and meet legal obligations</li>
+            </ul>
+            <p>
+                <strong
+                    >We do not sell personal information. We do not use personal
+                    information for targeted advertising, and we do not build
+                    advertising profiles.</strong>
+            </p>
+            <p>
+                We do not use information collected from students through
+                school-authorized use for advertising or any commercial purpose
+                unrelated to the Service the school requested.
+            </p>
+            <h2 id="information-shared-between-origami-systems-services">
+                Information shared between Origami Systems services
+            </h2>
+            <p>
+                Origami Systems applications share infrastructure for sign-in,
+                accounts, organizations, notifications, and security. When you
+                use more than one application, each one can access the limited
+                account information it needs to:
+            </p>
+            <ul>
+                <li>Identify and sign in your account</li>
+                <li>Confirm your organization membership</li>
+                <li>Check your permissions</li>
+                <li>Provide the features you use</li>
+                <li>Send notifications</li>
+                <li>Keep your account secure</li>
+            </ul>
+            <p>
+                For example, an application may receive your account identifier,
+                display name, or organization membership from Origami Systems
+                Identity.
+            </p>
+            <p>
+                Information you create in one application does not automatically
+                appear in the others. Access depends on the application, your
+                permissions, and your organization's settings.
+            </p>
+            <p>
+                We do not disclose one organization's information to another
+                organization because both use Origami Systems.
+            </p>
+            <h2 id="how-we-share-information">How we share information</h2>
+            <p>
+                We share information only to provide the Services, run our
+                business, comply with the law, or as this policy otherwise
+                describes.
+            </p>
+            <h3>Within organizations</h3>
+            <p>
+                Authorized users in the same organization may see information
+                about each other. Depending on their permissions, administrators
+                can view or manage:
+            </p>
+            <ul>
+                <li>Account and membership information</li>
+                <li>Roles and permissions</li>
+                <li>House or group assignments</li>
+                <li>Participation and registration records</li>
+                <li>Announcements, comments, and submitted content</li>
+                <li>Administrative and audit information</li>
+            </ul>
+            <p>
+                Other members may see standings, activities, events, or comments
+                when those features are available to them.
+            </p>
+            <h3>With form creators and organizers</h3>
+            <p>
+                When you register through The Signups App, the form's creator
+                and authorized organizers receive what they need to manage your
+                registration. That includes your name, email address, selected
+                slots, and registration status. <a
+                    class="text-link"
+                    href="#information-we-collect">Section 1</a
+                > explains what other visitors to a form can see.
+            </p>
+            <h3>With service providers</h3>
+            <p>
+                We use service providers to help run the Services. They process
+                information only to provide their services to us, under their
+                contracts with us and their legal obligations. They include:
+            </p>
+            <ul>
+                <li>
                     <strong
-                        >We do not sell personal information. We do not use personal
-                        information for targeted advertising, and we do not build
-                        advertising profiles.</strong>
-                </p>
-                <p>
-                    We do not use information collected from students through
-                    school-authorized use for advertising or any commercial purpose
-                    unrelated to the Service the school requested.
-                </p>
-                <h2 id="information-shared-between-origami-systems-services">
-                    Information shared between Origami Systems services
-                </h2>
-                <p>
-                    Origami Systems applications share infrastructure for sign-in,
-                    accounts, organizations, notifications, and security. When you
-                    use more than one application, each one can access the limited
-                    account information it needs to:
-                </p>
-                <ul>
-                    <li>Identify and sign in your account</li>
-                    <li>Confirm your organization membership</li>
-                    <li>Check your permissions</li>
-                    <li>Provide the features you use</li>
-                    <li>Send notifications</li>
-                    <li>Keep your account secure</li>
-                </ul>
-                <p>
-                    For example, an application may receive your account identifier,
-                    display name, or organization membership from Origami Systems
-                    Identity.
-                </p>
-                <p>
-                    Information you create in one application does not automatically
-                    appear in the others. Access depends on the application, your
-                    permissions, and your organization's settings.
-                </p>
-                <p>
-                    We do not disclose one organization's information to another
-                    organization because both use Origami Systems.
-                </p>
-                <h2 id="how-we-share-information">How we share information</h2>
-                <p>
-                    We share information only to provide the Services, run our
-                    business, comply with the law, or as this policy otherwise
-                    describes.
-                </p>
-                <h3>Within organizations</h3>
-                <p>
-                    Authorized users in the same organization may see information
-                    about each other. Depending on their permissions, administrators
-                    can view or manage:
-                </p>
-                <ul>
-                    <li>Account and membership information</li>
-                    <li>Roles and permissions</li>
-                    <li>House or group assignments</li>
-                    <li>Participation and registration records</li>
-                    <li>Announcements, comments, and submitted content</li>
-                    <li>Administrative and audit information</li>
-                </ul>
-                <p>
-                    Other members may see standings, activities, events, or comments
-                    when those features are available to them.
-                </p>
-                <h3>With form creators and organizers</h3>
-                <p>
-                    When you register through The Signups App, the form's creator
-                    and authorized organizers receive what they need to manage your
-                    registration. That includes your name, email address, selected
-                    slots, and registration status. <a
-                        class="text-link"
-                        href="#information-we-collect">Section 1</a
-                    > explains what other visitors to a form can see.
-                </p>
-                <h3>With service providers</h3>
-                <p>
-                    We use service providers to help run the Services. They process
-                    information only to provide their services to us, under their
-                    contracts with us and their legal obligations. They include:
-                </p>
-                <ul>
-                    <li>
-                        <strong
-                            >Cloud hosting, database, and file storage providers</strong
-                        >, which host our applications and store our data
-                    </li>
-                    <li><strong>Stripe</strong>, for payment processing</li>
-                    <li>
-                        <strong>Google</strong>, which sends our email through
-                        Google Workspace
-                    </li>
-                    <li>
-                        <strong>Sentry</strong>, for error reporting, performance
-                        monitoring, and session replay
-                    </li>
-                    <li>
-                        <strong>Google and Microsoft</strong>, when you choose to
-                        sign in with them
-                    </li>
-                    <li>
-                        <strong>Browser and device push services</strong>, such as
-                        those run by Google, Apple, and Mozilla, which deliver push
-                        notifications you turn on
-                    </li>
-                    <li>
-                        <strong>A workflow automation tool we operate</strong>,
-                        which routes contact-form messages to our support inbox
-                    </li>
-                </ul>
-                <h3>For legal and safety reasons</h3>
-                <p>
-                    We may disclose information when we reasonably believe it is
-                    necessary to:
-                </p>
-                <ul>
-                    <li>Comply with the law or valid legal process</li>
-                    <li>
-                        Protect the rights, safety, or security of users or others
-                    </li>
-                    <li>Investigate fraud, abuse, or security incidents</li>
-                    <li>Enforce our agreements</li>
-                    <li>Protect the Services</li>
-                </ul>
-                <h3>Business transfers</h3>
-                <p>
-                    If Origami Systems LLC is part of a merger, acquisition,
-                    financing, reorganization, or sale of assets, information may
-                    transfer as part of that transaction. We will give notice when
-                    the law requires it, and the information will remain subject to
-                    this policy unless you are notified otherwise.
-                </p>
-                <h2 id="cookies-browser-storage-and-similar-technologies">
-                    Cookies, browser storage, and similar technologies
-                </h2>
-                <p>
-                    We use cookies, browser storage, and application memory to keep
-                    you signed in, remember your preferences, and support guest
-                    access. We do not use them for advertising or cross-site
-                    tracking.
-                </p>
-                <h3>Sign-in cookies and tokens</h3>
-                <p>
-                    When you sign in on the web, Origami Systems Identity sets
-                    secure, HttpOnly cookies on its own domain to hold your session
-                    and refresh token. Scripts on the page cannot read these
-                    cookies. They last up to 14 days, after which you need to sign
-                    in again.
-                </p>
-                <p>
-                    Applications keep short-lived access tokens in memory only.
-                    Access tokens expire after 15 minutes, and the application gets
-                    a new one in the background while your session is active.
-                </p>
-                <p>
-                    When you sign out, we end the session on our servers and clear
-                    the sign-in data the application stored in your browser.
-                </p>
-                <h3>Guest access</h3>
-                <p>
-                    In The House App, guest sign-in information, including the
-                    guest's tokens, organization, and expiration date, is stored in
-                    the browser's local storage. This lets a guest return to the
-                    same guest account on that browser until the guest access
-                    expires.
-                </p>
-                <p>
-                    In The Signups App, guests get a private cancellation link after
-                    registering. Anyone with the link can cancel that registration,
-                    so keep it private.
-                </p>
-                <h3>Preferences</h3>
-                <p>
-                    We use local storage to remember settings such as your color
-                    theme, your most recent organization, and the sign-in method you
-                    chose.
-                </p>
-                <h3>Push notifications</h3>
-                <p>
-                    When you turn on push notifications, your browser or device
-                    gives us a push subscription, which we use to deliver
-                    notifications. You can turn push notifications off in your
-                    account settings or in your browser or device settings.
-                </p>
-                <h3>Managing browser storage</h3>
-                <p>
-                    You can clear cookies and local storage in your browser
-                    settings. Doing so may sign you out, remove access to a guest
-                    account, or reset your preferences.
-                </p>
-                <h2 id="data-retention">Data retention</h2>
-                <p>
-                    We keep personal information only as long as we reasonably need
-                    it to provide the Services, fulfill the purposes in this policy,
-                    meet legal obligations, resolve disputes, and maintain security.
-                    Different information has different retention periods.
-                </p>
-                <h3>Account information</h3>
-                <p>
-                    We keep account information while the account is active. <a
-                        class="text-link"
-                        href="#data-deletion-and-account-closure">Section 9</a
-                    > explains what happens when a personal account is deleted. Information
-                    tied to organization-managed accounts and organization activity may
-                    stay under the organization's control.
-                </p>
-                <p>
-                    We delete personal account registrations that were started but
-                    never completed after 7 days.
-                </p>
-                <h3>Organization and application information</h3>
-                <p>
-                    Organization records, participation history, sign-up forms,
-                    registrations, and other application content remain until:
-                </p>
-                <ul>
-                    <li>An authorized user or administrator deletes them</li>
-                    <li>The organization asks us to delete them</li>
-                    <li>Our agreement with the organization ends</li>
-                    <li>The information is no longer needed for the Service</li>
-                </ul>
-                <p>
-                    We may keep some information longer when the law, an agreement,
-                    or a security need requires it.
-                </p>
-                <h3>Guest information</h3>
-                <p>
-                    We keep guest information until the guest access expires, an
-                    administrator removes it, the guest group or invitation is
-                    invalidated, or we no longer need it. Some records may remain
-                    for a short time for security, legal, or backup reasons.
-                </p>
-                <h3>Authentication and security records</h3>
-                <p>
-                    Origami Systems Identity keeps authentication records for these
-                    periods:
-                </p>
-                <ul>
-                    <li>Successful sign-in records: up to 180 days</li>
-                    <li>Failed sign-in records: up to 90 days</li>
-                    <li>
-                        Records of revoked sessions, including sessions you signed
-                        out of: up to 180 days after revocation
-                    </li>
-                    <li>
-                        Password reset links: deleted 14 days after they are used or
-                        expire
-                    </li>
-                    <li>Sign-in sessions: expire after 14 days</li>
-                    <li>Access tokens: expire after 15 minutes</li>
-                    <li>
-                        Temporary sign-in codes and authorization states: expire
-                        within minutes to a day, depending on their purpose
-                    </li>
-                </ul>
-                <p>
-                    An automated cleanup process removes expired records every 12
-                    hours. We may keep specific records longer for an active
-                    security investigation or when the law requires it.
-                </p>
-                <h3>Application and infrastructure logs</h3>
-                <p>
-                    We keep technical logs to monitor performance, fix problems, and
-                    investigate security incidents. These logs are generally deleted
-                    after 90 days, unless we need them longer for an active security
-                    investigation or the law requires it.
-                </p>
-                <h3>Billing information</h3>
-                <p>
-                    We keep subscription, billing, and transaction records for as
-                    long as tax, accounting, and other laws require.
-                </p>
-                <h3>Support records</h3>
-                <p>
-                    We keep contact and support records as long as we need them to
-                    answer your request, keep reasonable business records, and
-                    handle related issues.
-                </p>
-                <h3>Backups</h3>
-                <p>
-                    We keep encrypted database backups for disaster recovery.
-                    Backups are generally deleted after 30 days. Deleted information
-                    may remain in a backup until that backup expires. We do not use
-                    backups for normal operations, and we may keep a backup longer
-                    only when the law or an active security investigation requires
-                    it.
-                </p>
-                <h2 id="data-deletion-and-account-closure">
-                    Data deletion and account closure
-                </h2>
-                <h3>Personal accounts</h3>
-                <p>
-                    You can delete your personal account in the Account app, or by
-                    emailing <a
-                        class="text-link"
-                        href="mailto:privacy@origamisystems.org"
-                        >privacy@origamisystems.org</a
-                    >.
-                </p>
-                <p>
-                    When you ask to delete your account, we disable it in every
-                    application right away and schedule it for permanent deletion 7
-                    days later. During those 7 days you can sign in to the Account
-                    app and cancel. After 7 days we permanently delete the account,
-                    its sessions, its sign-in records, and its credentials.
-                </p>
-                <p>
-                    If you are the only administrator of an organization, you need
-                    to add another administrator or close the organization before
-                    you can delete your account.
-                </p>
-                <p>
-                    Deleting your personal account removes your access to every
-                    Origami Systems application that uses it.
-                </p>
-                <h3>What happens to your application data</h3>
-                <p>
-                    <strong>The Signups App.</strong> We delete forms you created, along
-                    with their sections, slots, and registrations. Your registrations
-                    on other people's forms no longer show your name or email address
-                    and appear as "Deleted user." Registrations for slots that have not
-                    ended yet are canceled, which frees the spot for someone on the waitlist.
-                    Registrations for past slots stay as anonymous history so organizers
-                    keep accurate records.
-                </p>
-                <p>
-                    <strong>Organization content.</strong> Content you contributed to
-                    an organization, such as announcements, uploaded files, and audit
-                    records, stays with the organization but is no longer linked to your
-                    account.
-                </p>
-                <p>
-                    <strong>Other Services.</strong> We delete, de-identify, or keep other
-                    information according to the law, our agreements, and the type of
-                    information.
-                </p>
-                <h3>Organization-managed and invited accounts</h3>
-                <p>
-                    Some Services, including The House App, use accounts that an
-                    organization creates or invites you to. The organization manages
-                    these accounts, and you cannot delete them yourself in account
-                    settings.
-                </p>
-                <p>
-                    Authorized administrators can deactivate, archive, or remove
-                    these accounts. The organization may keep participation records,
-                    such as points, standings, and activity history, as the law and
-                    its agreements allow.
-                </p>
-                <p>
-                    You, or your parent or guardian, can still ask us for access to
-                    or deletion of personal information when the law gives you that
-                    right. We may handle the request together with the organization.
-                </p>
-                <h3>Organization data</h3>
-                <p>
-                    An organization can ask us to delete its information or end its
-                    use of the Services. We may keep certain records when the law,
-                    security, or another lawful purpose requires it.
-                </p>
-                <h3>Privacy requests</h3>
-                <p>
-                    For help with deleting an account or with your personal
-                    information, email <a
-                        class="text-link"
-                        href="mailto:privacy@origamisystems.org"
-                        >privacy@origamisystems.org</a
-                    >. We will respond as the law and our agreements require.
-                </p>
-                <h2 id="your-choices-and-privacy-rights">
-                    Your choices and privacy rights
-                </h2>
-                <p>Depending on where you live, you may have the right to:</p>
-                <ul>
-                    <li>Access your personal information</li>
-                    <li>Correct inaccurate information</li>
-                    <li>Delete your personal information</li>
-                    <li>Get a copy of certain information</li>
-                    <li>Object to or restrict certain processing</li>
-                    <li>Withdraw consent when we rely on it</li>
-                    <li>Appeal our decision on your request</li>
-                </ul>
-                <p>
-                    To make a request, email <a
-                        class="text-link"
-                        href="mailto:privacy@origamisystems.org"
-                        >privacy@origamisystems.org</a
-                    >.
-                </p>
-                <p>
-                    If an organization controls the information, we may send your
-                    request to that organization or work with it to respond.
-                </p>
-                <p>
-                    We may ask for information to confirm your identity and your
-                    authority to make the request. We will respond within the time
-                    the law requires. We may keep or decline to delete some
-                    information when the law permits or requires it, such as for
-                    security, legal compliance, or resolving disputes.
-                </p>
-                <h3>Account and notification settings</h3>
-                <p>
-                    You can update your profile, sign-in methods, and notification
-                    preferences in your account settings, unless your organization
-                    manages those settings. You can also turn off push notifications
-                    in your browser or device settings.
-                </p>
-                <h2 id="children-and-students">Children and students</h2>
-                <p>
-                    Schools and other organizations that work with minors may use
-                    some Services. We limit the collection and use of children's
-                    personal information to what the Service needs.
-                </p>
-                <h3>School-authorized use</h3>
-                <p>
-                    Schools may use the Services to manage student accounts,
-                    participation, activities, and other school functions.
-                </p>
-                <p>
-                    Where the law allows, a school may consent on behalf of parents
-                    to the collection of personal information from children under 13
-                    for a school purpose. We rely on that consent only when the
-                    school has authority to give it and the required notices have
-                    been provided.
-                </p>
-                <p>
-                    We use information from school-authorized use only to provide
-                    the Service the school requested and related functions the
-                    school authorized. We do not use it for targeted advertising or
-                    unrelated commercial purposes.
-                </p>
-                <h3>Parent and guardian rights</h3>
-                <p>
-                    Parents, guardians, and authorized schools can ask to review or
-                    delete a child's personal information, or ask us to stop
-                    collecting or using it, as the law allows. Send these requests
-                    to the organization's administrator or to <a
-                        class="text-link"
-                        href="mailto:privacy@origamisystems.org"
-                        >privacy@origamisystems.org</a
-                    >. We may confirm the requester's identity and authority before
-                    acting.
-                </p>
-                <h3>Personal accounts and other organizations</h3>
-                <p>
-                    You must be at least 13 years old to create a personal Origami
-                    Systems account. Other age or consent rules may apply where you
-                    live.
-                </p>
-                <p>
-                    Children under 13 may use accounts provided by their school for
-                    school purposes, subject to the required notices and consent.
-                </p>
-                <p>
-                    An organization that is not a school cannot consent for a
-                    child's parent or guardian. When the law requires parental
-                    consent, the organization must obtain it before adding the
-                    child's personal information.
-                </p>
-                <p>
-                    We do not require a child to give more personal information than
-                    the Service needs.
-                </p>
-                <h3>Public sign-up forms</h3>
-                <p>
-                    Anyone can open a public sign-up form, and some forms allow
-                    registration without an account. Form creators decide what their
-                    forms are for and what they ask.
-                </p>
-                <p>
-                    A parent, guardian, or authorized organization may register a
-                    child, as the law allows. Children's privacy laws still apply to
-                    public forms. We do not require age verification to view a
-                    public form.
-                </p>
-                <p>
-                    If you believe we collected personal information from a child
-                    under 13 without the required consent, email <a
-                        class="text-link"
-                        href="mailto:privacy@origamisystems.org"
-                        >privacy@origamisystems.org</a
-                    > and we will delete it.
-                </p>
-                <h2 id="data-security">Data security</h2>
-                <p>
-                    We use administrative, technical, and physical safeguards to
-                    protect personal information, including:
-                </p>
-                <ul>
-                    <li>Encryption of data sent over networks</li>
-                    <li>Password hashing and other credential protection</li>
-                    <li>
-                        Encryption of email addresses, authenticator secrets, and
-                        other sensitive values in storage
-                    </li>
-                    <li>
-                        Multi-factor authentication, passkeys, and security keys
-                    </li>
-                    <li>Role-based permissions</li>
-                    <li>Rate limits on sign-in and account emails</li>
-                    <li>Security logging and monitoring</li>
-                    <li>Restricted access to servers and databases</li>
-                    <li>Encrypted backups and recovery procedures</li>
-                </ul>
-                <p>
-                    No method of transmission or storage is completely secure. If a
-                    security incident affects your personal information, we will
-                    investigate it and notify you or your organization when the law
-                    or our agreements require it.
-                </p>
-                <h2 id="where-we-process-and-store-information">
-                    Where we process and store information
-                </h2>
-                <p>
-                    We process and store information in the United States. Some
-                    service providers may process information in other countries to
-                    provide their services. When the law requires safeguards for
-                    international transfers, we put them in place.
-                </p>
-                <h2 id="third-party-services-and-websites">
-                    Third-party services and websites
-                </h2>
-                <p>
-                    The Services may link to other websites or connect with outside
-                    services, such as Stripe, Google, Microsoft, your organization's
-                    identity provider, or websites that users and organizations link
-                    to. Those services have their own privacy policies, which apply
-                    when you use them directly.
-                </p>
-                <h2 id="changes-to-this-policy">Changes to this policy</h2>
-                <p>
-                    We may update this policy when our Services, practices, or legal
-                    obligations change. When we do, we will update the "Last
-                    updated" date above. If a change materially affects how we
-                    collect, use, or share personal information, we will give
-                    additional notice through our websites, applications, email, or
-                    your organization, and ask for your consent when the law
-                    requires it.
-                </p>
-                <h2 id="contact-us">Contact us</h2>
-                <p>
-                    If you have questions about this policy or your privacy rights,
-                    contact:
-                </p>
-                <p>
-                    <strong>Origami Systems LLC</strong><br />Privacy requests: <a
-                        class="text-link"
-                        href="mailto:privacy@origamisystems.org"
-                        >privacy@origamisystems.org</a
-                    ><br />General support: <a
-                        class="text-link"
-                        href="mailto:support@origamisystems.org"
-                        >support@origamisystems.org</a
-                    ><br />Security support: <a
-                        class="text-link"
-                        href="mailto:security@origamisystems.org"
-                        >security@origamisystems.org</a
-                    ><br />Website: <a
-                        class="text-link"
-                        href="https://origamisystems.org"
-                        >https://origamisystems.org</a>
-                </p>
-                <p>
-                    For questions about an organization-managed account or
-                    information an organization controls, you can also contact your
-                    organization's administrator.
-                </p>
-            </div>
-        </Card>
-    </div>
+                        >Cloud hosting, database, and file storage providers</strong
+                    >, which host our applications and store our data
+                </li>
+                <li><strong>Stripe</strong>, for payment processing</li>
+                <li>
+                    <strong>Google</strong>, which sends our email through
+                    Google Workspace
+                </li>
+                <li>
+                    <strong>Sentry</strong>, for error reporting, performance
+                    monitoring, and session replay
+                </li>
+                <li>
+                    <strong>Google and Microsoft</strong>, when you choose to
+                    sign in with them
+                </li>
+                <li>
+                    <strong>Browser and device push services</strong>, such as
+                    those run by Google, Apple, and Mozilla, which deliver push
+                    notifications you turn on
+                </li>
+                <li>
+                    <strong>A workflow automation tool we operate</strong>,
+                    which routes contact-form messages to our support inbox
+                </li>
+            </ul>
+            <h3>For legal and safety reasons</h3>
+            <p>
+                We may disclose information when we reasonably believe it is
+                necessary to:
+            </p>
+            <ul>
+                <li>Comply with the law or valid legal process</li>
+                <li>
+                    Protect the rights, safety, or security of users or others
+                </li>
+                <li>Investigate fraud, abuse, or security incidents</li>
+                <li>Enforce our agreements</li>
+                <li>Protect the Services</li>
+            </ul>
+            <h3>Business transfers</h3>
+            <p>
+                If Origami Systems LLC is part of a merger, acquisition,
+                financing, reorganization, or sale of assets, information may
+                transfer as part of that transaction. We will give notice when
+                the law requires it, and the information will remain subject to
+                this policy unless you are notified otherwise.
+            </p>
+            <h2 id="cookies-browser-storage-and-similar-technologies">
+                Cookies, browser storage, and similar technologies
+            </h2>
+            <p>
+                We use cookies, browser storage, and application memory to keep
+                you signed in, remember your preferences, and support guest
+                access. We do not use them for advertising or cross-site
+                tracking.
+            </p>
+            <h3>Sign-in cookies and tokens</h3>
+            <p>
+                When you sign in on the web, Origami Systems Identity sets
+                secure, HttpOnly cookies on its own domain to hold your session
+                and refresh token. Scripts on the page cannot read these
+                cookies. They last up to 14 days, after which you need to sign
+                in again.
+            </p>
+            <p>
+                Applications keep short-lived access tokens in memory only.
+                Access tokens expire after 15 minutes, and the application gets
+                a new one in the background while your session is active.
+            </p>
+            <p>
+                When you sign out, we end the session on our servers and clear
+                the sign-in data the application stored in your browser.
+            </p>
+            <h3>Guest access</h3>
+            <p>
+                In The House App, guest sign-in information, including the
+                guest's tokens, organization, and expiration date, is stored in
+                the browser's local storage. This lets a guest return to the
+                same guest account on that browser until the guest access
+                expires.
+            </p>
+            <p>
+                In The Signups App, guests get a private cancellation link after
+                registering. Anyone with the link can cancel that registration,
+                so keep it private.
+            </p>
+            <h3>Preferences</h3>
+            <p>
+                We use local storage to remember settings such as your color
+                theme, your most recent organization, and the sign-in method you
+                chose.
+            </p>
+            <h3>Push notifications</h3>
+            <p>
+                When you turn on push notifications, your browser or device
+                gives us a push subscription, which we use to deliver
+                notifications. You can turn push notifications off in your
+                account settings or in your browser or device settings.
+            </p>
+            <h3>Managing browser storage</h3>
+            <p>
+                You can clear cookies and local storage in your browser
+                settings. Doing so may sign you out, remove access to a guest
+                account, or reset your preferences.
+            </p>
+            <h2 id="data-retention">Data retention</h2>
+            <p>
+                We keep personal information only as long as we reasonably need
+                it to provide the Services, fulfill the purposes in this policy,
+                meet legal obligations, resolve disputes, and maintain security.
+                Different information has different retention periods.
+            </p>
+            <h3>Account information</h3>
+            <p>
+                We keep account information while the account is active. <a
+                    class="text-link"
+                    href="#data-deletion-and-account-closure">Section 9</a
+                > explains what happens when a personal account is deleted. Information
+                tied to organization-managed accounts and organization activity may
+                stay under the organization's control.
+            </p>
+            <p>
+                We delete personal account registrations that were started but
+                never completed after 7 days.
+            </p>
+            <h3>Organization and application information</h3>
+            <p>
+                Organization records, participation history, sign-up forms,
+                registrations, and other application content remain until:
+            </p>
+            <ul>
+                <li>An authorized user or administrator deletes them</li>
+                <li>The organization asks us to delete them</li>
+                <li>Our agreement with the organization ends</li>
+                <li>The information is no longer needed for the Service</li>
+            </ul>
+            <p>
+                We may keep some information longer when the law, an agreement,
+                or a security need requires it.
+            </p>
+            <h3>Guest information</h3>
+            <p>
+                We keep guest information until the guest access expires, an
+                administrator removes it, the guest group or invitation is
+                invalidated, or we no longer need it. Some records may remain
+                for a short time for security, legal, or backup reasons.
+            </p>
+            <h3>Authentication and security records</h3>
+            <p>
+                Origami Systems Identity keeps authentication records for these
+                periods:
+            </p>
+            <ul>
+                <li>Successful sign-in records: up to 180 days</li>
+                <li>Failed sign-in records: up to 90 days</li>
+                <li>
+                    Records of revoked sessions, including sessions you signed
+                    out of: up to 180 days after revocation
+                </li>
+                <li>
+                    Password reset links: deleted 14 days after they are used or
+                    expire
+                </li>
+                <li>Sign-in sessions: expire after 14 days</li>
+                <li>Access tokens: expire after 15 minutes</li>
+                <li>
+                    Temporary sign-in codes and authorization states: expire
+                    within minutes to a day, depending on their purpose
+                </li>
+            </ul>
+            <p>
+                An automated cleanup process removes expired records every 12
+                hours. We may keep specific records longer for an active
+                security investigation or when the law requires it.
+            </p>
+            <h3>Application and infrastructure logs</h3>
+            <p>
+                We keep technical logs to monitor performance, fix problems, and
+                investigate security incidents. These logs are generally deleted
+                after 90 days, unless we need them longer for an active security
+                investigation or the law requires it.
+            </p>
+            <h3>Billing information</h3>
+            <p>
+                We keep subscription, billing, and transaction records for as
+                long as tax, accounting, and other laws require.
+            </p>
+            <h3>Support records</h3>
+            <p>
+                We keep contact and support records as long as we need them to
+                answer your request, keep reasonable business records, and
+                handle related issues.
+            </p>
+            <h3>Backups</h3>
+            <p>
+                We keep encrypted database backups for disaster recovery.
+                Backups are generally deleted after 30 days. Deleted information
+                may remain in a backup until that backup expires. We do not use
+                backups for normal operations, and we may keep a backup longer
+                only when the law or an active security investigation requires
+                it.
+            </p>
+            <h2 id="data-deletion-and-account-closure">
+                Data deletion and account closure
+            </h2>
+            <h3>Personal accounts</h3>
+            <p>
+                You can delete your personal account in the Account app, or by
+                emailing <a
+                    class="text-link"
+                    href="mailto:privacy@origamisystems.org"
+                    >privacy@origamisystems.org</a
+                >.
+            </p>
+            <p>
+                When you ask to delete your account, we disable it in every
+                application right away and schedule it for permanent deletion 7
+                days later. During those 7 days you can sign in to the Account
+                app and cancel. After 7 days we permanently delete the account,
+                its sessions, its sign-in records, and its credentials.
+            </p>
+            <p>
+                If you are the only administrator of an organization, you need
+                to add another administrator or close the organization before
+                you can delete your account.
+            </p>
+            <p>
+                Deleting your personal account removes your access to every
+                Origami Systems application that uses it.
+            </p>
+            <h3>What happens to your application data</h3>
+            <p>
+                <strong>The Signups App.</strong> We delete forms you created, along
+                with their sections, slots, and registrations. Your registrations
+                on other people's forms no longer show your name or email address
+                and appear as "Deleted user." Registrations for slots that have not
+                ended yet are canceled, which frees the spot for someone on the waitlist.
+                Registrations for past slots stay as anonymous history so organizers
+                keep accurate records.
+            </p>
+            <p>
+                <strong>Organization content.</strong> Content you contributed to
+                an organization, such as announcements, uploaded files, and audit
+                records, stays with the organization but is no longer linked to your
+                account.
+            </p>
+            <p>
+                <strong>Other Services.</strong> We delete, de-identify, or keep other
+                information according to the law, our agreements, and the type of
+                information.
+            </p>
+            <h3>Organization-managed and invited accounts</h3>
+            <p>
+                Some Services, including The House App, use accounts that an
+                organization creates or invites you to. The organization manages
+                these accounts, and you cannot delete them yourself in account
+                settings.
+            </p>
+            <p>
+                Authorized administrators can deactivate, archive, or remove
+                these accounts. The organization may keep participation records,
+                such as points, standings, and activity history, as the law and
+                its agreements allow.
+            </p>
+            <p>
+                You, or your parent or guardian, can still ask us for access to
+                or deletion of personal information when the law gives you that
+                right. We may handle the request together with the organization.
+            </p>
+            <h3>Organization data</h3>
+            <p>
+                An organization can ask us to delete its information or end its
+                use of the Services. We may keep certain records when the law,
+                security, or another lawful purpose requires it.
+            </p>
+            <h3>Privacy requests</h3>
+            <p>
+                For help with deleting an account or with your personal
+                information, email <a
+                    class="text-link"
+                    href="mailto:privacy@origamisystems.org"
+                    >privacy@origamisystems.org</a
+                >. We will respond as the law and our agreements require.
+            </p>
+            <h2 id="your-choices-and-privacy-rights">
+                Your choices and privacy rights
+            </h2>
+            <p>Depending on where you live, you may have the right to:</p>
+            <ul>
+                <li>Access your personal information</li>
+                <li>Correct inaccurate information</li>
+                <li>Delete your personal information</li>
+                <li>Get a copy of certain information</li>
+                <li>Object to or restrict certain processing</li>
+                <li>Withdraw consent when we rely on it</li>
+                <li>Appeal our decision on your request</li>
+            </ul>
+            <p>
+                To make a request, email <a
+                    class="text-link"
+                    href="mailto:privacy@origamisystems.org"
+                    >privacy@origamisystems.org</a
+                >.
+            </p>
+            <p>
+                If an organization controls the information, we may send your
+                request to that organization or work with it to respond.
+            </p>
+            <p>
+                We may ask for information to confirm your identity and your
+                authority to make the request. We will respond within the time
+                the law requires. We may keep or decline to delete some
+                information when the law permits or requires it, such as for
+                security, legal compliance, or resolving disputes.
+            </p>
+            <h3>Account and notification settings</h3>
+            <p>
+                You can update your profile, sign-in methods, and notification
+                preferences in your account settings, unless your organization
+                manages those settings. You can also turn off push notifications
+                in your browser or device settings.
+            </p>
+            <h2 id="children-and-students">Children and students</h2>
+            <p>
+                Schools and other organizations that work with minors may use
+                some Services. We limit the collection and use of children's
+                personal information to what the Service needs.
+            </p>
+            <h3>School-authorized use</h3>
+            <p>
+                Schools may use the Services to manage student accounts,
+                participation, activities, and other school functions.
+            </p>
+            <p>
+                Where the law allows, a school may consent on behalf of parents
+                to the collection of personal information from children under 13
+                for a school purpose. We rely on that consent only when the
+                school has authority to give it and the required notices have
+                been provided.
+            </p>
+            <p>
+                We use information from school-authorized use only to provide
+                the Service the school requested and related functions the
+                school authorized. We do not use it for targeted advertising or
+                unrelated commercial purposes.
+            </p>
+            <h3>Parent and guardian rights</h3>
+            <p>
+                Parents, guardians, and authorized schools can ask to review or
+                delete a child's personal information, or ask us to stop
+                collecting or using it, as the law allows. Send these requests
+                to the organization's administrator or to <a
+                    class="text-link"
+                    href="mailto:privacy@origamisystems.org"
+                    >privacy@origamisystems.org</a
+                >. We may confirm the requester's identity and authority before
+                acting.
+            </p>
+            <h3>Personal accounts and other organizations</h3>
+            <p>
+                You must be at least 13 years old to create a personal Origami
+                Systems account. Other age or consent rules may apply where you
+                live.
+            </p>
+            <p>
+                Children under 13 may use accounts provided by their school for
+                school purposes, subject to the required notices and consent.
+            </p>
+            <p>
+                An organization that is not a school cannot consent for a
+                child's parent or guardian. When the law requires parental
+                consent, the organization must obtain it before adding the
+                child's personal information.
+            </p>
+            <p>
+                We do not require a child to give more personal information than
+                the Service needs.
+            </p>
+            <h3>Public sign-up forms</h3>
+            <p>
+                Anyone can open a public sign-up form, and some forms allow
+                registration without an account. Form creators decide what their
+                forms are for and what they ask.
+            </p>
+            <p>
+                A parent, guardian, or authorized organization may register a
+                child, as the law allows. Children's privacy laws still apply to
+                public forms. We do not require age verification to view a
+                public form.
+            </p>
+            <p>
+                If you believe we collected personal information from a child
+                under 13 without the required consent, email <a
+                    class="text-link"
+                    href="mailto:privacy@origamisystems.org"
+                    >privacy@origamisystems.org</a
+                > and we will delete it.
+            </p>
+            <h2 id="data-security">Data security</h2>
+            <p>
+                We use administrative, technical, and physical safeguards to
+                protect personal information, including:
+            </p>
+            <ul>
+                <li>Encryption of data sent over networks</li>
+                <li>Password hashing and other credential protection</li>
+                <li>
+                    Encryption of email addresses, authenticator secrets, and
+                    other sensitive values in storage
+                </li>
+                <li>
+                    Multi-factor authentication, passkeys, and security keys
+                </li>
+                <li>Role-based permissions</li>
+                <li>Rate limits on sign-in and account emails</li>
+                <li>Security logging and monitoring</li>
+                <li>Restricted access to servers and databases</li>
+                <li>Encrypted backups and recovery procedures</li>
+            </ul>
+            <p>
+                No method of transmission or storage is completely secure. If a
+                security incident affects your personal information, we will
+                investigate it and notify you or your organization when the law
+                or our agreements require it.
+            </p>
+            <h2 id="where-we-process-and-store-information">
+                Where we process and store information
+            </h2>
+            <p>
+                We process and store information in the United States. Some
+                service providers may process information in other countries to
+                provide their services. When the law requires safeguards for
+                international transfers, we put them in place.
+            </p>
+            <h2 id="third-party-services-and-websites">
+                Third-party services and websites
+            </h2>
+            <p>
+                The Services may link to other websites or connect with outside
+                services, such as Stripe, Google, Microsoft, your organization's
+                identity provider, or websites that users and organizations link
+                to. Those services have their own privacy policies, which apply
+                when you use them directly.
+            </p>
+            <h2 id="changes-to-this-policy">Changes to this policy</h2>
+            <p>
+                We may update this policy when our Services, practices, or legal
+                obligations change. When we do, we will update the "Last
+                updated" date above. If a change materially affects how we
+                collect, use, or share personal information, we will give
+                additional notice through our websites, applications, email, or
+                your organization, and ask for your consent when the law
+                requires it.
+            </p>
+            <h2 id="contact-us">Contact us</h2>
+            <p>
+                If you have questions about this policy or your privacy rights,
+                contact:
+            </p>
+            <p>
+                <strong>Origami Systems LLC</strong><br />Privacy requests: <a
+                    class="text-link"
+                    href="mailto:privacy@origamisystems.org"
+                    >privacy@origamisystems.org</a
+                ><br />General support: <a
+                    class="text-link"
+                    href="mailto:support@origamisystems.org"
+                    >support@origamisystems.org</a
+                ><br />Security support: <a
+                    class="text-link"
+                    href="mailto:security@origamisystems.org"
+                    >security@origamisystems.org</a
+                ><br />Website: <a
+                    class="text-link"
+                    href="https://origamisystems.org"
+                    >https://origamisystems.org</a>
+            </p>
+            <p>
+                For questions about an organization-managed account or
+                information an organization controls, you can also contact your
+                organization's administrator.
+            </p>
+        </div>
+    </article>
 </MainLayout>
 
 <style>
-    .page {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        width: 100%;
+    .blog {
+        width: 80vw;
     }
-
-    .page > .card {
-        width: 100%;
-        max-width: 700px;
-    }
-
-    .dates {
-        width: 100%;
-        max-width: 700px;
-        margin: 0;
-        color: var(--subtext-0);
+    .blog header {
+        margin-bottom: 1rem;
         text-align: left;
+    }
+    .blog header .description {
+        color: var(--subtext-0);
+    }
+    .blog :global(.card) {
+        width: 100%;
+        max-width: none;
+        margin-top: 1rem;
+    }
+
+    hr {
+        width: 100%;
     }
 
     .summary,
-    .container {
+    .content {
         text-align: left;
     }
 
     .summary h2 {
         margin-top: 0;
+        font-size: 20px;
     }
 
     .summary-note {
         color: var(--subtext-0);
     }
 
-    .container {
+    /* Match the blog post content components (src/components/content). */
+    .content p,
+    .content ul {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .content h2 {
+        font-size: 26px;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .content h3 {
+        font-size: 24px;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    .content h4 {
+        font-size: 20px;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    .content a {
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .content a:hover {
+        text-decoration: underline;
+    }
+
+    .content {
         counter-reset: section;
     }
-
-    .container h2 {
+    .content h2 {
         counter-increment: section;
         position: relative;
-        padding-left: 2rem;
+        padding-left: 2.5rem;
         scroll-margin-top: 80px;
     }
-
-    .container h2::before {
+    .content h2::before {
         content: counter(section) ".";
         position: absolute;
         left: 0;
         font-weight: 600;
-    }
-
-    .container h3,
-    .container h4 {
-        font-size: 15px;
     }
 </style>

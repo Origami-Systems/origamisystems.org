@@ -1,5 +1,5 @@
 ---
-import { Card, LargeTitleText } from "@origami-systems/ui";
+import { Card } from "@origami-systems/ui";
 import MainLayout from "~/layouts/MainLayout.astro";
 ---
 
@@ -7,9 +7,15 @@ import MainLayout from "~/layouts/MainLayout.astro";
     title="Terms of Use - Origami Systems"
     description="The terms for using Origami Systems apps and services."
 >
-    <LargeTitleText>Terms of Use</LargeTitleText>
-    <div class="page">
-        <p class="dates">Effective date: November 19, 2026 · Last updated: November 19, 2026</p>
+    <article class="blog">
+        <header>
+            <h1>Terms of Use</h1>
+            <div class="description">
+                Effective date: November 19, 2026 · Last updated: November 19,
+                2026
+            </div>
+        </header>
+        <hr />
         <Card>
             <div class="summary">
                 <h2>The short version</h2>
@@ -64,482 +70,503 @@ import MainLayout from "~/layouts/MainLayout.astro";
                 </ul>
             </div>
         </Card>
-        <Card>
-            <div class="container">
-                <p>
-                    These Terms of Use are an agreement between you and Origami
-                    Systems LLC ("Origami Systems," "we," "us," or "our"). They
-                    cover The House App, The Signups App, Origami Systems Identity,
-                    the Account app, our websites, and any other Origami Systems
-                    service that links to these terms (together, the "Services").
-                </p>
-                <p>
-                    You accept these terms when you check the box to accept them
-                    while creating a personal account, or when you otherwise use the
-                    Services. If you do not agree, do not use the Services.
-                </p>
-                <p>
-                    If you use the Services for a school, church, business, or other
-                    organization, you confirm that you have authority to accept
-                    these terms for it. In these terms, "Organization" means that
-                    organization, and "you" includes both you and the Organization
-                    where it applies.
-                </p>
-                <h2 id="the-services">The Services</h2>
-                <p>
-                    The House App helps organizations run house systems, including
-                    members, points, games, events, announcements, comments, guests,
-                    and participation records.
-                </p>
-                <p>
-                    The Signups App lets people create sign-up forms, collect
-                    registrations, and manage slots, participants, and waitlists.
-                </p>
-                <p>
-                    Origami Systems Identity and the Account app provide sign-in and
-                    account management for the other Services.
-                </p>
-                <p>
-                    We may add, change, or remove features. If a change
-                    substantially reduces the features of a paid plan, we will give
-                    reasonable notice in advance.
-                </p>
-                <h2 id="eligibility-and-minors">Eligibility and minors</h2>
-                <p>
-                    You must be at least 13 years old to create a personal account.
-                    If you are under 18, or under the age of majority where you
-                    live, a parent or guardian must agree to these terms for you.
-                </p>
-                <p>
-                    A child under 13 may use the Services only through an account
-                    provided by a school or other Organization that has obtained any
-                    consent the law requires.
-                </p>
-                <p>
-                    An Organization decides who may use its account and is
-                    responsible for giving its users any notices and getting any
-                    permissions or consents the law requires. This does not shift to
-                    the Organization any legal duty the law places directly on
-                    Origami Systems.
-                </p>
-                <h2 id="accounts">Accounts</h2>
-                <h3>Personal accounts</h3>
-                <p>
-                    You are responsible for the information in your personal account
-                    and for activity that happens through it. One personal account
-                    works across the Services that support it.
-                </p>
-                <p>
-                    You can delete your personal account in the Account app. We
-                    disable the account right away and delete it permanently 7 days
-                    later. You can cancel during those 7 days by signing in to the
-                    Account app. If you are the only administrator of an
-                    Organization, you must add another administrator before you can
-                    delete your account. Our Privacy Policy describes what happens
-                    to your data.
-                </p>
-                <h3>Organization-managed and guest accounts</h3>
-                <p>
-                    An Organization may create accounts for its members or invite
-                    guests. The Organization controls those accounts, including
-                    their roles, access, and removal.
-                </p>
-                <p>
-                    Guests may use a guest account only through an authorized
-                    invitation. Guest access may expire, and it ends when an
-                    administrator removes it or invalidates the invitation or guest
-                    group.
-                </p>
-                <h3>Account security</h3>
-                <p>
-                    Keep your password, passkeys, backup codes, and devices secure.
-                    Do not share an individual account with another person. If you
-                    believe an account has been compromised, tell your administrator
-                    or email <a
+        <div class="content">
+            <p>
+                These Terms of Use are an agreement between you and Origami
+                Systems LLC ("Origami Systems," "we," "us," or "our"). They
+                cover The House App, The Signups App, Origami Systems Identity,
+                the Account app, our websites, and any other Origami Systems
+                service that links to these terms (together, the "Services").
+            </p>
+            <p>
+                You accept these terms when you check the box to accept them
+                while creating a personal account, or when you otherwise use the
+                Services. If you do not agree, do not use the Services.
+            </p>
+            <p>
+                If you use the Services for a school, church, business, or other
+                organization, you confirm that you have authority to accept
+                these terms for it. In these terms, "Organization" means that
+                organization, and "you" includes both you and the Organization
+                where it applies.
+            </p>
+            <h2 id="the-services">The Services</h2>
+            <p>
+                The House App helps organizations run house systems, including
+                members, points, games, events, announcements, comments, guests,
+                and participation records.
+            </p>
+            <p>
+                The Signups App lets people create sign-up forms, collect
+                registrations, and manage slots, participants, and waitlists.
+            </p>
+            <p>
+                Origami Systems Identity and the Account app provide sign-in and
+                account management for the other Services.
+            </p>
+            <p>
+                We may add, change, or remove features. If a change
+                substantially reduces the features of a paid plan, we will give
+                reasonable notice in advance.
+            </p>
+            <h2 id="eligibility-and-minors">Eligibility and minors</h2>
+            <p>
+                You must be at least 13 years old to create a personal account.
+                If you are under 18, or under the age of majority where you
+                live, a parent or guardian must agree to these terms for you.
+            </p>
+            <p>
+                A child under 13 may use the Services only through an account
+                provided by a school or other Organization that has obtained any
+                consent the law requires.
+            </p>
+            <p>
+                An Organization decides who may use its account and is
+                responsible for giving its users any notices and getting any
+                permissions or consents the law requires. This does not shift to
+                the Organization any legal duty the law places directly on
+                Origami Systems.
+            </p>
+            <h2 id="accounts">Accounts</h2>
+            <h3>Personal accounts</h3>
+            <p>
+                You are responsible for the information in your personal account
+                and for activity that happens through it. One personal account
+                works across the Services that support it.
+            </p>
+            <p>
+                You can delete your personal account in the Account app. We
+                disable the account right away and delete it permanently 7 days
+                later. You can cancel during those 7 days by signing in to the
+                Account app. If you are the only administrator of an
+                Organization, you must add another administrator before you can
+                delete your account. Our Privacy Policy describes what happens
+                to your data.
+            </p>
+            <h3>Organization-managed and guest accounts</h3>
+            <p>
+                An Organization may create accounts for its members or invite
+                guests. The Organization controls those accounts, including
+                their roles, access, and removal.
+            </p>
+            <p>
+                Guests may use a guest account only through an authorized
+                invitation. Guest access may expire, and it ends when an
+                administrator removes it or invalidates the invitation or guest
+                group.
+            </p>
+            <h3>Account security</h3>
+            <p>
+                Keep your password, passkeys, backup codes, and devices secure.
+                Do not share an individual account with another person. If you
+                believe an account has been compromised, tell your administrator
+                or email <a
+                    class="text-link"
+                    href="mailto:support@origamisystems.org"
+                    >support@origamisystems.org</a
+                > right away.
+            </p>
+            <h2 id="organization-and-administrator-responsibilities">
+                Organization and administrator responsibilities
+            </h2>
+            <p>Organizations and their administrators are responsible for:</p>
+            <ul>
+                <li>Providing accurate account and organization information</li>
+                <li>Assigning appropriate roles and permissions</li>
+                <li>Removing access when a person leaves the Organization</li>
+                <li>
+                    Keeping single sign-on and directory provisioning settings
+                    accurate, if they use them
+                </li>
+                <li>
+                    Giving lawful instructions about organization-controlled
+                    data
+                </li>
+                <li>Using invitations and guest groups responsibly</li>
+                <li>
+                    Responding to member, parent, and guardian requests about
+                    records the Organization controls
+                </li>
+            </ul>
+            <p>
+                Administrators may create, view, update, archive, or remove
+                accounts and organization information according to their
+                permissions.
+            </p>
+            <h2 id="sign-up-forms">Sign-up forms</h2>
+            <p>If you create a sign-up form, you are responsible for:</p>
+            <ul>
+                <li>What the form asks for and how you use the answers</li>
+                <li>
+                    Following the laws that apply to the information you
+                    collect, including laws about children's information
+                </li>
+                <li>
+                    Choosing the right visibility. On a standard form, anyone
+                    who can open the form can see the names of the people signed
+                    up. Turn on anonymous mode if participants should not see
+                    each other.
+                </li>
+                <li>Keeping access codes private when you use them</li>
+            </ul>
+            <p>
+                If you register for a form, the form's creator and organizers
+                will see your registration. Guests who register without an
+                account receive a private cancellation link. Anyone with that
+                link can cancel the registration, so keep it private.
+            </p>
+            <h2 id="acceptable-use">Acceptable use</h2>
+            <p>You may not:</p>
+            <ul>
+                <li>Break the law or violate another person's rights</li>
+                <li>Harass, threaten, impersonate, or harm another person</li>
+                <li>
+                    Submit unlawful, deceptive, infringing, or malicious content
+                </li>
+                <li>
+                    Collect information through a sign-up form that you have no
+                    lawful reason to collect, or use forms for spam or phishing
+                </li>
+                <li>
+                    Try to access another Organization, another person's
+                    account, or data you are not permitted to see
+                </li>
+                <li>
+                    Bypass roles, restrictions, rate limits, or security
+                    controls
+                </li>
+                <li>
+                    Share individual credentials or misuse invitations or
+                    cancellation links
+                </li>
+                <li>Introduce malware or interfere with the Services</li>
+                <li>
+                    Scrape or automate access, except through a method we
+                    authorize
+                </li>
+                <li>
+                    Reverse engineer the Services, except where the law
+                    expressly allows it
+                </li>
+                <li>Perform security testing without our written permission</li>
+                <li>
+                    Use the Services to build or improve a competing product
+                </li>
+            </ul>
+            <p>
+                We may investigate suspected misuse and restrict access when
+                reasonably necessary to protect users, Organizations, or the
+                Services.
+            </p>
+            <p>
+                If you find a security vulnerability, report it to <a
+                    class="text-link"
+                    href="mailto:support@origamisystems.org"
+                    >support@origamisystems.org</a
+                > and give us a reasonable time to fix it before sharing it publicly.
+            </p>
+            <h2 id="your-content">Your content</h2>
+            <p>
+                You or your Organization keep ownership of the content you
+                submit to the Services.
+            </p>
+            <p>
+                You give Origami Systems a limited, nonexclusive license to
+                host, copy, process, transmit, and display that content only to
+                operate, secure, support, and improve the Services and to meet
+                our legal obligations. This license ends when the content is
+                deleted from our active systems, except for copies in backups
+                until they expire and information the law requires us to keep.
+            </p>
+            <p>
+                You confirm that you have permission to submit the content and
+                to let us process it under these terms. Organizations may
+                moderate or remove content in their accounts. We may remove
+                content that violates these terms.
+            </p>
+            <h2 id="our-property">Our property</h2>
+            <p>
+                Origami Systems and its licensors own the Services, including
+                the software, design, documentation, and trademarks. We give you
+                a limited, revocable, nontransferable right to use the Services
+                under these terms. These terms do not transfer ownership of the
+                Services to you.
+            </p>
+            <p>
+                If you send us feedback, we may use it without restriction or
+                payment. This does not give us ownership of your personal
+                information or your content.
+            </p>
+            <h2 id="privacy">Privacy</h2>
+            <p>
+                Our Privacy Policy at <a class="text-link" href="/privacy"
+                    >https://origamisystems.org/privacy</a
+                > explains how we handle personal information. An Organization may
+                also have its own privacy notices and legal duties for the information
+                it controls.
+            </p>
+            <p>
+                If an Organization has a separate service agreement or data
+                processing agreement with Origami Systems, that agreement
+                controls where it conflicts with these terms.
+            </p>
+            <h2 id="third-party-services">Third-party services</h2>
+            <p>
+                The Services rely on third-party providers for hosting, sign-in,
+                email, payments, notifications, and error monitoring. Some
+                features connect to services you or your Organization choose,
+                such as Google, Microsoft, or an Organization's identity
+                provider. Those services have their own terms. We are not
+                responsible for a third-party service outside our reasonable
+                control, but this section does not remove responsibilities that
+                the law or our agreements place on us.
+            </p>
+            <h2 id="fees-and-payment">Fees and payment</h2>
+            <p>
+                Some Services or features require a paid plan. If you or your
+                Organization buy one:
+            </p>
+            <ul>
+                <li>
+                    You agree to pay the fees and taxes shown at checkout or in
+                    your order.
+                </li>
+                <li>
+                    Stripe processes payments. You authorize us, through Stripe,
+                    to charge your payment method for each billing period.
+                </li>
+                <li>
+                    Subscriptions renew automatically at the end of each billing
+                    period until canceled.
+                </li>
+                <li>
+                    You can cancel at any time in your billing settings or by
+                    emailing <a
                         class="text-link"
                         href="mailto:support@origamisystems.org"
                         >support@origamisystems.org</a
-                    > right away.
-                </p>
-                <h2 id="organization-and-administrator-responsibilities">
-                    Organization and administrator responsibilities
-                </h2>
-                <p>Organizations and their administrators are responsible for:</p>
-                <ul>
-                    <li>Providing accurate account and organization information</li>
-                    <li>Assigning appropriate roles and permissions</li>
-                    <li>Removing access when a person leaves the Organization</li>
-                    <li>
-                        Keeping single sign-on and directory provisioning settings
-                        accurate, if they use them
-                    </li>
-                    <li>
-                        Giving lawful instructions about organization-controlled
-                        data
-                    </li>
-                    <li>Using invitations and guest groups responsibly</li>
-                    <li>
-                        Responding to member, parent, and guardian requests about
-                        records the Organization controls
-                    </li>
-                </ul>
-                <p>
-                    Administrators may create, view, update, archive, or remove
-                    accounts and organization information according to their
-                    permissions.
-                </p>
-                <h2 id="sign-up-forms">Sign-up forms</h2>
-                <p>If you create a sign-up form, you are responsible for:</p>
-                <ul>
-                    <li>What the form asks for and how you use the answers</li>
-                    <li>
-                        Following the laws that apply to the information you
-                        collect, including laws about children's information
-                    </li>
-                    <li>
-                        Choosing the right visibility. On a standard form, anyone
-                        who can open the form can see the names of the people signed
-                        up. Turn on anonymous mode if participants should not see
-                        each other.
-                    </li>
-                    <li>Keeping access codes private when you use them</li>
-                </ul>
-                <p>
-                    If you register for a form, the form's creator and organizers
-                    will see your registration. Guests who register without an
-                    account receive a private cancellation link. Anyone with that
-                    link can cancel the registration, so keep it private.
-                </p>
-                <h2 id="acceptable-use">Acceptable use</h2>
-                <p>You may not:</p>
-                <ul>
-                    <li>Break the law or violate another person's rights</li>
-                    <li>Harass, threaten, impersonate, or harm another person</li>
-                    <li>
-                        Submit unlawful, deceptive, infringing, or malicious content
-                    </li>
-                    <li>
-                        Collect information through a sign-up form that you have no
-                        lawful reason to collect, or use forms for spam or phishing
-                    </li>
-                    <li>
-                        Try to access another Organization, another person's
-                        account, or data you are not permitted to see
-                    </li>
-                    <li>
-                        Bypass roles, restrictions, rate limits, or security
-                        controls
-                    </li>
-                    <li>
-                        Share individual credentials or misuse invitations or
-                        cancellation links
-                    </li>
-                    <li>Introduce malware or interfere with the Services</li>
-                    <li>
-                        Scrape or automate access, except through a method we
-                        authorize
-                    </li>
-                    <li>
-                        Reverse engineer the Services, except where the law
-                        expressly allows it
-                    </li>
-                    <li>Perform security testing without our written permission</li>
-                    <li>
-                        Use the Services to build or improve a competing product
-                    </li>
-                </ul>
-                <p>
-                    We may investigate suspected misuse and restrict access when
-                    reasonably necessary to protect users, Organizations, or the
-                    Services.
-                </p>
-                <p>
-                    If you find a security vulnerability, report it to <a
-                        class="text-link"
-                        href="mailto:support@origamisystems.org"
-                        >support@origamisystems.org</a
-                    > and give us a reasonable time to fix it before sharing it publicly.
-                </p>
-                <h2 id="your-content">Your content</h2>
-                <p>
-                    You or your Organization keep ownership of the content you
-                    submit to the Services.
-                </p>
-                <p>
-                    You give Origami Systems a limited, nonexclusive license to
-                    host, copy, process, transmit, and display that content only to
-                    operate, secure, support, and improve the Services and to meet
-                    our legal obligations. This license ends when the content is
-                    deleted from our active systems, except for copies in backups
-                    until they expire and information the law requires us to keep.
-                </p>
-                <p>
-                    You confirm that you have permission to submit the content and
-                    to let us process it under these terms. Organizations may
-                    moderate or remove content in their accounts. We may remove
-                    content that violates these terms.
-                </p>
-                <h2 id="our-property">Our property</h2>
-                <p>
-                    Origami Systems and its licensors own the Services, including
-                    the software, design, documentation, and trademarks. We give you
-                    a limited, revocable, nontransferable right to use the Services
-                    under these terms. These terms do not transfer ownership of the
-                    Services to you.
-                </p>
-                <p>
-                    If you send us feedback, we may use it without restriction or
-                    payment. This does not give us ownership of your personal
-                    information or your content.
-                </p>
-                <h2 id="privacy">Privacy</h2>
-                <p>
-                    Our Privacy Policy at <a class="text-link" href="/privacy"
-                        >https://origamisystems.org/privacy</a
-                    > explains how we handle personal information. An Organization may
-                    also have its own privacy notices and legal duties for the information
-                    it controls.
-                </p>
-                <p>
-                    If an Organization has a separate service agreement or data
-                    processing agreement with Origami Systems, that agreement
-                    controls where it conflicts with these terms.
-                </p>
-                <h2 id="third-party-services">Third-party services</h2>
-                <p>
-                    The Services rely on third-party providers for hosting, sign-in,
-                    email, payments, notifications, and error monitoring. Some
-                    features connect to services you or your Organization choose,
-                    such as Google, Microsoft, or an Organization's identity
-                    provider. Those services have their own terms. We are not
-                    responsible for a third-party service outside our reasonable
-                    control, but this section does not remove responsibilities that
-                    the law or our agreements place on us.
-                </p>
-                <h2 id="fees-and-payment">Fees and payment</h2>
-                <p>
-                    Some Services or features require a paid plan. If you or your
-                    Organization buy one:
-                </p>
-                <ul>
-                    <li>
-                        You agree to pay the fees and taxes shown at checkout or in
-                        your order.
-                    </li>
-                    <li>
-                        Stripe processes payments. You authorize us, through Stripe,
-                        to charge your payment method for each billing period.
-                    </li>
-                    <li>
-                        Subscriptions renew automatically at the end of each billing
-                        period until canceled.
-                    </li>
-                    <li>
-                        You can cancel at any time in your billing settings or by
-                        emailing <a
-                            class="text-link"
-                            href="mailto:support@origamisystems.org"
-                            >support@origamisystems.org</a
-                        >. Cancellation takes effect at the end of the current
-                        billing period, and you keep access until then.
-                    </li>
-                    <li>
-                        Fees are not refundable, except where the law requires a
-                        refund or we agree to one in writing.
-                    </li>
-                    <li>
-                        If a payment fails, we will notify you. If it is not
-                        resolved within 14 days, we may suspend paid features until
-                        it is.
-                    </li>
-                    <li>
-                        We will give at least 30 days' notice before a price
-                        increase takes effect on your next renewal.
-                    </li>
-                </ul>
-                <p>
-                    A separate order form or agreement with an Organization controls
-                    where it conflicts with this section.
-                </p>
-                <h2 id="suspension-and-termination">Suspension and termination</h2>
-                <p>
-                    You may stop using the Services at any time. An Organization may
-                    ask to close its account by emailing <a
-                        class="text-link"
-                        href="mailto:support@origamisystems.org"
-                        >support@origamisystems.org</a
-                    >, subject to any separate agreement.
-                </p>
-                <p>
-                    We may suspend or end your access if you materially violate
-                    these terms, create a security or legal risk, fail to pay
-                    required fees, or use the Services in a way that could harm
-                    another person or the Services. When practical, we will notify
-                    you first and give you a chance to fix the problem.
-                </p>
-                <p>
-                    When an Organization closes, we will give it 30 days to export
-                    its data. After that, we may delete the data as described in our
-                    Privacy Policy and any agreement with the Organization.
-                </p>
-                <p>
-                    Sections that by their nature should continue after termination
-                    remain in effect, including ownership, payment obligations,
-                    disclaimers, limits on liability, indemnification, and dispute
-                    terms.
-                </p>
-                <h2 id="disclaimers">Disclaimers</h2>
-                <p>
-                    We work to keep the Services available and secure, but outages,
-                    maintenance, and errors happen. Unless a separate agreement says
-                    otherwise, we provide the Services "as is" and "as available."
-                </p>
-                <p>
-                    To the extent the law allows, Origami Systems disclaims implied
-                    warranties, including merchantability, fitness for a particular
-                    purpose, and noninfringement. This does not affect warranties or
-                    rights that cannot legally be excluded.
-                </p>
-                <h2 id="limitation-of-liability">Limitation of liability</h2>
-                <p>
-                    To the extent the law allows, neither party will be liable for
-                    indirect, incidental, special, consequential, or punitive
-                    damages, or for lost profits, revenue, or business
-                    opportunities, arising from the Services.
-                </p>
-                <p>
-                    To the extent the law allows, Origami Systems' total liability
-                    for all claims arising from the Services will not exceed the
-                    greater of (a) the fees you paid us for the Services in the 12
-                    months before the claim arose, or (b) $100.
-                </p>
-                <p>
-                    These limits do not apply to liability that cannot legally be
-                    limited, or to exceptions stated in a separate agreement with an
-                    Organization.
-                </p>
-                <h2 id="indemnification">Indemnification</h2>
-                <p>
-                    To the extent the law allows, an Organization will defend and
-                    indemnify Origami Systems against third-party claims arising
-                    from the Organization's unlawful content, its misuse of the
-                    Services, or its material violation of these terms. This does
-                    not apply to claims caused by Origami Systems' own misconduct or
-                    violation of law.
-                </p>
-                <h2 id="changes-to-these-terms">Changes to these terms</h2>
-                <p>
-                    We may update these terms. When we do, we will update the date
-                    above and give reasonable notice of material changes through the
-                    Services or by email. If the law requires it, or if a change is
-                    material, we will ask you to accept the new terms before you
-                    keep using the Services.
-                </p>
-                <p>
-                    The terms in effect when a claim arose govern that claim unless
-                    the parties agree otherwise or the law requires a different
-                    result.
-                </p>
-                <h2 id="governing-law-and-disputes">Governing law and disputes</h2>
-                <p>
-                    Texas law governs these terms, without regard to conflict-of-law
-                    rules.
-                </p>
-                <p>
-                    Before filing a claim, contact us at <a
-                        class="text-link"
-                        href="mailto:support@origamisystems.org"
-                        >support@origamisystems.org</a
-                    > and describe the dispute. Both sides will try in good faith to resolve
-                    it informally for 30 days. Either side may then go to court.
-                </p>
-                <p>
-                    Any court proceeding must be brought in the state or federal
-                    courts located in Denton County, Texas, unless the law requires
-                    another location. Either party may bring an individual claim in
-                    small claims court if it qualifies.
-                </p>
-                <h2 id="general-terms">General terms</h2>
-                <p>
-                    These terms, our Privacy Policy, and any separate agreement with
-                    an Organization are the entire agreement about the Services. If
-                    any provision is unenforceable, the rest stays in effect. A
-                    failure to enforce a provision is not a waiver. You may not
-                    assign these terms without our written consent. We may assign
-                    them as part of a merger, reorganization, or sale of the
-                    Services.
-                </p>
-                <p>
-                    Neither party is responsible for delays caused by events beyond
-                    its reasonable control, except for payment obligations.
-                </p>
-                <h2 id="contact">Contact</h2>
-                <p>
-                    Origami Systems LLC<br /><a
-                        class="text-link"
-                        href="mailto:support@origamisystems.org"
-                        >support@origamisystems.org</a>
-                </p>
-            </div>
-        </Card>
-    </div>
+                    >. Cancellation takes effect at the end of the current
+                    billing period, and you keep access until then.
+                </li>
+                <li>
+                    Fees are not refundable, except where the law requires a
+                    refund or we agree to one in writing.
+                </li>
+                <li>
+                    If a payment fails, we will notify you. If it is not
+                    resolved within 14 days, we may suspend paid features until
+                    it is.
+                </li>
+                <li>
+                    We will give at least 30 days' notice before a price
+                    increase takes effect on your next renewal.
+                </li>
+            </ul>
+            <p>
+                A separate order form or agreement with an Organization controls
+                where it conflicts with this section.
+            </p>
+            <h2 id="suspension-and-termination">Suspension and termination</h2>
+            <p>
+                You may stop using the Services at any time. An Organization may
+                ask to close its account by emailing <a
+                    class="text-link"
+                    href="mailto:support@origamisystems.org"
+                    >support@origamisystems.org</a
+                >, subject to any separate agreement.
+            </p>
+            <p>
+                We may suspend or end your access if you materially violate
+                these terms, create a security or legal risk, fail to pay
+                required fees, or use the Services in a way that could harm
+                another person or the Services. When practical, we will notify
+                you first and give you a chance to fix the problem.
+            </p>
+            <p>
+                When an Organization closes, we will give it 30 days to export
+                its data. After that, we may delete the data as described in our
+                Privacy Policy and any agreement with the Organization.
+            </p>
+            <p>
+                Sections that by their nature should continue after termination
+                remain in effect, including ownership, payment obligations,
+                disclaimers, limits on liability, indemnification, and dispute
+                terms.
+            </p>
+            <h2 id="disclaimers">Disclaimers</h2>
+            <p>
+                We work to keep the Services available and secure, but outages,
+                maintenance, and errors happen. Unless a separate agreement says
+                otherwise, we provide the Services "as is" and "as available."
+            </p>
+            <p>
+                To the extent the law allows, Origami Systems disclaims implied
+                warranties, including merchantability, fitness for a particular
+                purpose, and noninfringement. This does not affect warranties or
+                rights that cannot legally be excluded.
+            </p>
+            <h2 id="limitation-of-liability">Limitation of liability</h2>
+            <p>
+                To the extent the law allows, neither party will be liable for
+                indirect, incidental, special, consequential, or punitive
+                damages, or for lost profits, revenue, or business
+                opportunities, arising from the Services.
+            </p>
+            <p>
+                To the extent the law allows, Origami Systems' total liability
+                for all claims arising from the Services will not exceed the
+                greater of (a) the fees you paid us for the Services in the 12
+                months before the claim arose, or (b) $100.
+            </p>
+            <p>
+                These limits do not apply to liability that cannot legally be
+                limited, or to exceptions stated in a separate agreement with an
+                Organization.
+            </p>
+            <h2 id="indemnification">Indemnification</h2>
+            <p>
+                To the extent the law allows, an Organization will defend and
+                indemnify Origami Systems against third-party claims arising
+                from the Organization's unlawful content, its misuse of the
+                Services, or its material violation of these terms. This does
+                not apply to claims caused by Origami Systems' own misconduct or
+                violation of law.
+            </p>
+            <h2 id="changes-to-these-terms">Changes to these terms</h2>
+            <p>
+                We may update these terms. When we do, we will update the date
+                above and give reasonable notice of material changes through the
+                Services or by email. If the law requires it, or if a change is
+                material, we will ask you to accept the new terms before you
+                keep using the Services.
+            </p>
+            <p>
+                The terms in effect when a claim arose govern that claim unless
+                the parties agree otherwise or the law requires a different
+                result.
+            </p>
+            <h2 id="governing-law-and-disputes">Governing law and disputes</h2>
+            <p>
+                Texas law governs these terms, without regard to conflict-of-law
+                rules.
+            </p>
+            <p>
+                Before filing a claim, contact us at <a
+                    class="text-link"
+                    href="mailto:support@origamisystems.org"
+                    >support@origamisystems.org</a
+                > and describe the dispute. Both sides will try in good faith to resolve
+                it informally for 30 days. Either side may then go to court.
+            </p>
+            <p>
+                Any court proceeding must be brought in the state or federal
+                courts located in Denton County, Texas, unless the law requires
+                another location. Either party may bring an individual claim in
+                small claims court if it qualifies.
+            </p>
+            <h2 id="general-terms">General terms</h2>
+            <p>
+                These terms, our Privacy Policy, and any separate agreement with
+                an Organization are the entire agreement about the Services. If
+                any provision is unenforceable, the rest stays in effect. A
+                failure to enforce a provision is not a waiver. You may not
+                assign these terms without our written consent. We may assign
+                them as part of a merger, reorganization, or sale of the
+                Services.
+            </p>
+            <p>
+                Neither party is responsible for delays caused by events beyond
+                its reasonable control, except for payment obligations.
+            </p>
+            <h2 id="contact">Contact</h2>
+            <p>
+                Origami Systems LLC<br /><a
+                    class="text-link"
+                    href="mailto:support@origamisystems.org"
+                    >support@origamisystems.org</a>
+            </p>
+        </div>
+    </article>
 </MainLayout>
 
 <style>
-    .page {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        width: 100%;
+    .blog {
+        width: 80vw;
     }
-
-    .page > .card {
-        width: 100%;
-        max-width: 700px;
-    }
-
-    .dates {
-        width: 100%;
-        max-width: 700px;
-        margin: 0;
-        color: var(--subtext-0);
+    .blog header {
+        margin-bottom: 1rem;
         text-align: left;
+    }
+    .blog header .description {
+        color: var(--subtext-0);
+    }
+    .blog :global(.card) {
+        width: 100%;
+        max-width: none;
+        margin-top: 1rem;
+    }
+
+    hr {
+        width: 100%;
     }
 
     .summary,
-    .container {
+    .content {
         text-align: left;
     }
 
     .summary h2 {
         margin-top: 0;
+        font-size: 20px;
     }
 
     .summary-note {
         color: var(--subtext-0);
     }
 
-    .container {
+    /* Match the blog post content components (src/components/content). */
+    .content p,
+    .content ul {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .content h2 {
+        font-size: 26px;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .content h3 {
+        font-size: 24px;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    .content h4 {
+        font-size: 20px;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    .content a {
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .content a:hover {
+        text-decoration: underline;
+    }
+
+    .content {
         counter-reset: section;
     }
-
-    .container h2 {
+    .content h2 {
         counter-increment: section;
         position: relative;
-        padding-left: 2rem;
+        padding-left: 2.5rem;
         scroll-margin-top: 80px;
     }
-
-    .container h2::before {
+    .content h2::before {
         content: counter(section) ".";
         position: absolute;
         left: 0;
         font-weight: 600;
-    }
-
-    .container h3,
-    .container h4 {
-        font-size: 15px;
     }
 </style>
