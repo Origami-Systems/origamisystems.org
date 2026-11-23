@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import showsWordmarkDark from "@assets/icons/shows/dark/wordmark.png";
+import showsWordmarkLight from "@assets/icons/shows/light/wordmark.png";
+---
+
+<div class="logo theshowsapp">
+    <Image
+        src={showsWordmarkDark}
+        alt="The Shows App Logo"
+        class="icon icon-dark"
+    />
+    <Image
+        src={showsWordmarkLight}
+        alt="The Shows App Logo"
+        class="icon icon-light"
+    />
+</div>
+
+<style>
+    .logo {
+        img {
+            height: auto;
+        }
+        user-select: none;
+    }
+
+    .icon {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .icon-dark {
+        display: none;
+    }
+
+    :global(html.dark) .icon-light {
+        display: none;
+    }
+
+    :global(html.dark) .icon-dark {
+        display: inline;
+    }
+</style>
