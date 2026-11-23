@@ -25,7 +25,11 @@
     <RoundedContainer v-if="mode === 'Issues'">
         <template #title>Known Issues</template>
         <AppSkeleton v-if="loading" loading label="Loading issues">
-            <div v-for="item in placeholders" :key="item.id" class="left-aligned">
+            <div
+                v-for="item in placeholders"
+                :key="item.id"
+                class="left-aligned"
+            >
                 <BugItem :issue="item" />
             </div>
         </AppSkeleton>
@@ -49,7 +53,11 @@
     <RoundedContainer v-if="mode === 'Feature Requests'">
         <template #title>Enhancements and Feature Requests</template>
         <AppSkeleton v-if="loading" loading label="Loading feature requests">
-            <div v-for="item in placeholders" :key="item.id" class="left-aligned">
+            <div
+                v-for="item in placeholders"
+                :key="item.id"
+                class="left-aligned"
+            >
                 <EnhancementItem :enhancement="item" />
             </div>
         </AppSkeleton>
@@ -75,7 +83,12 @@
 <script setup lang="ts">
 import type { GitHubIssue } from "~/types/GitHubIssue";
 import { computed, onMounted, ref } from "vue";
-import { AppSkeleton, Dropdown, RoundedContainer, TextField } from "@origami-systems/ui";
+import {
+    AppSkeleton,
+    Dropdown,
+    RoundedContainer,
+    TextField,
+} from "@origami-systems/ui";
 import BugItem from "./BugItem.vue";
 import EnhancementItem from "./EnhancementItem.vue";
 import { getEnhancements } from "@utils/GetEnhancements";
@@ -121,7 +134,10 @@ const filtered = computed<GitHubIssue[]>(() => {
 });
 
 onMounted(async () => {
-    const [issueData, enhancementData] = await Promise.all([getIssues(), getEnhancements()]);
+    const [issueData, enhancementData] = await Promise.all([
+        getIssues(),
+        getEnhancements(),
+    ]);
     issues.value = issueData;
     enhancements.value = enhancementData;
     loading.value = false;

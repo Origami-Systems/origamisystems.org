@@ -7,7 +7,12 @@
             autocomplete="name"
             required
         />
-        <EmailField v-model="email" label="Email Address" placeholder="Enter your email" required />
+        <EmailField
+            v-model="email"
+            label="Email Address"
+            placeholder="Enter your email"
+            required
+        />
         <TextField
             v-model="organization"
             label="Organization"
@@ -15,7 +20,12 @@
             autocomplete="organization"
             required
         />
-        <Field label="How did you hear about us?" required full-width v-slot="field">
+        <Field
+            label="How did you hear about us?"
+            required
+            full-width
+            v-slot="field"
+        >
             <Dropdown
                 :id="field.id"
                 v-model="hear"
@@ -49,7 +59,9 @@
             aria-hidden="true"
             style="display: none"
         />
-        <AppSubmitButton @click="submit" primary :disabled>Send Message</AppSubmitButton>
+        <AppSubmitButton @click="submit" primary :disabled
+            >Send Message</AppSubmitButton
+        >
     </form>
 </template>
 
@@ -102,7 +114,8 @@ const submit = async (done: () => void) => {
             notifications.error("Submission failed. Please try again.");
             return;
         }
-        const hearValue = hear.value === "Other" ? howDidYouHearAboutUs.value : hear.value;
+        const hearValue =
+            hear.value === "Other" ? howDidYouHearAboutUs.value : hear.value;
         const result = await SubmitContact(
             name.value,
             email.value,
