@@ -7,12 +7,7 @@
             autocomplete="name"
             required
         />
-        <EmailField
-            v-model="email"
-            label="Email Address"
-            placeholder="Enter your email"
-            required
-        />
+        <EmailField v-model="email" label="Email Address" placeholder="Enter your email" required />
         <TextField
             v-model="organization"
             label="Organization"
@@ -20,17 +15,11 @@
             autocomplete="organization"
             required
         />
-        <Field
-            label="How did you hear about us?"
-            required
-            full-width
-            v-slot="field"
-        >
+        <Field label="How did you hear about us?" required v-slot="field">
             <Dropdown
                 :id="field.id"
                 v-model="hear"
                 :options="howDidYouHearAboutUsOptions"
-                width="100%"
                 required
             />
         </Field>
@@ -41,14 +30,12 @@
             placeholder="Tell us where you heard about us"
             required
             stacked
-            full-width
         />
         <TextArea
             v-model="question"
             label="What would you like to know more about?"
             placeholder="Tell us what interests you or any questions you have"
             stacked
-            full-width
         />
         <input
             type="text"
@@ -59,9 +46,7 @@
             aria-hidden="true"
             style="display: none"
         />
-        <AppSubmitButton @click="submit" primary :disabled
-            >Send Message</AppSubmitButton
-        >
+        <AppSubmitButton @click="submit" primary :disabled>Send Message</AppSubmitButton>
     </form>
 </template>
 
@@ -114,8 +99,7 @@ const submit = async (done: () => void) => {
             notifications.error("Submission failed. Please try again.");
             return;
         }
-        const hearValue =
-            hear.value === "Other" ? howDidYouHearAboutUs.value : hear.value;
+        const hearValue = hear.value === "Other" ? howDidYouHearAboutUs.value : hear.value;
         const result = await SubmitContact(
             name.value,
             email.value,

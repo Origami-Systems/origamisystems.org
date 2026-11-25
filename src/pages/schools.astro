@@ -1,5 +1,10 @@
 ---
-import { AppSubmitButton, Card, CardGrid, LargeTitleText } from "@origami-systems/ui";
+import {
+    AppSubmitButton,
+    Card,
+    CardGrid,
+    LargeTitleText,
+} from "@origami-systems/ui";
 import {
     CalendarCheck,
     GraduationCap,
@@ -17,18 +22,22 @@ import MainLayout from "~/layouts/MainLayout.astro";
     mainClass="marketing"
 >
     <section class="page-section header">
-        <LargeTitleText>For<br />Schools</LargeTitleText>
+        <LargeTitleText>For Schools</LargeTitleText>
         <p class="lede">
             Origami Systems started in schools. Our apps help staff spend less
-            time on coordination and give students one clear place to see
-            what is happening.
+            time on coordination and give students one clear place to see what
+            is happening.
         </p>
         <div class="actions">
             <a href="/contact">
-                <AppSubmitButton primary client:only="vue">Talk to Us</AppSubmitButton>
+                <AppSubmitButton primary client:only="vue">
+                    Talk to Us
+                </AppSubmitButton>
             </a>
             <a href="/products">
-                <AppSubmitButton client:only="vue">See Our Products</AppSubmitButton>
+                <AppSubmitButton client:only="vue">
+                    See Our Products
+                </AppSubmitButton>
             </a>
         </div>
     </section>
@@ -39,32 +48,61 @@ import MainLayout from "~/layouts/MainLayout.astro";
         </div>
         <CardGrid class="card-grid-wide" minWidth="300px">
             <Card heading="h3" style="--accent: var(--house-app)">
-                <span slot="title" class="card-title-row"><span class="feature-icon"><Trophy size={22} aria-hidden="true" /></span>Run your house system</span>
+                <span slot="title" class="card-title-row">
+                    <span class="feature-icon">
+                        <Trophy size={22} aria-hidden="true" />
+                    </span>
+                    Run your house system
+                </span>
                 <p>
                     Award points as good work happens and let students follow
                     live standings. Houses keep their own names, colors, and
                     leaders.
                 </p>
-                <a href="https://the-house-app.com" class="text-link card-link" target="_blank" rel="noopener noreferrer">Learn about The House App</a>
+                <a
+                    href="https://the-house-app.com"
+                    class="text-link card-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Learn about The House App
+                </a>
             </Card>
             <Card heading="h3" style="--accent: var(--house-app)">
-                <span slot="title" class="card-title-row"><span class="feature-icon"><Megaphone size={22} aria-hidden="true" /></span>Share news and events</span>
+                <span slot="title" class="card-title-row">
+                    <span class="feature-icon">
+                        <Megaphone size={22} aria-hidden="true" />
+                    </span>
+                    Share news and events
+                </span>
                 <p>
                     Post announcements to the right people and keep calendars
                     for students, leaders, and staff in the same place.
                 </p>
             </Card>
             <Card heading="h3" style="--accent: var(--signups-app)">
-                <span slot="title" class="card-title-row"><span class="feature-icon"><CalendarCheck size={22} aria-hidden="true" /></span>Organize volunteers and conferences</span>
+                <span slot="title" class="card-title-row">
+                    <span class="feature-icon">
+                        <CalendarCheck size={22} aria-hidden="true" />
+                    </span>
+                    Organize volunteers and conferences
+                </span>
                 <p>
-                    Build signups for parent conferences, field trip
-                    chaperones, or concessions. Slots fill up on their own and
-                    waitlists catch the rest.
+                    Build signups for parent conferences, field trip chaperones,
+                    or concessions. Slots fill up on their own and waitlists
+                    catch the rest.
                 </p>
-                <a href="/signups" class="text-link card-link">Learn about The Signups App</a>
+                <a href="/signups" class="text-link card-link">
+                    Learn about The Signups App
+                </a>
             </Card>
             <Card heading="h3" style="--accent: var(--grades-app)">
-                <span slot="title" class="card-title-row"><span class="feature-icon"><GraduationCap size={22} aria-hidden="true" /></span>Keep track of grades</span>
+                <span slot="title" class="card-title-row">
+                    <span class="feature-icon">
+                        <GraduationCap size={22} aria-hidden="true" />
+                    </span>
+                    Keep track of grades
+                </span>
                 <p>
                     The Grades App is in progress. It will give teachers a
                     straightforward gradebook that fits with the rest of our
@@ -80,14 +118,24 @@ import MainLayout from "~/layouts/MainLayout.astro";
         </div>
         <CardGrid class="card-grid-wide" minWidth="300px">
             <Card heading="h3">
-                <span slot="title" class="card-title-row"><span class="feature-icon"><KeyRound size={22} aria-hidden="true" /></span>One sign-in</span>
+                <span slot="title" class="card-title-row">
+                    <span class="feature-icon">
+                        <KeyRound size={22} aria-hidden="true" />
+                    </span>
+                    One sign-in
+                </span>
                 <p>
                     Staff and students use one Origami Systems account for every
                     app, secured with passkeys and two-factor authentication.
                 </p>
             </Card>
             <Card heading="h3">
-                <span slot="title" class="card-title-row"><span class="feature-icon"><UsersRound size={22} aria-hidden="true" /></span>The right access for each person</span>
+                <span slot="title" class="card-title-row">
+                    <span class="feature-icon">
+                        <UsersRound size={22} aria-hidden="true" />
+                    </span>
+                    The right access for each person
+                </span>
                 <p>
                     Give administrators, staff, student leaders, and students
                     the access that matches their role.
@@ -96,10 +144,13 @@ import MainLayout from "~/layouts/MainLayout.astro";
         </CardGrid>
     </section>
 
-    <section class="page-section">
-        <div class="section-intro">
+    <section class="getting-started">
+        <div class="steps-title">
             <h2>Getting started.</h2>
         </div>
+        <p class="steps-description">
+            Tell us what your school needs, and we'll help you get started.
+        </p>
         <ol class="steps">
             <li>
                 <strong>Reach out</strong>
@@ -111,7 +162,9 @@ import MainLayout from "~/layouts/MainLayout.astro";
             </li>
             <li>
                 <strong>Invite your school</strong>
-                <p>Staff and students sign in and pick up where you left off.</p>
+                <p>
+                    Staff and students sign in and pick up where you left off.
+                </p>
             </li>
         </ol>
     </section>
@@ -126,14 +179,18 @@ import MainLayout from "~/layouts/MainLayout.astro";
         </div>
         <div class="actions">
             <a href="/contact">
-                <AppSubmitButton primary client:only="vue">Contact Us</AppSubmitButton>
+                <AppSubmitButton primary client:only="vue">
+                    Contact Us
+                </AppSubmitButton>
             </a>
             <a
                 href="https://app.the-house-app.com/example"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <AppSubmitButton client:only="vue">Explore an Example</AppSubmitButton>
+                <AppSubmitButton client:only="vue">
+                    Explore an Example
+                </AppSubmitButton>
             </a>
         </div>
     </section>
@@ -146,10 +203,32 @@ import MainLayout from "~/layouts/MainLayout.astro";
     .header .lede {
         max-width: 640px;
     }
-    .steps {
+    .getting-started {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-section);
+        gap: 10px;
+        width: min(1000px, 100%);
+    }
+    .steps-title {
+        grid-column: span 2;
+        align-self: center;
+    }
+    .steps-title h2 {
+        margin: 0;
+        font-size: clamp(2.2rem, 5vw, 4.2rem);
+        line-height: 1.05;
+        letter-spacing: -0.055em;
+    }
+    .steps-description {
+        margin: 0;
+        padding: 5px 10px;
+        color: var(--subtext-0);
+        line-height: 1.65;
+    }
+    .steps {
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: subgrid;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -158,35 +237,38 @@ import MainLayout from "~/layouts/MainLayout.astro";
     .steps li {
         display: flex;
         flex-direction: column;
-        gap: var(--space-tight);
-        border-top: 2px solid var(--background-2);
-        padding-top: 1.2rem;
+        border-top: 2px solid var(--background-1);
+        padding: 1.4rem 0.4rem 0;
         counter-increment: step;
     }
     .steps li::before {
-        content: counter(step);
-        display: grid;
-        place-items: center;
-        width: 32px;
-        height: 32px;
-        margin-bottom: 1rem;
-        border: 1px solid var(--accent);
-        border-radius: 50%;
-        background: color-mix(in srgb, var(--accent) 14%, transparent);
-        color: var(--text-0);
-        font-weight: var(--weight-heading);
+        content: "0" counter(step);
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
     }
     .steps strong {
-        font-size: var(--text-size-card-title);
+        margin-top: 2rem;
+        font-size: 1.18rem;
     }
     .steps p {
-        margin: 0;
+        margin: 0.5rem 0 0;
         color: var(--subtext-0);
-        line-height: var(--line-height-body);
+        line-height: 1.5;
     }
     @media (max-width: 650px) {
+        .getting-started,
         .steps {
             grid-template-columns: 1fr;
+        }
+        .steps-title,
+        .steps-description,
+        .steps {
+            grid-column: 1;
+        }
+        .steps li {
+            margin-top: 1rem;
         }
     }
 </style>
