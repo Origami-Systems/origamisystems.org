@@ -4,27 +4,36 @@ import { AppSubmitButton, Badge, Card, CardGrid, LargeTitleText } from "@origami
 import {
     BookOpen,
     CalendarDays,
+    ClipboardCheck,
     ClipboardList,
     Gauge,
+    GraduationCap,
+    HeartHandshake,
+    Layers,
     Link2,
     ListChecks,
+    ListOrdered,
     Megaphone,
+    MonitorPlay,
     Palette,
     Trophy,
     UsersRound,
     Hourglass,
+    Timer,
+    Upload,
 } from "@lucide/astro";
 import MainLayout from "~/layouts/MainLayout.astro";
 import TheHouseAppWordmark from "@/wordmarks/TheHouseAppWordmark.astro";
 import TheGradesAppWordmark from "@/wordmarks/TheGradesAppWordmark.astro";
 import TheSignupsAppWordmark from "@/wordmarks/TheSignupsAppWordmark.astro";
+import TheShowsAppWordmark from "@/wordmarks/TheShowsAppWordmark.astro";
 import accountLight from "@assets/icons/account/light/rounded.png";
 import accountDark from "@assets/icons/account/dark/rounded.png";
 ---
 
 <MainLayout
     title="Products - Origami Systems"
-    description="The House App, The Signups App, and The Grades App: apps that each solve one problem well and share one Origami Systems account."
+    description="The House App, The Signups App, The Shows App, and The Grades App: apps that each solve one problem well and share one Origami Systems account."
     mainClass="marketing products"
 >
     <section class="page-section header">
@@ -132,6 +141,44 @@ import accountDark from "@assets/icons/account/dark/rounded.png";
             </ul>
         </article>
 
+        <article
+            class="product"
+            style="--accent: var(--shows-app)"
+        >
+            <header class="product-header">
+                <div class="title-row">
+                    <div class="wordmark"><TheShowsAppWordmark /></div>
+                    <Badge>Coming soon</Badge>
+                </div>
+                <p>
+                    Plan your run of show, run it live, and keep every screen
+                    in sync. When the schedule changes, everyone sees it.
+                </p>
+            </header>
+            <ul class="features" aria-label="The Shows App plans">
+                <li>
+                    <ListOrdered size={20} aria-hidden="true" />
+                    <span><strong>Run of show</strong> Give each segment a duration and the start times work themselves out. Lock fixed times like lunch.</span>
+                </li>
+                <li>
+                    <Timer size={20} aria-hidden="true" />
+                    <span><strong>Live timer</strong> Start, pause, and advance cues, and see how far ahead or behind the show is.</span>
+                </li>
+                <li>
+                    <MonitorPlay size={20} aria-hidden="true" />
+                    <span><strong>Stage displays</strong> Countdown clocks and booth messages on any monitor, tablet, or phone, from one link.</span>
+                </li>
+                <li>
+                    <Upload size={20} aria-hidden="true" />
+                    <span><strong>Speaker uploads</strong> Speakers send slides, videos, and bios from a private link, with no account needed.</span>
+                </li>
+                <li>
+                    <UsersRound size={20} aria-hidden="true" />
+                    <span><strong>Views for each crew</strong> Audio, lighting, video, and stage crews each see only the columns they need.</span>
+                </li>
+            </ul>
+        </article>
+
         <article class="product" style="--accent: var(--grades-app)">
             <header class="product-header">
                 <div class="title-row">
@@ -139,14 +186,31 @@ import accountDark from "@assets/icons/account/dark/rounded.png";
                     <Badge theme="grades">Coming soon</Badge>
                 </div>
                 <p>
-                    A straightforward gradebook for teachers, with assignments
-                    and scores that fit with the rest of our apps.
+                    A straightforward gradebook for teachers, with the
+                    attendance and records a school needs, all working with the
+                    rest of our apps.
                 </p>
             </header>
             <ul class="features" aria-label="The Grades App plans">
                 <li>
                     <ListChecks size={20} aria-hidden="true" />
-                    <span><strong>Gradebooks</strong> Assignments, scores, and progress for every class.</span>
+                    <span><strong>Gradebooks</strong> Enter scores and feedback, then publish grades when students should see them.</span>
+                </li>
+                <li>
+                    <ClipboardCheck size={20} aria-hidden="true" />
+                    <span><strong>Attendance</strong> Mark each student present, absent, late, or excused, with a note when needed.</span>
+                </li>
+                <li>
+                    <Layers size={20} aria-hidden="true" />
+                    <span><strong>Course modules</strong> Group assignments into modules, set prerequisites, and let modules complete on their own.</span>
+                </li>
+                <li>
+                    <GraduationCap size={20} aria-hidden="true" />
+                    <span><strong>Transcripts and diploma plans</strong> Track credits toward graduation and keep final records for every year.</span>
+                </li>
+                <li>
+                    <HeartHandshake size={20} aria-hidden="true" />
+                    <span><strong>Family access</strong> Guardians see their student's published grades and attendance.</span>
                 </li>
             </ul>
         </article>

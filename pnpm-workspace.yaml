@@ -1,10 +1,37 @@
+configDependencies:
+    "@origami-systems/pnpm-config": 0.0.4
+
+include:
+    "@origami-systems/pnpm-config":
+        - minimumReleaseAge
+        - minimumReleaseAgeExcludePrune
+        - trustPolicy
+        - trustPolicyExcludePrune
+        - trustPolicyExclude
+        - strictPeerDependencies
+        - autoDedupe
+        - lockfile
+        - catalogs
+        - overrides
+        - peerDependencyRules
+
 allowBuilds:
     "@parcel/watcher": true
     esbuild: true
     sharp: true
+
 minimumReleaseAgeExclude:
-    - astro
-    - "@astrojs/*"
     - "@origami-systems/*"
-lockfile:
-    includeResolutionSettings: true
+    - "@astrojs/*"
+    - astro
+    - vite-plus
+    - "@voidzero-dev/*"
+    - oxlint
+    - "@oxlint/*"
+    - "@oxlint-tsgolint/*"
+    - oxfmt
+    - "@oxfmt/*"
+    - vitest
+    - "@vitest/*"
+    - tsrs
+    - "@tsrs/*"
